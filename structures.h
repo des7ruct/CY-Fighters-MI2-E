@@ -1,1 +1,6 @@
+/* Structure Combattant */
 
+typedef struct {
+
+
+} 
