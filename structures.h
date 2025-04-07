@@ -17,9 +17,9 @@ typedef struct {
   int defense ;
   int agilite ;
   int vitesse ;
-  Competences* competences ;
+  Competence* competences ;
+  Passif passif ;
   Effets* effets_positifs ;
   Effets* effets_negatifs ;
-  
 } Combattant ;
 
