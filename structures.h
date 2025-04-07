@@ -23,3 +23,4 @@ typedef struct {
   Effets* effets_negatifs ;
 } Combattant ;
 
+/* Equipe */
