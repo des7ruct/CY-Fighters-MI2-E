@@ -1,8 +1,15 @@
 /* Effets */
-
+typedef struct {
+  int num ;
+  int type ;
+  float coeff ;
+}Effet;
+ 
 
 /* Compétences */
-
+typedef struct {
+  char* nom;
+  
 
 /* Passifs */
 
