@@ -9,13 +9,16 @@ typedef struct {
 /* Compétences */
 typedef struct {
   int id ;
-  char* nom;
-  
+  char* nom ;
+  char* description ;
 
 } Competence ;
 
 /* Passifs */
-
+typedef struct {
+  int id ;
+  char* nom ;
+  char* description ;
 
 /* Structure Combattant */
 
