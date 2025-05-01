@@ -28,14 +28,14 @@ int aleatoire(int minimum, int maximum) {
   int resultat ;
   
   if ((minimum >= maximum) || (maximum <= 0)) {
-    printf("Erreur dans la fonction aleatoire avec les nombres minimums et maximums.") ;
+    printf("Erreur dans la fonction aleatoire avec les nombres minimums et maximums.\n") ;
     exit(1) ;
   }
   
   resultat = minimum + (rand() % ((maximum - minimum) + 1)) ;
   
   if ((resultat < 0) || (resultat < minimum) || (resultat > maximum)) {
-    printf("Erreur dans la fonction aleatoire avec le retour de la fonction.") ;
+    printf("Erreur dans la fonction aleatoire avec le retour de la fonction.\n") ;
     exit(2) ;
   }
 
@@ -53,7 +53,7 @@ int multiplicateur_critique(int valeur_critique) {
   */
     
   if (valeur_critique < TAUX_CRITIQUE) {
-    printf("Erreur dans la fonction critique avec le pourcentage de coup critique.") ;
+    printf("Erreur dans la fonction critique avec le pourcentage de coup critique.\n") ;
     exit(1) ;
   }
 
@@ -72,9 +72,39 @@ int multiplicateur_critique(int valeur_critique) {
   }
 }
 
+/* Pourcentage initial de bonus de type */
+#define TAUX_TYPE 0.25
 
+float multiplicateur_type(int type_lanceur, int type_cible) {
+  /* 
+  Fonction prenant le type du lanceur de l'attaque et le type de la cible et renvoie
+  1 + TAUX_TYPE si le lanceur est en avantage, 1 si les types sont identiques et 1 - TAUX_TYPE sinon.
+  */
 
-int multiplicateur_type()
+  if ((type_lanceur != FEU) && (type_lanceur != PLANTE) && (type_lanceur != EAU)) {
+    printf("Erreur dans la fonction multiplicateur type avec le type du lanceur.\n") ;
+    exit(1) ;
+  }
+
+  else if ((type_cible != FEU) && (type_cible != PLANTE) && (type_cible != EAU)) {
+    printf("Erreur dans la fonction multiplicateur type avec le type de la cible.\n") ;
+    exit(2) ;
+  }
+
+  else {
+    if (type_lanceur == type_cible) {
+      return 1 ;  
+    }
+
+    else if(((type_lanceur == FEU) && (type_cible == PLANTE)) || ((type_lanceur == PLANTE) && (type_cible == EAU)) || ((type_lanceur == EAU) && (type_cible == FEU))) {
+      return 1 + TAUX_TYPE ;
+    }
+
+    else {
+      return 1 - TAUX_TYPE ;
+    }
+  }
+}
 
 
 
