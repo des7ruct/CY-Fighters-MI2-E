@@ -24,6 +24,7 @@ typedef struct {
 
 typedef struct {
   char* nom ;
+  int type ;
   int pv_max ;
   int attaque ;
   int defense ;
