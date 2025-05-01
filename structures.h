@@ -11,6 +11,8 @@ typedef struct {
   char* nom;
   
 
+} Competence ;
+
 /* Passifs */
 
 
@@ -19,13 +21,16 @@ typedef struct {
 typedef struct {
   char* nom ;
   int pv_max ;
-  int pv_courants ;
   int attaque ;
   int defense ;
   int agilite ;
   int vitesse ;
   Competence* competences ;
   Passif passif ;
+
+  /* Non Prédéfini */
+  int stamina ;
+  int pv_courants ;
   Effets* effets_positifs ;
   Effets* effets_negatifs ;
 } Combattant ;
