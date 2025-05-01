@@ -22,9 +22,7 @@ deux esquives et le résultat nous donnera le montant de dégats esquivé.
 
 int aleatoire(int minimum, int maximum) {
   /*
-  
   Fonction prenant un minimum et un maximum positifs et génére un nombre aléatoire entre les deux. 
-  
   */
   
   int resultat ;
@@ -36,9 +34,12 @@ int aleatoire(int minimum, int maximum) {
   
   resultat = minimum + (rand() % ((maximum - minimum) + 1)) ;
   
-  if ((resultat < 0) || (resultat )  ) {
+  if ((resultat < 0) || (resultat < minimum) || (resultat > maximum)) {
+    printf("Erreur dans la fonction aleatoire avec le retour de la fonction.") ;
+    exit(2) ;
   }
-  
+
+  return resultat ;
 }
 
 
