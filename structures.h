@@ -1,3 +1,10 @@
+/* Valeur de chaque type assignée à son nom pour faciliter l'écriture de code */
+
+#define FEU 1
+#define PLANTE 2
+#define EAU 3
+
+
 /* Effets */
 typedef struct {
   int num ;
