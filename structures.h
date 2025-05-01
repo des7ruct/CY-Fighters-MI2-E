@@ -8,6 +8,7 @@ typedef struct {
 
 /* Compétences */
 typedef struct {
+  int id ;
   char* nom;
   
 
