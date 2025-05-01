@@ -43,8 +43,34 @@ int aleatoire(int minimum, int maximum) {
 }
 
 
+/* Pourcentage initial de coup critique */
+#define TAUX_CRITIQUE 15
 
-int multiplicateur_critique()
+
+int multiplicateur_critique(int valeur_critique) {
+  /*
+  Prend une valeur de pourcentage de chance d'effectuer un coup critique et renvoie 2 si le coup est critique, 1 sinon.
+  */
+    
+  if (valeur_critique < TAUX_CRITIQUE) {
+    printf("Erreur dans la fonction critique avec le pourcentage de coup critique.") ;
+    exit(1) ;
+  }
+
+  else if (valeur_critique >= 100) {
+    return 2 ;      
+  }
+
+  else {
+    if (aleatoire(1, 100) > valeur_critique) {
+      return 1 ;  
+    }
+
+    else {
+      return 2 ;
+    }
+  }
+}
 
 
 
