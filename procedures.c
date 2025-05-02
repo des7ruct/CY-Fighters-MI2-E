@@ -4,6 +4,26 @@
 
 /* contenu */
 
+void Tuto(){
+//Affichage du tutoriel//
+    printf(" Bienvenue dans le tutoriel de CY-Fighters\n\n");
+    printf(" Chaque joueur choisira entre 3 et 6 combattants (en fonction du mode) parmis la liste des 18 combattants disponibles.\n");
+    printf(" Chaque combattant possede une type : Eau, Feu ou Plante.\n");
+    printf(" Le type Eau est faible au type Plante.\n");
+    printf(" Le type Plante est faible au type Feu.\n");
+    printf(" Le type Feu est faible au type Eau.\n");
+    printf(" Chaque combattant possedera également 2 competences (actives) et un passif qui lui sont propre. Les competences ont des temps de chargements\n");
+    printf(" tandis que les passifs ont effet a chaque tours.\n");
+    printf(" Durant leur tour, chaque combattant aura 4 choix possibles :\n");
+    printf("- Il pourra utiliser une attaque normale, pour infliger des degats.\n");
+    printf("- Il pourra se défendre, pour avoir un bonus de réduction de degats jusqu'à son prochain tour\n");
+    printf("- Il pourra utiliser une competence spéciale, pour infliger plus de degats ou mettre un effet a un autre combattant (ou lui même)\n");
+    printf("- Ou alors, si il en possede, il pourra utiliser un consommable.\n");
+    printf(" Le combattant ayant le plus de stamina sera celui qui jouera sont tour en premier.\n\n");
+    printf(" Si vous avez des combattants en reserve, il remplaceront vos combattants K.O au 3eme tour.\n\n");
+    printf(" 1-Retourner au menu.\n\n");
+
+}
 
 void Menu(){
     int n=0;
@@ -33,9 +53,17 @@ void Menu(){
 
 
         case 3:
+            n=0;
+            Tuto();
+            while(n!=1){
+                fgets(tampon, V,stdin);
+                n=VerifScanf(tampon);
+                if(n!=1){
+                    printf("Erreur, pour retourner au menu, entrez '1'\n ");
+                }
 
+            }
             break;
-
         
         case 4:
             /* 
