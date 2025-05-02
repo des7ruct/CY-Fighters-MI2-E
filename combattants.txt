@@ -1,1 +1,2 @@
-
+chevalier draconique
+PV ATK DEF AGI VIT COMP PASSIF
