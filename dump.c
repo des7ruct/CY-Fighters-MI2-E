@@ -1,9 +1,3 @@
-
-//Constante utilisé pour les fgets//
-#define V 100
-
-
-
 int Credit(){
 //Affichage des crédits du jeu//
     char tampon[100];
