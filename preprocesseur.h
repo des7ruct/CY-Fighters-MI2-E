@@ -14,6 +14,12 @@
   #define PLANTE 2
   #define EAU 3
 
+  /* Pourcentage initial de bonus de type */
+  #define TAUX_TYPE 0.25
+
+  /* Pourcentage initial de coup critique */
+  #define TAUX_CRITIQUE 15
+
   //Constante utilisé pour les fgets//
   #define V 100
 
