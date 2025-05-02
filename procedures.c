@@ -28,7 +28,7 @@ void Tuto(){
 void Menu(){
     int n=0;
     char tampon[100];
-    printf(" Choisissez une option en entrant le chiffre adequat\n\n 1-Jouer contre un autre joueur\n 2-Jouer contre l'ordinateur\n");
+    printf(" Choisissez une option en entrant le chiffre adequat\n\n 1-Jouer\n 2-Codex\n");
     printf(" 3-Tutoriel\n 4-Credits\n 5-Quitter le jeu\n\n");
     printf("Reponse :   ");
 
