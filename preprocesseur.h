@@ -6,7 +6,7 @@
   #include <stdlib.h>
   #include <time.h>
 
-  /* contenu */
+  /* constantes */
 
   /* Valeur de chaque type assignée à son nom pour faciliter l'écriture de code */
 
@@ -14,6 +14,10 @@
   #define PLANTE 2
   #define EAU 3
 
+  //Constante utilisé pour les fgets//
+  #define V 100
+
+  /* structures */
 
   /* Effets */
   typedef struct {
