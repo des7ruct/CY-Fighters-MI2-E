@@ -22,10 +22,3 @@ int Credit(){
         return(n);
     }
 }
-
-
-int main(){
-
-Menu();
-return(0);
-}
