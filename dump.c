@@ -2,40 +2,7 @@
 //Constante utilisé pour les fgets//
 #define V 100
 
-int VerifNb(char* test){
-//Vérifie que chaque caractère est bien un chiffre//
-    for(int i=0; test[i]!='\0'; i++){
-        if(test[i]<'0' || test[i]>'9'){
-            return 0;
-        }
-    }
-    return(1);
-}
 
-
-int VerifScanf(char* test){
-    //Vérifie que la chaine reçu ne soit pas vide//
-    if (test==NULL){
-        printf("\033[H\033[2J");
-        printf("ERREUR, veuillez-recommencer\n");
-        return(-1);
-    }
-    else if(test!=NULL){
-        test[strcspn(test, "\n")]=0;
-    }
-    /*Après avoir vérifier que la chaine ne contiennent que des chiffres,
-    retourne la chaîne en tant que int*/
-    if(VerifNb(test)){
-        return(atoi(test));
-    }
-    else{
-        printf("\033[H\033[2J");
-        printf("ERREUR, veuillez-recommencer\n");
-        return(-1);
-    }
-    return(0);
-
-}
 
 int Credit(){
 //Affichage des crédits du jeu//
