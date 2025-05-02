@@ -86,10 +86,6 @@ int aleatoire(int minimum, int maximum) {
 }
 
 
-/* Pourcentage initial de coup critique */
-#define TAUX_CRITIQUE 15
-
-
 int multiplicateur_critique(int valeur_critique) {
   /*
   Prend une valeur de pourcentage de chance d'effectuer un coup critique et renvoie 2 si le coup est critique, 1 sinon.
@@ -114,9 +110,6 @@ int multiplicateur_critique(int valeur_critique) {
     }
   }
 }
-
-/* Pourcentage initial de bonus de type */
-#define TAUX_TYPE 0.25
 
 float multiplicateur_type(int type_lanceur, int type_cible) {
   /* 
