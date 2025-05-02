@@ -1,5 +1,5 @@
-#ifndef STRUCTURES_H
-  #define STRUCTURES_H
+#ifndef PREPROCESSEUR_H
+  #define PREPROCESSEUR_H
 
   /* inclusions */
 
