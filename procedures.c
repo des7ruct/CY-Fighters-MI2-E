@@ -102,3 +102,29 @@ void Menu(){
 
     }
 }
+
+void Affiche_tab(Combattant* tab, int taille){
+    //Affiche les informations de tous les combattants
+    for(int i=0; i<taille; i++){
+        printf("Nom : %s // Type : ", tab[i].nom);
+        switch (tab[i].type){
+            case 1:
+                printf("Feu");
+                break;
+
+            case 2:
+                printf("Plante");
+                break;
+
+            case 3:
+                printf("Eau");
+                break;
+
+            default:
+                printf("ERREUR");
+                exit(4);
+        }
+        printf("\n Pvmax : %d / Attaque : %d / Defense : %d / Agilite : %d / Vitesse : %d \n", tab[i].pv_max, tab[i].attaque, tab[i].defense, tab[i].agilite, tab[i].vitesse);
+    }
+}
+
