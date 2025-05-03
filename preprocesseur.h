@@ -94,8 +94,9 @@
     Effet* effets_positifs ;
     Effet* effets_negatifs ;
     
-
     /* effets suplémentaires */
+    int heal ;
+    int barriere ;
     
   } Phase ;
 
@@ -130,7 +131,7 @@
     /* Non Prédéfini */
     int stamina ;
     int pv_courants ;
-    int protection ;
+    int barriere ;
     Effet* effets_positifs ;
     Effet* effets_negatifs ;
   } Combattant ;
