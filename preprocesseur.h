@@ -43,6 +43,9 @@
   #define DEFENSE 2
   #define PVSMAX 3
 
+  #define NON_ACTIF 0
+  #define ACTIF 1  
+
   /* Constantes pour les effets */
   /* Négatifs */ 
   #define FLAMES 1
