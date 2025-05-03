@@ -35,27 +35,53 @@
   //Constante utilisé pour les fgets//
   #define V 100
 
+  /* Constantes utilisées pour les phases */
+  #define MOI 1
+  #define ENNEMI 2
+
+  #define ATTAQUE 1
+  #define DEFENSE 2
+  #define PVSMAX 3
+  
+
+
   /* structures */
 
   /* Effets */
   typedef struct {
-    int num ;
+    int tours ;
     int type ;
-    float coeff ;
-  }Effet;
- 
+  } Effet ;
+
+  /* Phases */
+  typedef struct {
+    /* calcul classique des dégats */
+    int multiplicateur ;
+    int stat ;
+
+    /* cibles */
+    int cible ;
+    int aoe ;
+
+    /* effets spéciaux */
+    Effet* effets_positifs ;
+    Effet* effets_negatifs ;
+    
+
+    /* effets suplémentaires */
+    
+  } Phase ;
 
   /* Compétences */
   typedef struct {
-    int id ;
     char* nom ;
     char* description ;
-
+    int rechargement ;
+    Phase* phases ;
   } Competence ;
 
   /* Passifs */
   typedef struct {
-    int id ;
     char* nom ;
     char* description ;
 
@@ -77,8 +103,8 @@
     /* Non Prédéfini */
     int stamina ;
     int pv_courants ;
-    Effets* effets_positifs ;
-    Effets* effets_negatifs ;
+    Effet* effets_positifs ;
+    Effet* effets_negatifs ;
   } Combattant ;
 
   /* Equipe */
