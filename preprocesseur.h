@@ -42,9 +42,33 @@
   #define ATTAQUE 1
   #define DEFENSE 2
   #define PVSMAX 3
+
+  /* Constantes pour les effets */
+  /* Négatifs */ 
+  #define FLAMES
+  #define POISON
+  #define GEL
+
+  #define DIM_ATTAQUE
+  #define DIM_DEFENSE
+  #define DIM_AGILITE
+  #define DIM_VITESSE
+
+  #define SILENCE
+  #define CONFUSION
+  #define ETOURDISSEMENT
+  #define ANTIHEAL
+
+  /* Positifs */
+  #define AUG_ATTAQUE
+  #define AUG_DEFENSE
+  #define AUG_AGILITE
+  #define AUG_VITESSE
+  #define AUG_CRITIQUE
+
+  #define IMMUNITE
+  #define EPINES
   
-
-
   /* structures */
 
   /* Effets */
@@ -103,6 +127,7 @@
     /* Non Prédéfini */
     int stamina ;
     int pv_courants ;
+    int protection ;
     Effet* effets_positifs ;
     Effet* effets_negatifs ;
   } Combattant ;
