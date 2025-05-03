@@ -137,3 +137,99 @@ float multiplicateur_type(int type_lanceur, int type_cible) {
     }
   }
 }
+
+
+float Calcul_Coeff(char* stats){
+    //Calcul le coefficient pour calculer la valeur de la stat en fonction de sa qualité
+    
+    if (strcmp(stats, "HAUT")==0){
+        return(1);
+    }
+    else if(strcmp(stats, "MOYEN")==0){
+        return(0.75);
+    }
+    else if (strcmp(stats, "BAS")==0){
+        return(0.5);
+    }
+    else{
+        printf("ERREUR, Fermeture du programme");
+        exit(2);
+    }
+    return;
+
+}
+
+
+
+Combattant* RemplirTabCombattant(){
+    //Crée un tableau avec tous les combattants disponible
+    
+    Combattant* tab;
+    int nb_combattants;
+    FILE* fic=NULL;
+    fic=fopen("combattants.txt", "r");
+    char ligne[V];
+    
+    //Calcul le nombre de combattants
+    if(fic!=NULL){
+        int nb_ligne=0;
+        while(fgets(ligne, V, fic)){
+            nb_ligne++;
+        }
+        rewind(fic);
+
+        nb_combattants=nb_ligne/2;
+
+        //Création du tableau de combattant avec allocation dynamique
+        tab = malloc(sizeof(Combattant) * nb_combattants);
+        if(tab==NULL){
+            printf("Erreur, sortie du programme");
+            exit(2);
+        }
+        
+        //Remplit le tableau avec tous les combattants et leur stats
+        char ligne_stats[V];
+        float coeff;
+        int type=1;
+        for(int i=0; i<nb_combattants; i++){
+            tab[i].nom=malloc(V);
+            fgets(tab[i].nom, V, fic);
+
+            fgets(ligne_stats, V, fic);
+            char* pvmax=strtok(ligne_stats, " ");
+            tab[i].pv_max = PVMAX_BASE * Calcul_Coeff(pvmax);
+            char* att=strtok(NULL, " ");
+            tab[i].attaque = ATTAQUE_BASE * Calcul_Coeff(att);
+            char* def=strtok(NULL, " ");
+            tab[i].defense = DEFENSE_BASE * Calcul_Coeff(def);
+            char* agi=strtok(NULL, " ");
+            tab[i].agilite = AGILITE_BASE * Calcul_Coeff(agi);
+            char* vit=strtok(NULL, "\n");
+            tab[i].vitesse = VITESSE_BASE * Calcul_Coeff(vit);
+            
+            //Application du type, sachant qu'ils sont triés dans le fichier : FEU - PLANTE - EAU
+            tab[i].type=type;
+            if(type==1 || type==2){
+                type++;
+            }
+            else if(type==3){
+                type=1;
+            }
+            else{
+                printf("ERREUR de type");
+                exit(3);
+            }
+
+        }
+
+
+       fclose(fic);
+    }
+    else{
+        printf("ERREUR, Echec d'ouverture du fichier\n\n\n");
+        exit(1);
+    }
+    Affiche_tab(tab, nb_combattants);
+    return(tab);
+}
+
