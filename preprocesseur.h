@@ -20,6 +20,18 @@
   /* Pourcentage initial de coup critique */
   #define TAUX_CRITIQUE 15
 
+  /* Pourcentage initial de stats de bases */
+  #define HAUT 1
+  #define MOYEN 0.75
+  #define BAS 0.5
+
+  /* Stats de base */
+  #define PVMAX_BASE 50000
+  #define ATTAQUE_BASE 4000
+  #define DEFENSE_BASE 800
+  #define AGILITE_BASE 100
+  #define VITESSE_BASE 200
+
   //Constante utilisé pour les fgets//
   #define V 100
 
