@@ -20,6 +20,9 @@
   /* Pourcentage initial de coup critique */
   #define TAUX_CRITIQUE 15
 
+  /* Taille de la barre de stamina */
+  #define STAMINA_MAX 1000
+
   /* Pourcentage initial de stats de bases */
   #define HAUT 1
   #define MOYEN 0.75
@@ -83,21 +86,32 @@
   /* Phases */
   typedef struct {
     /* calcul classique des dégats */
-    int multiplicateur ;
+    float multiplicateur ;
     int stat ;
-
-    /* cibles */
     int cible ;
-    int aoe ;
+    
 
     /* effets spéciaux */
     Effet* effets_positifs ;
     Effet* effets_negatifs ;
     
     /* effets suplémentaires */
-    int heal ;
-    int barriere ;
-    
+    /* actifs / inactifs */
+    int soin ;
+    int vampirisme ;
+    int aire ;
+    int destruction ;
+    int debuff_multiplicateur ;
+
+    /* effets complexes */
+    float barriere ;
+    int red_rechargement ;
+    float red_stamina ;
+    int red_nefastes ;
+    int ignore_defense ;
+
+    int degats_pvs_restants_type ;
+    int degats_pvs_restants_cible ;
   } Phase ;
 
   /* Compétences */
