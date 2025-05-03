@@ -1,2 +1,36 @@
-chevalier draconique
-PV ATK DEF AGI VIT COMP PASSIF
+Chevalier Draconique
+HAUT HAUT MOYEN BAS BAS
+Chevalier de l'Arbre
+MOYEN HAUT MOYEN MOYEN MOYEN
+Chevalier Tsunami
+HAUT BAS HAUT BAS BAS
+Paladin Enflammé
+MOYEN MOYEN HAUT BAS BAS
+Paladin Fleuri
+HAUT BAS MOYEN BAS BAS
+Paladin du Courant
+HAUT BAS HAUT BAS BAS
+Fée Cramoisie
+BAS BAS BAS HAUT HAUT
+Fée Verdoyante
+BAS BAS BAS HAUT HAUT
+Fée Goutte d'Eau
+BAS BAS BAS HAUT HAUT
+Assassin Rouge
+BAS HAUT BAS HAUT HAUT
+Assassin Vert
+HAUT MOYEN BAS HAUT MOYEN
+Assassin Bleu
+BAS HAUT BAS BAS BAS
+Sorcière des Flames
+MOYEN BAS MOYEN BAS BAS
+Sorcière de la Nature
+MOYEN BAS MOYEN BAS BAS
+Sorcière de la Rivière
+MOYEN BAS BAS HAUT HAUT
+Mage Brûlant
+BAS HAUT BAS MOYEN MOYEN
+Mage Bourgeonnant
+HAUT BAS BAS BAS BAS
+Mage Orageux
+BAS BAS BAS BAS BAS
