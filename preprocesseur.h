@@ -45,29 +45,29 @@
 
   /* Constantes pour les effets */
   /* Négatifs */ 
-  #define FLAMES
-  #define POISON
-  #define GEL
+  #define FLAMES 1
+  #define POISON 2
+  #define GEL 3
 
-  #define DIM_ATTAQUE
-  #define DIM_DEFENSE
-  #define DIM_AGILITE
-  #define DIM_VITESSE
+  #define DIM_ATTAQUE 4
+  #define DIM_DEFENSE 5
+  #define DIM_AGILITE 6
+  #define DIM_VITESSE 7
 
-  #define SILENCE
-  #define CONFUSION
-  #define ETOURDISSEMENT
-  #define ANTIHEAL
+  #define SILENCE 8
+  #define CONFUSION 9
+  #define ETOURDISSEMENT 10
+  #define ANTIHEAL 11
 
   /* Positifs */
-  #define AUG_ATTAQUE
-  #define AUG_DEFENSE
-  #define AUG_AGILITE
-  #define AUG_VITESSE
-  #define AUG_CRITIQUE
+  #define AUG_ATTAQUE 1
+  #define AUG_DEFENSE 2
+  #define AUG_AGILITE 3
+  #define AUG_VITESSE 4
+  #define AUG_CRITIQUE 5
 
-  #define IMMUNITE
-  #define EPINES
+  #define IMMUNITE 6
+  #define EPINES 7
   
   /* structures */
 
