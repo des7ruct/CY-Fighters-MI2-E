@@ -52,6 +52,9 @@
   #define NON_ACTIF 0
   #define ACTIF 1  
 
+  #define STAT 1
+  #define EFFET 2
+
   /* Constantes pour les effets */
   #define AUCUNS 0
 
