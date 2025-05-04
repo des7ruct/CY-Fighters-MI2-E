@@ -51,7 +51,7 @@
 
   /* Constantes pour les effets */
   /* Négatifs */ 
-  #define FLAMES 1
+  #define FLAMMES 1
   #define POISON 2
   #define GEL 3
 
