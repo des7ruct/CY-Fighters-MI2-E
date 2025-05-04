@@ -1,1 +1,15 @@
+Colère du Dragon
+Inflige sur un ennemi 150% de l'attaque, 1 effet de flamme, et baisse sa défense.
+2
+1.5 ATTAQUE ENNEMI
+AUCUNS
+FLAMMES DIM_DEFENSE
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 0.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
+Cyclone du Dragon
+Inflige sur tout les ennemis 35% de l'attaque, leur retire 30% de stamina.
+3
+0.35 ATTAQUE ENNEMI
+AUCUNS
+AUCUNS
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 0.7 0 NON_ACTIF NON_ACTIF NON_ACTIF
