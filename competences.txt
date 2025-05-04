@@ -49,3 +49,63 @@ NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF NON_ACTIF 
 AUCUNS
 AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF NON_ACTIF NON_ACTIF
+
+Marteau Brûlant
+
+Bouclier de Flammes
+
+Marteau Pointu
+
+Bouclier d'Epines
+
+Vol de Force Vitale
+
+Tourbillon Gelé
+
+Violence
+
+Rage
+
+Liane Géante
+
+Piège de Lianes
+
+Goutte d'Eau Supersonique
+
+Absorption d'Humidité
+
+Lancer de Kunai
+
+Concoction Spéciale
+
+Sabre Vampirique
+
+Poison Mortel
+
+Parchemin de Gel
+
+Brise Glace
+
+Flames Pourpres
+
+Flames Guérisseuses
+
+Racines Amères
+
+Concoction Secrète
+
+Barrière d'Eau
+
+Puissance de l'Eau
+
+Boule de Feu
+
+Tempête de Flammes
+
+Potion Médicinale
+
+Gaz Guérisseur
+
+Eclair
+
+Ragnarok
