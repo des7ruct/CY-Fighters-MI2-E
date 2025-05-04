@@ -4,7 +4,7 @@ Inflige sur un ennemi 150% de l'attaque, 1 effet de flamme, et baisse sa défens
 1.5 ATTAQUE ENNEMI
 AUCUNS
 FLAMMES DIM_DEFENSE
-NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 0.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Cyclone du Dragon
 Inflige sur tout les ennemis 35% de l'attaque, leur retire 30% de stamina.
@@ -13,3 +13,39 @@ Inflige sur tout les ennemis 35% de l'attaque, leur retire 30% de stamina.
 AUCUNS
 AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 0.7 0 NON_ACTIF NON_ACTIF NON_ACTIF
+
+Feuille Volante
+Inflige sur un ennemi 75% de l'attaque, plus vos pvs sont bas plus la défense est ignorée, retire 10% de stamina.
+1
+0.75 ATTAQUE ENNEMI
+AUCUNS
+AUCUNS
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 0.9 0 STAT NON_ACTIF NON_ACTIF
+
+Feuille Sifflante
+Inflige sur un ennemi 125% de l'attaque, plus vos pvs sont bas plus la défense est ignorée, vampirisme.
+3
+1.25 ATTAQUE ENNEMI
+AUCUNS
+AUCUNS
+NON_ACTIF ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 STAT NON_ACTIF NON_ACTIF
+
+Torrent
+Inflige sur un ennemi 175% de la défense, les dégâts augmentent en fonction de vos pvs restants.
+2
+1.75 DEFENSE ENNEMI
+AUCUNS
+AUCUNS
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF PLUS MOI
+
+Rage du Tsunami
+Inflige sur un ennemi 25% des pvs courants, gagne un effet d'immunité.
+5
+0.0 ATTAQUE MOI
+IMMUNITE
+AUCUNS
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF NON_ACTIF NON_ACTIF
+0.25 PVSCOURANTS ENNEMI
+AUCUNS
+AUCUNS
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF NON_ACTIF NON_ACTIF
