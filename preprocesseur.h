@@ -50,6 +50,8 @@
   #define ACTIF 1  
 
   /* Constantes pour les effets */
+  #define AUCUNS 0
+
   /* Négatifs */ 
   #define FLAMMES 1
   #define POISON 2
