@@ -44,7 +44,7 @@
 
   #define ATTAQUE 1
   #define DEFENSE 2
-  #define PVSMAX 3
+  #define PVSCOURANTS 3
 
   #define MOINS 1
   #define PLUS 2
