@@ -46,6 +46,9 @@
   #define DEFENSE 2
   #define PVSMAX 3
 
+  #define MOINS 0
+  #define PLUS 1
+
   #define NON_ACTIF 0
   #define ACTIF 1  
 
