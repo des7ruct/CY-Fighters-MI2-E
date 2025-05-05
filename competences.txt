@@ -51,61 +51,241 @@ AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Marteau Brûlant
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Bouclier de Flammes
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Marteau Pointu
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Bouclier d'Epines
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Vol de Force Vitale
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Tourbillon Gelé
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Violence
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Rage
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Liane Géante
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Piège de Lianes
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Goutte d'Eau Supersonique
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Absorption d'Humidité
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Lancer de Kunai
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Concoction Spéciale
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Sabre Vampirique
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Poison Mortel
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Parchemin de Gel
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Brise Glace
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Flames Pourpres
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Flames Guérisseuses
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Racines Amères
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Concoction Secrète
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Barrière d'Eau
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Puissance de l'Eau
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Boule de Feu
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Tempête de Flammes
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Potion Médicinale
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Gaz Guérisseur
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Eclair
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Ragnarok
+description
+cd
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
