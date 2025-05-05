@@ -308,7 +308,7 @@ Sur un allié, soigne 20% de ses pvs max, lui retire 1 effet néfaste, et lui ap
 0.0 ATTAQUE ALLIE
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 1 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Gaz Guérisseur
 Sur tout les alliés, soigne 20% de leurs pvs max, leur retire 3 effets néfastes, et leur applique un effet d'immunité.
@@ -316,7 +316,7 @@ Sur tout les alliés, soigne 20% de leurs pvs max, leur retire 3 effets néfaste
 0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 3 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Eclair
 Inflige 175% de l'attaque sur un ennemi, puis applique un effet d'immunité sur moi-même.
@@ -336,4 +336,4 @@ Inflige 25% de l'attaque sur tout les ennemis, détruit leurs pvs max par rappor
 0.25 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF ACTIF ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
