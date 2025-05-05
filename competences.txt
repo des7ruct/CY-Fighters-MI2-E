@@ -74,16 +74,16 @@ effets positifs
 effets négatifs
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE MOI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 2.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Marteau Pointu
 Inflige 150% de l'attaque sur un ennemi, puis l'empoisonne.
 2
 1.5 ATTAQUE ENNEMI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
 effets positifs
@@ -114,8 +114,8 @@ Tourbillon Gelé
 Inflige 50% de l'attaque sur tout les ennemis, puis les gèles 2 fois.
 4
 0.5 ATTAQUE ENNEMI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
 effets positifs
@@ -126,8 +126,8 @@ Violence
 Inflige 200% de l'attaque sur un ennemi.
 3
 2.0 ATTAQUE ENNEMI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Rage
@@ -142,8 +142,8 @@ Liane Géante
 Inflige 125% de l'attaque sur un ennemi, puis l'empoisonne, diminue sa défense et son attaque.
 3
 1.25 ATTAQUE ENNEMI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
 effets positifs
@@ -154,8 +154,8 @@ Piège de Lianes
 Inflige 75% de l'attaque sur tout les ennemis, puis diminue leur vitesse et leur agilité.
 5
 0.75 ATTAQUE ENNEMI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
 effets positifs
@@ -166,8 +166,8 @@ Goutte d'Eau Supersonique
 Inflige 300% de l'attaque sur un ennemi, puis diminue son agilité 2 fois.
 3
 3.0 ATTAQUE ENNEMI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
 effets positifs
@@ -186,8 +186,8 @@ Lancer de Kunai
 Inflige 150% de l'attaque sur un ennemi, moins la cible à de pvs, plus les dégâts sont importants.
 1
 1.5 ATTAQUE ENNEMI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF MOINS ENNEMI
 
 Concoction Spéciale
@@ -202,8 +202,8 @@ Sabre Vampirique
 Inflige 200% de l'attaque sur un ennemi, vampirisme.
 2
 2.0 ATTAQUE ENNEMI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Poison Mortel
@@ -218,8 +218,8 @@ Parchemin de Gel
 Inflige 125% de l'attaque sur un ennemi, puis le gèle 3 fois.
 3
 1.25 ATTAQUE ENNEMI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
 effets positifs
@@ -230,8 +230,8 @@ Brise Glace
 Inflige 200% de l'attaque sur un ennemi, ignore la défense si la cible est gelée.
 6
 2.0 ATTAQUE ENNEMI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 EFFET NON_ACTIF NON_ACTIF
 
 Flames Pourpres
@@ -270,8 +270,8 @@ Barrière d'Eau
 Sur tout les alliés, leur applique 100% de ma défense en une barrière.
 2
 0.0 ATTAQUE MOI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 1.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Puissance de l'Eau
@@ -286,8 +286,8 @@ Boule de Feu
 Inflige 125% de l'attaque sur un ennemi, puis le brûle.
 1
 1.25 ATTAQUE ENNEMI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
 effets positifs
@@ -298,8 +298,8 @@ Tempête de Flammes
 Inflige 35% de l'attaque sur tout les ennemis, pour chaque ennemi les dégâts sont multipliés par le nombre d'effets néfastes sur lui.
 6
 0.35 ATTAQUE ENNEMI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Potion Médicinale
@@ -322,8 +322,8 @@ Eclair
 Inflige 175% de l'attaque sur un ennemi, puis applique un effet d'immunité sur moi-même.
 3
 1.75 ATTAQUE ENNEMI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE MOI
 effets positifs
@@ -334,6 +334,6 @@ Ragnarok
 Inflige 25% de l'attaque sur tout les ennemis, détruit leurs pvs max par rapport aux dégâts infligés.
 6
 0.25 ATTAQUE ENNEMI
-effets positifs
-effets négatifs
+AUCUNS
+AUCUNS
 NON_ACTIF NON_ACTIF ACTIF ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
