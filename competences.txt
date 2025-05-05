@@ -93,7 +93,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Bouclier d'Epines
 Sur moi-même, applique un effet d'épines et gagne 200% de la défense en barrière.
 4
-mult stat cible
+0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -133,7 +133,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Rage
 Sur tout les alliés, leur applique un effet de silence et de confusion, augmente leur taux de coups critique 6 fois, et leur attaque 4 fois.
 6
-mult stat cible
+0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -193,7 +193,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Concoction Spéciale
 Sur moi-même, augmente mon taux de coups critiques, mon attaque 2 fois et mon agilité 3 fois.
 4
-mult stat cible
+0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -245,7 +245,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Flames Guérisseuses
 Sur tout les alliés, soigne 20% de leurs pvs max, augmente leur taux de coups critiques, leur attaque, leur agilité et leur défense.
 5
-mult stat cible
+0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -253,7 +253,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Racines Amères
 Sur tout les alliés, leur retire 2 effets néfastes, augmente leur taux de coups critiques, et leur agilité 3 fois.
 4
-mult stat cible
+0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -261,7 +261,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Concoction Secrète
 Sur tout les alliés, augmente leur vitesse et diminue le temps de rechargement de leurs compétences de 2 tours.
 8
-mult stat cible
+0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -269,7 +269,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Barrière d'Eau
 Sur tout les alliés, leur applique 100% de ma défense en une barrière.
 2
-mult stat cible
+0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -277,7 +277,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Puissance de l'Eau
 Sur tout les alliés, soigne 20% de leurs pvs max, et augmente leur défense 2 fois.
 4
-mult stat cible
+0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -305,7 +305,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Potion Médicinale
 Sur un allié, soigne 20% de ses pvs max, lui retire 1 effet néfaste, et lui applique un effet d'immunité.
 2
-mult stat cible
+0.0 ATTAQUE ALLIE
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -313,7 +313,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Gaz Guérisseur
 Sur tout les alliés, soigne 20% de leurs pvs max, leur retire 3 effets néfastes, et leur applique un effet d'immunité.
 4
-mult stat cible
+0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -325,7 +325,7 @@ mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
-mult stat cible
+0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
