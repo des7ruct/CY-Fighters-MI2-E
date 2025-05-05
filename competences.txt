@@ -113,11 +113,11 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Tourbillon Gelé
 Inflige 50% de l'attaque sur tout les ennemis, puis les gèles 2 fois.
 4
-mult stat cible
+0.5 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
-mult stat cible
+0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -125,7 +125,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Violence
 Inflige 200% de l'attaque sur un ennemi.
 3
-mult stat cible
+2.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -141,11 +141,11 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Liane Géante
 Inflige 125% de l'attaque sur un ennemi, puis l'empoisonne, diminue sa défense et son attaque.
 3
-mult stat cible
+1.25 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
-mult stat cible
+0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -153,11 +153,11 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Piège de Lianes
 Inflige 75% de l'attaque sur tout les ennemis, puis diminue leur vitesse et leur agilité.
 5
-mult stat cible
+0.75 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
-mult stat cible
+0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -165,11 +165,11 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Goutte d'Eau Supersonique
 Inflige 300% de l'attaque sur un ennemi, puis diminue son agilité 2 fois.
 3
-mult stat cible
+3.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
-mult stat cible
+0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -177,7 +177,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Absorption d'Humidité
 Sur tout les ennemis, leur applique un effet de silence, diminue leur attaque et leur vitesse.
 6
-mult stat cible
+0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -185,7 +185,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Lancer de Kunai
 Inflige 150% de l'attaque sur un ennemi, moins la cible à de pvs, plus les dégâts sont importants.
 1
-mult stat cible
+1.5 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -201,7 +201,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Sabre Vampirique
 Inflige 200% de l'attaque sur un ennemi, vampirisme.
 2
-mult stat cible
+2.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -209,7 +209,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Poison Mortel
 Sur un ennemi, l'empoisonne 5 fois et lui retire 100% de stamina.
 5
-mult stat cible
+0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -217,11 +217,11 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Parchemin de Gel
 Inflige 125% de l'attaque sur un ennemi, puis le gèle 3 fois.
 3
-mult stat cible
+1.25 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
-mult stat cible
+0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -229,7 +229,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Brise Glace
 Inflige 200% de l'attaque sur un ennemi, ignore la défense si la cible est gelée.
 6
-mult stat cible
+2.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -237,7 +237,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Flames Pourpres
 Sur un ennemi, le brûle, diminue sa défense et son attaque.
 3
-mult stat cible
+0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -285,11 +285,11 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Boule de Feu
 Inflige 125% de l'attaque sur un ennemi, puis le brûle.
 1
-mult stat cible
+1.25 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
-mult stat cible
+0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -297,7 +297,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Tempête de Flammes
 Inflige 35% de l'attaque sur tout les ennemis, pour chaque ennemi les dégâts sont multipliés par le nombre d'effets néfastes sur lui.
 6
-0.35 ATTAQUE cible
+0.35 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
