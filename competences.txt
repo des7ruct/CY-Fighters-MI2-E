@@ -188,6 +188,7 @@ Inflige 150% de l'attaque sur un ennemi, moins la cible à de pvs, plus les dég
 1.5 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Concoction Spéciale
@@ -204,6 +205,7 @@ Inflige 200% de l'attaque sur un ennemi, vampirisme.
 2.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
+NON_ACTIF ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Poison Mortel
@@ -212,7 +214,7 @@ Sur un ennemi, l'empoisonne 5 fois et lui retire 100% de stamina.
 0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 0.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Parchemin de Gel
 Inflige 125% de l'attaque sur un ennemi, puis le gèle 3 fois.
@@ -232,7 +234,7 @@ Inflige 200% de l'attaque sur un ennemi, ignore la défense si la cible est gel�
 2.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 EFFET NON_ACTIF NON_ACTIF
 
 Flames Pourpres
 Sur un ennemi, le brûle, diminue sa défense et son attaque.
@@ -248,7 +250,7 @@ Sur tout les alliés, soigne 20% de leurs pvs max, augmente leur taux de coups c
 0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Racines Amères
 Sur tout les alliés, leur retire 2 effets néfastes, augmente leur taux de coups critiques, et leur agilité 3 fois.
@@ -256,7 +258,7 @@ Sur tout les alliés, leur retire 2 effets néfastes, augmente leur taux de coup
 0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 2 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Concoction Secrète
 Sur tout les alliés, augmente leur vitesse et diminue le temps de rechargement de leurs compétences de 2 tours.
@@ -264,7 +266,7 @@ Sur tout les alliés, augmente leur vitesse et diminue le temps de rechargement 
 0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 2 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Barrière d'Eau
 Sur tout les alliés, leur applique 100% de ma défense en une barrière.
@@ -272,7 +274,7 @@ Sur tout les alliés, leur applique 100% de ma défense en une barrière.
 0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 1.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Puissance de l'Eau
 Sur tout les alliés, soigne 20% de leurs pvs max, et augmente leur défense 2 fois.
@@ -280,7 +282,7 @@ Sur tout les alliés, soigne 20% de leurs pvs max, et augmente leur défense 2 f
 0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Boule de Feu
 Inflige 125% de l'attaque sur un ennemi, puis le brûle.
@@ -300,7 +302,7 @@ Inflige 35% de l'attaque sur tout les ennemis, pour chaque ennemi les dégâts s
 0.35 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF ACTIF NON_ACTIF ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Potion Médicinale
 Sur un allié, soigne 20% de ses pvs max, lui retire 1 effet néfaste, et lui applique un effet d'immunité.
