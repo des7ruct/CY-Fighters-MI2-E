@@ -1,5 +1,5 @@
 Colère du Dragon
-Inflige sur un ennemi 150% de l'attaque, 1 effet de flamme, et baisse sa défense.
+Inflige sur un ennemi 150% de l'attaque, applique un effet de flamme, baisse la défense.
 2
 1.5 ATTAQUE ENNEMI
 AUCUNS
@@ -148,7 +148,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Lancer de Kunai
 description
-cd
+1
 mult stat cible
 effets positifs
 effets négatifs
@@ -156,7 +156,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Concoction Spéciale
 description
-cd
+4
 mult stat cible
 effets positifs
 effets négatifs
@@ -164,7 +164,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Sabre Vampirique
 description
-cd
+2
 mult stat cible
 effets positifs
 effets négatifs
@@ -172,7 +172,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Poison Mortel
 description
-cd
+5
 mult stat cible
 effets positifs
 effets négatifs
@@ -180,111 +180,111 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Parchemin de Gel
 description
-cd
+3
 mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Brise Glace
-description
-cd
+Inflige 200% de l'attaque sur un ennemi, ignore la défense si la cible est gelée.
+6
 mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Flames Pourpres
-description
-cd
+Sur un ennemi, applique un effet de flammes, baisse sa défense, baisse son attaque.
+3
 mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Flames Guérisseuses
-description
-cd
+Sur tout les alliés, soigne 20% des pvs max, augmente le taux de coups critiques, augmente l'attaque, augmente l'agilité, augmente la défense.
+5
 mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Racines Amères
-description
-cd
+Sur tout les alliés, retire 2 effets néfastes, augmente l'agilité 3 fois, augmente le taux de coups critiques.
+4
 mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Concoction Secrète
-description
-cd
+Sur tout les alliés, augmente la vitesse, réduit le temps de rechargement des compétences de 2 tours.
+8
 mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Barrière d'Eau
-description
-cd
+Sur tout les alliés, applique 100% de la défense en une barrière.
+2
 mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Puissance de l'Eau
-description
-cd
+Sur tout les alliés, soigne 20% des pvs max, augmente la défense 2 fois.
+4
 mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Boule de Feu
-description
-cd
+Inflige sur un ennemi 125% de l'attaque, applique un effet de flammes.
+1
 mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Tempête de Flammes
-description
-cd
+Inflige sur tout les ennemis 35% de l'attaque, pour chaque ennemi les dégâts sont multipliés par le nombre d'effets néfastes sur lui.
+6
 mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Potion Médicinale
-description
-cd
+Sur un allié, soigne 20% des pvs max, retire 1 effet néfaste, applique un effet d'immunité.
+2
 mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Gaz Guérisseur
-description
-cd
+Sur tout les alliés, soigne 20% des pvs max, retire 3 effets néfastes, applique un effet d'immunité.
+4
 mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Eclair
-description
-cd
+Inflige sur un ennemi 175% de l'attaque, gagne un effet d'immunité.
+3
 mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Ragnarok
-description
-cd
+Inflige sur tout les ennemis 25% de l'attaque, détruit les pvs max par rapport aux dégâts infligés.
+6
 mult stat cible
 effets positifs
 effets négatifs
