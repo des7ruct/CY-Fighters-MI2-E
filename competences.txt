@@ -1,5 +1,5 @@
 Colère du Dragon
-Inflige 150% de l'attaque sur un ennemi, applique un effet de flamme, baisse la défense.
+Inflige 150% de l'attaque sur un ennemi, applique un effet de flamme et baisse la défense.
 2
 1.5 ATTAQUE ENNEMI
 AUCUNS
@@ -39,14 +39,14 @@ AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF PLUS MOI
 
 Rage du Tsunami
-Inflige 25% des pvs courants sur un ennemi, gagne un effet d'immunité.
+Inflige 25% des pvs courants sur un ennemi, puis gagne un effet d'immunité.
 5
-0.0 ATTAQUE MOI
-IMMUNITE
-AUCUNS
-NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.25 PVSCOURANTS ENNEMI
 AUCUNS
+AUCUNS
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF NON_ACTIF NON_ACTIF
+0.0 ATTAQUE MOI
+IMMUNITE
 AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
