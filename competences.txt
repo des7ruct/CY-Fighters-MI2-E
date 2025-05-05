@@ -117,6 +117,10 @@ mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Violence
 Inflige 200% de l'attaque sur un ennemi.
@@ -141,6 +145,10 @@ mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Piège de Lianes
 Inflige 75% de l'attaque sur tout les ennemis, puis diminue leur vitesse et leur agilité.
@@ -149,10 +157,18 @@ mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Goutte d'Eau Supersonique
 Inflige 300% de l'attaque sur un ennemi, puis diminue son agilité 2 fois.
 3
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 mult stat cible
 effets positifs
 effets négatifs
@@ -167,7 +183,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Lancer de Kunai
-Inflige 150% de l'attaque sur un ennemi.
+Inflige 150% de l'attaque sur un ennemi, moins la cible à de pvs, plus les dégâts sont importants.
 1
 mult stat cible
 effets positifs
@@ -201,6 +217,10 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Parchemin de Gel
 Inflige 125% de l'attaque sur un ennemi, puis le gèle 3 fois.
 3
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 mult stat cible
 effets positifs
 effets négatifs
@@ -269,6 +289,10 @@ mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Tempête de Flammes
 Inflige 35% de l'attaque sur tout les ennemis, pour chaque ennemi les dégâts sont multipliés par le nombre d'effets néfastes sur lui.
@@ -297,6 +321,10 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Eclair
 Inflige 175% de l'attaque sur un ennemi, puis applique un effet d'immunité sur moi-même.
 3
+mult stat cible
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 mult stat cible
 effets positifs
 effets négatifs
