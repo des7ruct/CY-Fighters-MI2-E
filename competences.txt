@@ -139,7 +139,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Absorption d'Humidité
-description
+Sur tout les ennemis, applique un effet de silence, baisse l'attaque, baisse la vitesse.
 6
 mult stat cible
 effets positifs
@@ -147,7 +147,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Lancer de Kunai
-description
+Inflige 150% de l'attaque sur un ennemi.
 1
 mult stat cible
 effets positifs
@@ -155,7 +155,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Concoction Spéciale
-description
+Sur moi-même, augmente le taux de coups critiques, augmente l'attaque 2 fois, augmente l'agilité 3 fois.
 4
 mult stat cible
 effets positifs
@@ -163,7 +163,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Sabre Vampirique
-description
+Inflige 200% de l'attaque sur un ennemi, vampirisme.
 2
 mult stat cible
 effets positifs
@@ -171,7 +171,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Poison Mortel
-description
+Sur un ennemi, applique 5 effets de poison, retire 100% du stamina.
 5
 mult stat cible
 effets positifs
@@ -179,7 +179,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Parchemin de Gel
-description
+Inflige 125% de l'attaque sur un ennemi, applique 3 effets de gel.
 3
 mult stat cible
 effets positifs
