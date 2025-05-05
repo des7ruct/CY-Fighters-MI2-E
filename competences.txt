@@ -1,5 +1,5 @@
 Colère du Dragon
-Inflige 150% de l'attaque sur un ennemi, applique un effet de flamme et baisse la défense.
+Inflige 150% de l'attaque sur un ennemi, puis le brûle et diminue sa défense.
 2
 1.5 ATTAQUE ENNEMI
 AUCUNS
@@ -7,7 +7,7 @@ FLAMMES DIM_DEFENSE
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Cyclone du Dragon
-Inflige 35% de l'attaque sur tout les ennemis, retire 30% de stamina.
+Inflige 35% de l'attaque sur tout les ennemis, puis leur retire 30% de stamina.
 3
 0.35 ATTAQUE ENNEMI
 AUCUNS
@@ -15,7 +15,7 @@ AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 0.7 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Feuille Volante
-Inflige 75% de l'attaque sur un ennemi, plus vos pvs sont bas plus la défense est ignorée, retire 10% de stamina.
+Inflige 75% de l'attaque sur un ennemi, plus vos pvs sont bas plus la défense est ignorée, puis lui retire 10% de stamina.
 1
 0.75 ATTAQUE ENNEMI
 AUCUNS
@@ -39,7 +39,7 @@ AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF PLUS MOI
 
 Rage du Tsunami
-Inflige 25% des pvs courants sur un ennemi, puis gagne un effet d'immunité.
+Inflige 25% des pvs courants sur un ennemi, puis applique un effet d'immunité sur moi-même.
 5
 0.25 PVSCOURANTS ENNEMI
 AUCUNS
@@ -51,7 +51,7 @@ AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Marteau Brûlant
-Inflige 75% de l'attaque sur un ennemi, applique 2 effets de flammes.
+Inflige 75% de l'attaque sur un ennemi, puis le brûle 2 fois.
 1
 mult stat cible
 effets positifs
@@ -60,14 +60,14 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Bouclier de Flammes
 Sur moi-même, applique une barrière pour 200% de la défense, puis inflige 50% de l'attaque sur la cible et l'étourdit.
-4
+5
 mult stat cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Marteau Pointu
-Inflige 150% de l'attaque sur un ennemi, applique un effet de poison.
+Inflige 150% de l'attaque sur un ennemi, puis l'empoisonne.
 2
 mult stat cible
 effets positifs
@@ -75,7 +75,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Bouclier d'Epines
-Sur moi-même, applique un effet d'épines, gagne 200% de la défense en barrière.
+Sur moi-même, applique un effet d'épines et gagne 200% de la défense en barrière.
 4
 mult stat cible
 effets positifs
@@ -83,7 +83,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Vol de Force Vitale
-Inflige 75% de l'attaque sur un ennemi, baisse l'attaque, vampirisme, augmente mon attaque.
+Inflige 75% de l'attaque sur un ennemi, puis diminue son attaque et augmente mon attaque, vampirisme.
 3
 mult stat cible
 effets positifs
@@ -91,7 +91,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Tourbillon Gelé
-Inflige 50% de l'attaque sur tout les ennemis, applique 2 effets de gel.
+Inflige 50% de l'attaque sur tout les ennemis, puis les gèles 2 fois.
 4
 mult stat cible
 effets positifs
@@ -107,7 +107,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Rage
-Sur tout les alliés, applique un effet de silence, applique un effet de confusion, augmente le taux de coups critique 6 fois, augmente l'attaque 4 fois.
+Sur tout les alliés, leur applique un effet de silence et de confusion, augmente leur taux de coups critique 6 fois, et leur attaque 4 fois.
 6
 mult stat cible
 effets positifs
@@ -115,7 +115,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Liane Géante
-Inflige 125% de l'attaque sur un ennemi, applique un effet de poison, baisse la défense, baisse l'attaque.
+Inflige 125% de l'attaque sur un ennemi, puis l'empoisonne, diminue sa défense et son attaque.
 3
 mult stat cible
 effets positifs
@@ -123,7 +123,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Piège de Lianes
-Inflige 75% de l'attaque sur tout les ennemis, baisse la vitesse, baisse l'agilité.
+Inflige 75% de l'attaque sur tout les ennemis, puis diminue leur vitesse et leur agilité.
 5
 mult stat cible
 effets positifs
@@ -131,7 +131,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Goutte d'Eau Supersonique
-Inflige 300% de l'attaque sur un ennemi, baisse l'agilité 2 fois.
+Inflige 300% de l'attaque sur un ennemi, puis diminue son agilité 2 fois.
 3
 mult stat cible
 effets positifs
@@ -139,7 +139,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Absorption d'Humidité
-Sur tout les ennemis, applique un effet de silence, baisse l'attaque, baisse la vitesse.
+Sur tout les ennemis, leur applique un effet de silence, diminue leur attaque et leur vitesse.
 6
 mult stat cible
 effets positifs
@@ -155,7 +155,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Concoction Spéciale
-Sur moi-même, augmente le taux de coups critiques, augmente l'attaque 2 fois, augmente l'agilité 3 fois.
+Sur moi-même, augmente mon taux de coups critiques, mon attaque 2 fois et mon agilité 3 fois.
 4
 mult stat cible
 effets positifs
@@ -171,7 +171,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Poison Mortel
-Sur un ennemi, applique 5 effets de poison, retire 100% du stamina.
+Sur un ennemi, l'empoisonne 5 fois et lui retire 100% de stamina.
 5
 mult stat cible
 effets positifs
@@ -179,7 +179,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Parchemin de Gel
-Inflige 125% de l'attaque sur un ennemi, applique 3 effets de gel.
+Inflige 125% de l'attaque sur un ennemi, puis le gèle 3 fois.
 3
 mult stat cible
 effets positifs
@@ -195,7 +195,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Flames Pourpres
-Sur un ennemi, applique un effet de flammes, baisse sa défense, baisse son attaque.
+Sur un ennemi, le brûle, diminue sa défense et son attaque.
 3
 mult stat cible
 effets positifs
@@ -203,7 +203,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Flames Guérisseuses
-Sur tout les alliés, soigne 20% des pvs max, augmente le taux de coups critiques, augmente l'attaque, augmente l'agilité, augmente la défense.
+Sur tout les alliés, soigne 20% de leurs pvs max, augmente leur taux de coups critiques, leur attaque, leur agilité et leur défense.
 5
 mult stat cible
 effets positifs
@@ -211,7 +211,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Racines Amères
-Sur tout les alliés, retire 2 effets néfastes, augmente l'agilité 3 fois, augmente le taux de coups critiques.
+Sur tout les alliés, leur retire 2 effets néfastes, augmente leur taux de coups critiques, et leur agilité 3 fois.
 4
 mult stat cible
 effets positifs
@@ -219,7 +219,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Concoction Secrète
-Sur tout les alliés, augmente la vitesse, réduit le temps de rechargement des compétences de 2 tours.
+Sur tout les alliés, augmente leur vitesse et diminue le temps de rechargement de leurs compétences de 2 tours.
 8
 mult stat cible
 effets positifs
@@ -227,7 +227,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Barrière d'Eau
-Sur tout les alliés, applique 100% de la défense en une barrière.
+Sur tout les alliés, leur applique 100% de ma défense en une barrière.
 2
 mult stat cible
 effets positifs
@@ -235,7 +235,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Puissance de l'Eau
-Sur tout les alliés, soigne 20% des pvs max, augmente la défense 2 fois.
+Sur tout les alliés, soigne 20% de leurs pvs max, et augmente leur défense 2 fois.
 4
 mult stat cible
 effets positifs
@@ -243,7 +243,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Boule de Feu
-Inflige 125% de l'attaque sur un ennemi, applique un effet de flammes.
+Inflige 125% de l'attaque sur un ennemi, puis le brûle.
 1
 mult stat cible
 effets positifs
@@ -259,7 +259,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Potion Médicinale
-Sur un allié, soigne 20% des pvs max, retire 1 effet néfaste, applique un effet d'immunité.
+Sur un allié, soigne 20% de ses pvs max, lui retire 1 effet néfaste, et lui applique un effet d'immunité.
 2
 mult stat cible
 effets positifs
@@ -267,7 +267,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Gaz Guérisseur
-Sur tout les alliés, soigne 20% des pvs max, retire 3 effets néfastes, applique un effet d'immunité.
+Sur tout les alliés, soigne 20% de leurs pvs max, leur retire 3 effets néfastes, et leur applique un effet d'immunité.
 4
 mult stat cible
 effets positifs
@@ -275,7 +275,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Eclair
-Inflige 175% de l'attaque sur un ennemi, gagne un effet d'immunité.
+Inflige 175% de l'attaque sur un ennemi, puis applique un effet d'immunité sur moi-même.
 3
 mult stat cible
 effets positifs
@@ -283,7 +283,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Ragnarok
-Inflige 25% de l'attaque sur tout les ennemis, détruit les pvs max par rapport aux dégâts infligés.
+Inflige 25% de l'attaque sur tout les ennemis, détruit leurs pvs max par rapport aux dégâts infligés.
 6
 mult stat cible
 effets positifs
