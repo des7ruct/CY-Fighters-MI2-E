@@ -60,11 +60,11 @@ Inflige 75% de l'attaque sur un ennemi, puis le brûle 2 fois.
 0.75 ATTAQUE ENNEMI
 AUCUNS
 AUCUNS
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
 AUCUNS
 FLAMMES FLAMMES
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Bouclier de Flammes
 Inflige 50% de l'attaque sur la cible et l'étourdit, puis applique une barrière sur moi même pour 200% de la défense.
@@ -72,7 +72,7 @@ Inflige 50% de l'attaque sur la cible et l'étourdit, puis applique une barrièr
 0.5 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
@@ -84,11 +84,11 @@ Inflige 150% de l'attaque sur un ennemi, puis l'empoisonne.
 1.5 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Bouclier d'Epines
 Sur moi-même, applique un effet d'épines et gagne 200% de la défense en barrière.
@@ -108,7 +108,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Tourbillon Gelé
 Inflige 50% de l'attaque sur tout les ennemis, puis les gèles 2 fois.
@@ -128,7 +128,7 @@ Inflige 200% de l'attaque sur un ennemi.
 2.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Rage
 Sur tout les alliés, leur applique un effet de silence et de confusion, augmente leur taux de coups critique 6 fois, et leur attaque 4 fois.
@@ -144,11 +144,11 @@ Inflige 125% de l'attaque sur un ennemi, puis l'empoisonne, diminue sa défense 
 1.25 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Piège de Lianes
 Inflige 75% de l'attaque sur tout les ennemis, puis diminue leur vitesse et leur agilité.
@@ -168,11 +168,11 @@ Inflige 300% de l'attaque sur un ennemi, puis diminue son agilité 2 fois.
 3.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Absorption d'Humidité
 Sur tout les ennemis, leur applique un effet de silence, diminue leur attaque et leur vitesse.
@@ -196,7 +196,7 @@ Sur moi-même, augmente mon taux de coups critiques, mon attaque 2 fois et mon a
 0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Sabre Vampirique
 Inflige 200% de l'attaque sur un ennemi, vampirisme.
@@ -220,11 +220,11 @@ Inflige 125% de l'attaque sur un ennemi, puis le gèle 3 fois.
 1.25 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Brise Glace
 Inflige 200% de l'attaque sur un ennemi, ignore la défense si la cible est gelée.
@@ -240,7 +240,7 @@ Sur un ennemi, le brûle, diminue sa défense et son attaque.
 0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Flames Guérisseuses
 Sur tout les alliés, soigne 20% de leurs pvs max, augmente leur taux de coups critiques, leur attaque, leur agilité et leur défense.
@@ -288,11 +288,11 @@ Inflige 125% de l'attaque sur un ennemi, puis le brûle.
 1.25 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Tempête de Flammes
 Inflige 35% de l'attaque sur tout les ennemis, pour chaque ennemi les dégâts sont multipliés par le nombre d'effets néfastes sur lui.
@@ -324,11 +324,11 @@ Inflige 175% de l'attaque sur un ennemi, puis applique un effet d'immunité sur 
 1.75 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Ragnarok
 Inflige 25% de l'attaque sur tout les ennemis, détruit leurs pvs max par rapport aux dégâts infligés.
