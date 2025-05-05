@@ -3,6 +3,10 @@ Inflige 150% de l'attaque sur un ennemi, puis le brûle et diminue sa défense.
 2
 1.5 ATTAQUE ENNEMI
 AUCUNS
+AUCUNS
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
+0.0 ATTAQUE ENNEMI
+AUCUNS
 FLAMMES DIM_DEFENSE
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
@@ -53,15 +57,23 @@ NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF NON_ACTIF 
 Marteau Brûlant
 Inflige 75% de l'attaque sur un ennemi, puis le brûle 2 fois.
 1
-mult stat cible
-effets positifs
-effets négatifs
+0.75 ATTAQUE ENNEMI
+AUCUNS
+AUCUNS
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+0.0 ATTAQUE ENNEMI
+AUCUNS
+FLAMMES FLAMMES
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Bouclier de Flammes
-Sur moi-même, applique une barrière pour 200% de la défense, puis inflige 50% de l'attaque sur la cible et l'étourdit.
+Inflige 50% de l'attaque sur la cible et l'étourdit, puis applique une barrière sur moi même pour 200% de la défense.
 5
-mult stat cible
+0.5 ATTAQUE ENNEMI
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -69,7 +81,11 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Marteau Pointu
 Inflige 150% de l'attaque sur un ennemi, puis l'empoisonne.
 2
-mult stat cible
+1.5 ATTAQUE ENNEMI
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -85,7 +101,11 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Vol de Force Vitale
 Inflige 75% de l'attaque sur un ennemi, puis diminue son attaque et augmente mon attaque, vampirisme.
 3
-mult stat cible
+0.75 ATTAQUE ENNEMI
+effets positifs
+effets négatifs
+soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
