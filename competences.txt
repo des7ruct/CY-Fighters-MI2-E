@@ -70,7 +70,7 @@ Bouclier de Flammes
 Inflige 50% de l'attaque sur la cible et l'étourdit, puis applique une barrière sur moi même pour 200% de la défense.
 5
 0.5 ATTAQUE ENNEMI
-effets positifs
+AUCUNS
 effets négatifs
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE MOI
@@ -86,7 +86,7 @@ AUCUNS
 AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
-effets positifs
+AUCUNS
 effets négatifs
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
@@ -95,19 +95,19 @@ Sur moi-même, applique un effet d'épines et gagne 200% de la défense en barri
 4
 0.0 ATTAQUE MOI
 effets positifs
-effets négatifs
+AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 2.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Vol de Force Vitale
 Inflige 75% de l'attaque sur un ennemi, puis diminue son attaque et augmente mon attaque, vampirisme.
 3
 0.75 ATTAQUE ENNEMI
-effets positifs
+AUCUNS
 effets négatifs
 NON_ACTIF ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE MOI
 effets positifs
-effets négatifs
+AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Tourbillon Gelé
@@ -118,7 +118,7 @@ AUCUNS
 AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
-effets positifs
+AUCUNS
 effets négatifs
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
@@ -146,7 +146,7 @@ AUCUNS
 AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
-effets positifs
+AUCUNS
 effets négatifs
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
@@ -158,7 +158,7 @@ AUCUNS
 AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
-effets positifs
+AUCUNS
 effets négatifs
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
@@ -170,7 +170,7 @@ AUCUNS
 AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
-effets positifs
+AUCUNS
 effets négatifs
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
@@ -178,7 +178,7 @@ Absorption d'Humidité
 Sur tout les ennemis, leur applique un effet de silence, diminue leur attaque et leur vitesse.
 6
 0.0 ATTAQUE ENNEMI
-effets positifs
+AUCUNS
 effets négatifs
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
@@ -195,7 +195,7 @@ Sur moi-même, augmente mon taux de coups critiques, mon attaque 2 fois et mon a
 4
 0.0 ATTAQUE MOI
 effets positifs
-effets négatifs
+AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Sabre Vampirique
@@ -210,7 +210,7 @@ Poison Mortel
 Sur un ennemi, l'empoisonne 5 fois et lui retire 100% de stamina.
 5
 0.0 ATTAQUE ENNEMI
-effets positifs
+AUCUNS
 effets négatifs
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 0.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
@@ -222,7 +222,7 @@ AUCUNS
 AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
-effets positifs
+AUCUNS
 effets négatifs
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
@@ -238,7 +238,7 @@ Flames Pourpres
 Sur un ennemi, le brûle, diminue sa défense et son attaque.
 3
 0.0 ATTAQUE ENNEMI
-effets positifs
+AUCUNS
 effets négatifs
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
@@ -247,7 +247,7 @@ Sur tout les alliés, soigne 20% de leurs pvs max, augmente leur taux de coups c
 5
 0.0 ATTAQUE MOI
 effets positifs
-effets négatifs
+AUCUNS
 ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Racines Amères
@@ -255,7 +255,7 @@ Sur tout les alliés, leur retire 2 effets néfastes, augmente leur taux de coup
 4
 0.0 ATTAQUE MOI
 effets positifs
-effets négatifs
+AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 2 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Concoction Secrète
@@ -263,7 +263,7 @@ Sur tout les alliés, augmente leur vitesse et diminue le temps de rechargement 
 8
 0.0 ATTAQUE MOI
 effets positifs
-effets négatifs
+AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 2 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Barrière d'Eau
@@ -279,7 +279,7 @@ Sur tout les alliés, soigne 20% de leurs pvs max, et augmente leur défense 2 f
 4
 0.0 ATTAQUE MOI
 effets positifs
-effets négatifs
+AUCUNS
 ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Boule de Feu
@@ -290,7 +290,7 @@ AUCUNS
 AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
-effets positifs
+AUCUNS
 effets négatifs
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
@@ -307,7 +307,7 @@ Sur un allié, soigne 20% de ses pvs max, lui retire 1 effet néfaste, et lui ap
 2
 0.0 ATTAQUE ALLIE
 effets positifs
-effets négatifs
+AUCUNS
 ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 1 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Gaz Guérisseur
@@ -315,7 +315,7 @@ Sur tout les alliés, soigne 20% de leurs pvs max, leur retire 3 effets néfaste
 4
 0.0 ATTAQUE MOI
 effets positifs
-effets négatifs
+AUCUNS
 ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 3 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Eclair
@@ -327,7 +327,7 @@ AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE MOI
 effets positifs
-effets négatifs
+AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Ragnarok
