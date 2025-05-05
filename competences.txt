@@ -1,5 +1,5 @@
 Colère du Dragon
-Inflige sur un ennemi 150% de l'attaque, applique un effet de flamme, baisse la défense.
+Inflige 150% de l'attaque sur un ennemi, applique un effet de flamme, baisse la défense.
 2
 1.5 ATTAQUE ENNEMI
 AUCUNS
@@ -7,7 +7,7 @@ FLAMMES DIM_DEFENSE
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Cyclone du Dragon
-Inflige sur tout les ennemis 35% de l'attaque, leur retire 30% de stamina.
+Inflige 35% de l'attaque sur tout les ennemis, retire 30% de stamina.
 3
 0.35 ATTAQUE ENNEMI
 AUCUNS
@@ -15,7 +15,7 @@ AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 0.7 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Feuille Volante
-Inflige sur un ennemi 75% de l'attaque, plus vos pvs sont bas plus la défense est ignorée, retire 10% de stamina.
+Inflige 75% de l'attaque sur un ennemi, plus vos pvs sont bas plus la défense est ignorée, retire 10% de stamina.
 1
 0.75 ATTAQUE ENNEMI
 AUCUNS
@@ -23,7 +23,7 @@ AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 0.9 0 STAT NON_ACTIF NON_ACTIF
 
 Feuille Sifflante
-Inflige sur un ennemi 125% de l'attaque, plus vos pvs sont bas plus la défense est ignorée, vampirisme.
+Inflige 125% de l'attaque sur un ennemi, plus vos pvs sont bas plus la défense est ignorée, vampirisme.
 3
 1.25 ATTAQUE ENNEMI
 AUCUNS
@@ -31,7 +31,7 @@ AUCUNS
 NON_ACTIF ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 STAT NON_ACTIF NON_ACTIF
 
 Torrent
-Inflige sur un ennemi 175% de la défense, les dégâts augmentent en fonction de vos pvs restants.
+Inflige 175% de la défense sur un ennemi, les dégâts augmentent en proportion de vos pvs restants.
 2
 1.75 DEFENSE ENNEMI
 AUCUNS
@@ -39,7 +39,7 @@ AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF PLUS MOI
 
 Rage du Tsunami
-Inflige sur un ennemi 25% des pvs courants, gagne un effet d'immunité.
+Inflige 25% des pvs courants sur un ennemi, gagne un effet d'immunité.
 5
 0.0 ATTAQUE MOI
 IMMUNITE
@@ -91,7 +91,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Tourbillon Gelé
-Inflige sur tout les ennemis 50% de l'attaque, applique 2 effets de gel.
+Inflige 50% de l'attaque sur tout les ennemis, applique 2 effets de gel.
 4
 mult stat cible
 effets positifs
@@ -99,7 +99,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Violence
-Inflige sur un ennemi 200% de l'attaque.
+Inflige 200% de l'attaque sur un ennemi.
 3
 mult stat cible
 effets positifs
@@ -243,7 +243,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Boule de Feu
-Inflige sur un ennemi 125% de l'attaque, applique un effet de flammes.
+Inflige 125% de l'attaque sur un ennemi, applique un effet de flammes.
 1
 mult stat cible
 effets positifs
@@ -251,7 +251,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Tempête de Flammes
-Inflige sur tout les ennemis 35% de l'attaque, pour chaque ennemi les dégâts sont multipliés par le nombre d'effets néfastes sur lui.
+Inflige 35% de l'attaque sur tout les ennemis, pour chaque ennemi les dégâts sont multipliés par le nombre d'effets néfastes sur lui.
 6
 mult stat cible
 effets positifs
@@ -275,7 +275,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Eclair
-Inflige sur un ennemi 175% de l'attaque, gagne un effet d'immunité.
+Inflige 175% de l'attaque sur un ennemi, gagne un effet d'immunité.
 3
 mult stat cible
 effets positifs
@@ -283,7 +283,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Ragnarok
-Inflige sur tout les ennemis 25% de l'attaque, détruit les pvs max par rapport aux dégâts infligés.
+Inflige 25% de l'attaque sur tout les ennemis, détruit les pvs max par rapport aux dégâts infligés.
 6
 mult stat cible
 effets positifs
