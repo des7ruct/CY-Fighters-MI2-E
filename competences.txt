@@ -52,7 +52,7 @@ NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF NON_ACTIF 
 
 Marteau Brûlant
 description
-cd
+1
 mult stat cible
 effets positifs
 effets négatifs
@@ -60,7 +60,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Bouclier de Flammes
 description
-cd
+4
 mult stat cible
 effets positifs
 effets négatifs
@@ -68,7 +68,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Marteau Pointu
 description
-cd
+2
 mult stat cible
 effets positifs
 effets négatifs
@@ -76,7 +76,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Bouclier d'Epines
 description
-cd
+4
 mult stat cible
 effets positifs
 effets négatifs
@@ -84,7 +84,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Vol de Force Vitale
 description
-cd
+3
 mult stat cible
 effets positifs
 effets négatifs
@@ -92,7 +92,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Tourbillon Gelé
 description
-cd
+4
 mult stat cible
 effets positifs
 effets négatifs
@@ -100,7 +100,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Violence
 description
-cd
+3
 mult stat cible
 effets positifs
 effets négatifs
@@ -108,7 +108,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Rage
 description
-cd
+6
 mult stat cible
 effets positifs
 effets négatifs
@@ -116,7 +116,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Liane Géante
 description
-cd
+3
 mult stat cible
 effets positifs
 effets négatifs
@@ -124,7 +124,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Piège de Lianes
 description
-cd
+5
 mult stat cible
 effets positifs
 effets négatifs
@@ -132,7 +132,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Goutte d'Eau Supersonique
 description
-cd
+3
 mult stat cible
 effets positifs
 effets négatifs
@@ -140,7 +140,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 
 Absorption d'Humidité
 description
-cd
+6
 mult stat cible
 effets positifs
 effets négatifs
