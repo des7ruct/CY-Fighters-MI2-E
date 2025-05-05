@@ -32,7 +32,7 @@ Inflige 125% de l'attaque sur un ennemi, plus vos pvs sont bas plus la défense 
 1.25 ATTAQUE ENNEMI
 AUCUNS
 AUCUNS
-NON_ACTIF ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 STAT NON_ACTIF NON_ACTIF
+NON_ACTIF ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 STAT NON_ACTIF NON_ACTIF
 
 Torrent
 Inflige 175% de la défense sur un ennemi, les dégâts augmentent en proportion de vos pvs restants.
@@ -40,7 +40,7 @@ Inflige 175% de la défense sur un ennemi, les dégâts augmentent en proportion
 1.75 DEFENSE ENNEMI
 AUCUNS
 AUCUNS
-NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF PLUS MOI
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF PLUS MOI
 
 Rage du Tsunami
 Inflige 25% des pvs courants sur un ennemi, puis applique un effet d'immunité sur moi-même.
@@ -48,11 +48,11 @@ Inflige 25% des pvs courants sur un ennemi, puis applique un effet d'immunité s
 0.25 PVSCOURANTS ENNEMI
 AUCUNS
 AUCUNS
-NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF NON_ACTIF NON_ACTIF
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE MOI
 IMMUNITE
 AUCUNS
-NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF NON_ACTIF NON_ACTIF
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Marteau Brûlant
 Inflige 75% de l'attaque sur un ennemi, puis le brûle 2 fois.
@@ -76,7 +76,7 @@ NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTI
 0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 2.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Marteau Pointu
 Inflige 150% de l'attaque sur un ennemi, puis l'empoisonne.
@@ -96,7 +96,7 @@ Sur moi-même, applique un effet d'épines et gagne 200% de la défense en barri
 0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 2.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Vol de Force Vitale
 Inflige 75% de l'attaque sur un ennemi, puis diminue son attaque et augmente mon attaque, vampirisme.
@@ -104,7 +104,7 @@ Inflige 75% de l'attaque sur un ennemi, puis diminue son attaque et augmente mon
 0.75 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
@@ -116,11 +116,11 @@ Inflige 50% de l'attaque sur tout les ennemis, puis les gèles 2 fois.
 0.5 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Violence
 Inflige 200% de l'attaque sur un ennemi.
@@ -136,7 +136,7 @@ Sur tout les alliés, leur applique un effet de silence et de confusion, augment
 0.0 ATTAQUE MOI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Liane Géante
 Inflige 125% de l'attaque sur un ennemi, puis l'empoisonne, diminue sa défense et son attaque.
@@ -156,11 +156,11 @@ Inflige 75% de l'attaque sur tout les ennemis, puis diminue leur vitesse et leur
 0.75 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Goutte d'Eau Supersonique
 Inflige 300% de l'attaque sur un ennemi, puis diminue son agilité 2 fois.
@@ -180,7 +180,7 @@ Sur tout les ennemis, leur applique un effet de silence, diminue leur attaque et
 0.0 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Lancer de Kunai
 Inflige 150% de l'attaque sur un ennemi, moins la cible à de pvs, plus les dégâts sont importants.
@@ -188,8 +188,7 @@ Inflige 150% de l'attaque sur un ennemi, moins la cible à de pvs, plus les dég
 1.5 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
-NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
+NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF MOINS ENNEMI
 
 Concoction Spéciale
 Sur moi-même, augmente mon taux de coups critiques, mon attaque 2 fois et mon agilité 3 fois.
@@ -206,7 +205,6 @@ Inflige 200% de l'attaque sur un ennemi, vampirisme.
 effets positifs
 effets négatifs
 NON_ACTIF ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
-soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Poison Mortel
 Sur un ennemi, l'empoisonne 5 fois et lui retire 100% de stamina.
