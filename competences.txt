@@ -297,7 +297,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Tempête de Flammes
 Inflige 35% de l'attaque sur tout les ennemis, pour chaque ennemi les dégâts sont multipliés par le nombre d'effets néfastes sur lui.
 6
-mult stat cible
+0.35 ATTAQUE cible
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -321,7 +321,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Eclair
 Inflige 175% de l'attaque sur un ennemi, puis applique un effet d'immunité sur moi-même.
 3
-mult stat cible
+1.75 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
@@ -333,7 +333,7 @@ soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef p
 Ragnarok
 Inflige 25% de l'attaque sur tout les ennemis, détruit leurs pvs max par rapport aux dégâts infligés.
 6
-mult stat cible
+0.25 ATTAQUE ENNEMI
 effets positifs
 effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
