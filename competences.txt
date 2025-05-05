@@ -51,7 +51,7 @@ AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Marteau Brûlant
-description
+Inflige 75% de l'attaque sur un ennemi, applique 2 effets de flammes.
 1
 mult stat cible
 effets positifs
@@ -59,7 +59,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Bouclier de Flammes
-description
+Sur moi-même, applique une barrière pour 200% de la défense, puis inflige 50% de l'attaque sur la cible et l'étourdit.
 4
 mult stat cible
 effets positifs
@@ -67,7 +67,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Marteau Pointu
-description
+Inflige 150% de l'attaque sur un ennemi, applique un effet de poison.
 2
 mult stat cible
 effets positifs
@@ -75,7 +75,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Bouclier d'Epines
-description
+Sur moi-même, applique un effet d'épines, gagne 200% de la défense en barrière.
 4
 mult stat cible
 effets positifs
@@ -83,7 +83,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Vol de Force Vitale
-description
+Inflige 75% de l'attaque sur un ennemi, baisse l'attaque, vampirisme, augmente mon attaque.
 3
 mult stat cible
 effets positifs
@@ -91,7 +91,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Tourbillon Gelé
-description
+Inflige sur tout les ennemis 50% de l'attaque, applique 2 effets de gel.
 4
 mult stat cible
 effets positifs
@@ -99,7 +99,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Violence
-description
+Inflige sur un ennemi 200% de l'attaque.
 3
 mult stat cible
 effets positifs
@@ -107,7 +107,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Rage
-description
+Sur tout les alliés, applique un effet de silence, applique un effet de confusion, augmente le taux de coups critique 6 fois, augmente l'attaque 4 fois.
 6
 mult stat cible
 effets positifs
@@ -115,7 +115,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Liane Géante
-description
+Inflige 125% de l'attaque sur un ennemi, applique un effet de poison, baisse la défense, baisse l'attaque.
 3
 mult stat cible
 effets positifs
@@ -123,7 +123,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Piège de Lianes
-description
+Inflige 75% de l'attaque sur tout les ennemis, baisse la vitesse, baisse l'agilité.
 5
 mult stat cible
 effets positifs
@@ -131,7 +131,7 @@ effets négatifs
 soin vamp aoe destr debuff_mult barriere redcd redstamina rednefaste ignoredef pvsrestantstype pvsrestantscible
 
 Goutte d'Eau Supersonique
-description
+Inflige 300% de l'attaque sur un ennemi, baisse l'agilité 2 fois.
 3
 mult stat cible
 effets positifs
