@@ -41,6 +41,7 @@
   /* Constantes utilisées pour les phases */
   #define MOI 1
   #define ENNEMI 2
+  #define ALLIE 3
 
   #define ATTAQUE 1
   #define DEFENSE 2
