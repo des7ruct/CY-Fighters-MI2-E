@@ -116,7 +116,7 @@
     int vampirisme ;
     int aire ;
     int destruction ;
-    int debuff_multiplicateur ;
+    int nefastes_multiplicateur ;
 
     /* effets complexes */
     float barriere ;
