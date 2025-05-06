@@ -437,7 +437,7 @@ int choix_combattant_correct(Combattant* combattants, int choix) {
 
   else if (combattants == NULL) {
     printf("Erreur dans la fonction choix_combattant_correct avec la liste des combattants.\n") ; 
-    exit(1) ;
+    exit(2) ;
   }
 
   else {
@@ -449,4 +449,24 @@ int choix_combattant_correct(Combattant* combattants, int choix) {
       return 0 ;
     }
   } 
+}
+
+int mettre_dans_equipe(Combattant* tab_combattants, Combattant* equipe, int choix) {
+  if (choix < 0) {
+    printf("Erreur dans la fonction mettre_dans_equipe, le choix est incorrect.\n") ;
+    exit(1) ;  
+  }
+
+  else if ((tab_combattants == NULL) || (equipe == NULL)) {
+    printf("Erreur dans la fonction mettre_dans_equipe avec les listes de combattants.\n") ;
+    exit(2) ;
+  }
+
+  else {
+    for (int i = 0 ; i <= 8 ; i++) {
+      if (((equipe + i) -> nom) == "NON_DISPO") {
+        (equipe + i) = 
+      }
+    }
+  }
 }
