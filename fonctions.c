@@ -389,34 +389,64 @@ Combattant* RemplirTabCombattant(){
 }
 
 
-int initialisation_equipes(Equipe equipe_a, Equipe equipe_b) {
+int initialisation_equipes(Combattant* equipe_a, Combattant* equipe_b) {
   /*
-  Prend deux équipes et initialise tout leurs combattants comme "NON_DISPO"
+  Prend deux listes de combattants et initialise tout les combattants comme "NON_DISPO"
   Renvoie 0 si l'opération réussie.
   */
 
   int i ;
   char* chaine = NULL ;
 
-  if ((equipe_a.combattants == NULL) || (equipe_b.combattants == NULL)) {
-    printf("Erreur dans la fonction initialisation_equipes avec la liste combattants des deux équipes.\n") ;
+  chaine = malloc(V) ;
+
+  if ((equipe_a == NULL) || (equipe_b.combattants == NULL)) {
+    printf("Erreur dans la fonction initialisation_equipes avec les listes combattants.\n") ;
     exit(1) ;
   }
-    
-  chaine = malloc(V) ;
-  if (chaine == NULL) {
+      
+  else if (chaine == NULL) {
     printf("Erreur dans fonction initialisation_equipes, l'allocation a échouée\n") ;
     exit(2) ;
   }
-  *chaine = "NON_DISPO" ;
+
+  else {
+    *chaine = "NON_DISPO" ;
       
-  for (i = 0 ; i < 8 ; i++) {
-    (equipe_a.combattants + i).nom = chaine ;
+    for (i = 0 ; i < 8 ; i++) {
+      (combattants + i).nom = chaine ;
+    }
+
+    for (i = 0 ; i < 8 ; i++) {
+      (combattants + i).nom = chaine ;
+    }
+
+    return 0 ;
+  }
+}
+
+int choix_combattant_correct(Combattant* combattants, int choix) {
+  /*
+  Retourne 0 si le combattant d'indice choix est dispo, 1 sinon.
+  */
+
+  if (choix < 0) {
+    printf("Erreur dans la fonction choix_combattant_correct avec la variable choix.\n") ;
+    exit(1) ;
   }
 
-  for (i = 0 ; i < 8 ; i++) {
-    (equipe_b.combattants + i).nom = chaine ;
+  else if (combattants == NULL) {
+    printf("Erreur dans la fonction choix_combattant_correct avec la liste des combattants.\n") ; 
+    exit(1) ;
   }
 
-  return 0 ;
+  else {
+    if (((combattants + choix) -> nom) == "NON_DISPO") {
+      return 1 ;
+    }
+
+    else {
+      return 0 ;
+    }
+  } 
 }
