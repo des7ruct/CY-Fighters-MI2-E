@@ -17,6 +17,9 @@
   /* Pourcentage initial de bonus de type */
   #define TAUX_TYPE 0.25
 
+  /* Pourcentage initial d'application des effets négatifs */
+  #define APPLICATION_EFFETS 75
+
   /* Pourcentage initial de coup critique */
   #define TAUX_CRITIQUE 15
 
