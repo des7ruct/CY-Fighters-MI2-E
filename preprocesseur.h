@@ -42,7 +42,7 @@
   #define VITESSE_BASE 200
 
   //Constante utilisé pour les fgets//
-  #define V 100
+  #define V 1000
 
   /* Constantes utilisées pour les phases */
   #define MOI 1
