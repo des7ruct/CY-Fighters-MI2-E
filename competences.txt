@@ -1,5 +1,5 @@
-Colère du Dragon
-Inflige 150% de l'attaque sur un ennemi, puis le brûle et diminue sa défense.
+Colere du Dragon
+Inflige 150% de l'attaque sur un ennemi, puis le brule et diminue sa defense.
 2
 1.5 ATTAQUE ENNEMI
 AUCUNS
@@ -19,7 +19,7 @@ AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 0.7 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Feuille Volante
-Inflige 75% de l'attaque sur un ennemi, plus vos pvs sont bas plus la défense est ignorée, puis lui retire 10% de stamina.
+Inflige 75% de l'attaque sur un ennemi, plus vos pvs sont bas plus la defense est ignoree, puis lui retire 10% de stamina.
 1
 0.75 ATTAQUE ENNEMI
 AUCUNS
@@ -27,7 +27,7 @@ AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 0.9 0 STAT NON_ACTIF NON_ACTIF
 
 Feuille Sifflante
-Inflige 125% de l'attaque sur un ennemi, plus vos pvs sont bas plus la défense est ignorée, vampirisme.
+Inflige 125% de l'attaque sur un ennemi, plus vos pvs sont bas plus la defense est ignorée, vampirisme.
 3
 1.25 ATTAQUE ENNEMI
 AUCUNS
@@ -35,7 +35,7 @@ AUCUNS
 NON_ACTIF ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 STAT NON_ACTIF NON_ACTIF
 
 Torrent
-Inflige 175% de la défense sur un ennemi, les dégâts augmentent en proportion de vos pvs restants.
+Inflige 175% de la defense sur un ennemi, les degats augmentent en proportion de vos pvs restants.
 2
 1.75 DEFENSE ENNEMI
 AUCUNS
@@ -43,7 +43,7 @@ AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF PLUS MOI
 
 Rage du Tsunami
-Inflige 25% des pvs courants sur un ennemi, puis applique un effet d'immunité sur moi-même.
+Inflige 25% des pvs courants sur un ennemi, puis applique un effet d'immunite sur moi-meme.
 5
 0.25 PVSCOURANTS ENNEMI
 AUCUNS
@@ -54,8 +54,8 @@ IMMUNITE
 AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
-Marteau Brûlant
-Inflige 75% de l'attaque sur un ennemi, puis le brûle 2 fois.
+Marteau Brulant
+Inflige 75% de l'attaque sur un ennemi, puis le brule 2 fois.
 1
 0.75 ATTAQUE ENNEMI
 AUCUNS
@@ -67,7 +67,7 @@ FLAMMES FLAMMES
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Bouclier de Flammes
-Inflige 50% de l'attaque sur la cible et l'étourdit, puis applique une barrière sur moi même pour 200% de la défense.
+Inflige 50% de l'attaque sur la cible et l'etourdit, puis applique une barriere sur moi meme pour 200% de la defense.
 5
 0.5 ATTAQUE ENNEMI
 AUCUNS
@@ -91,7 +91,7 @@ POISON
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Bouclier d'Epines
-Sur moi-même, applique un effet d'épines et gagne 200% de la défense en barrière.
+Sur moi-meme, applique un effet d'epines et gagne 200% de la defense en barriere.
 4
 0.0 ATTAQUE MOI
 EPINES
@@ -110,8 +110,8 @@ AUG_ATTAQUE
 AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
-Tourbillon Gelé
-Inflige 50% de l'attaque sur tout les ennemis, puis les gèles 2 fois.
+Tourbillon Gele
+Inflige 50% de l'attaque sur tout les ennemis, puis les geles 2 fois.
 4
 0.5 ATTAQUE ENNEMI
 AUCUNS
@@ -131,15 +131,15 @@ AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Rage
-Sur tout les alliés, leur applique un effet de silence et de confusion, augmente leur taux de coups critique 6 fois, et leur attaque 4 fois.
+Sur tout les allies, leur applique un effet de silence et de confusion, augmente leur taux de coups critique 6 fois, et leur attaque 4 fois.
 6
 0.0 ATTAQUE MOI
 AUG_CRITIQUE AUG_CRITIQUE AUG_CRITIQUE AUG_CRITIQUE AUG_CRITIQUE AUG_CRITIQUE AUG_ATTAQUE AUG_ATTAQUE AUG_ATTAQUE AUG_ATTAQUE
 SILENCE CONFUSION
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
-Liane Géante
-Inflige 125% de l'attaque sur un ennemi, puis l'empoisonne, diminue sa défense et son attaque.
+Liane Geante
+Inflige 125% de l'attaque sur un ennemi, puis l'empoisonne, diminue sa defense et son attaque.
 3
 1.25 ATTAQUE ENNEMI
 AUCUNS
@@ -150,8 +150,8 @@ AUCUNS
 POISON DIM_DEFENSE DIM_ATTAQUE
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
-Piège de Lianes
-Inflige 75% de l'attaque sur tout les ennemis, puis diminue leur vitesse et leur agilité.
+Piege de Lianes
+Inflige 75% de l'attaque sur tout les ennemis, puis diminue leur vitesse et leur agilite.
 5
 0.75 ATTAQUE ENNEMI
 AUCUNS
@@ -163,7 +163,7 @@ DIM_VITESSE DIM_AGILITE
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Goutte d'Eau Supersonique
-Inflige 300% de l'attaque sur un ennemi, puis diminue son agilité 2 fois.
+Inflige 300% de l'attaque sur un ennemi, puis diminue son agilite 2 fois.
 3
 3.0 ATTAQUE ENNEMI
 AUCUNS
@@ -174,7 +174,7 @@ AUCUNS
 DIM_AGILITE DIM_AGILITE
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
-Absorption d'Humidité
+Absorption d'Humidite
 Sur tout les ennemis, leur applique un effet de silence, diminue leur attaque et leur vitesse.
 6
 0.0 ATTAQUE ENNEMI
@@ -183,15 +183,15 @@ SILENCE DIM_ATTAQUE DIM_VITESSE
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Lancer de Kunai
-Inflige 150% de l'attaque sur un ennemi, moins la cible à de pvs, plus les dégâts sont importants.
+Inflige 150% de l'attaque sur un ennemi, moins la cible à de pvs, plus les degats sont importants.
 1
 1.5 ATTAQUE ENNEMI
 AUCUNS
 AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF MOINS ENNEMI
 
-Concoction Spéciale
-Sur moi-même, augmente mon taux de coups critiques, mon attaque 2 fois et mon agilité 3 fois.
+Concoction Speciale
+Sur moi-meme, augmente mon taux de coups critiques, mon attaque 2 fois et mon agilite 3 fois.
 4
 0.0 ATTAQUE MOI
 AUG_CRITIQUE AUG_ATTAQUE AUG_ATTAQUE AUG_AGILITE AUG_AGILITE AUG_AGILITE
@@ -215,7 +215,7 @@ POISON POISON POISON POISON POISON
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 0.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Parchemin de Gel
-Inflige 125% de l'attaque sur un ennemi, puis le gèle 3 fois.
+Inflige 125% de l'attaque sur un ennemi, puis le gele 3 fois.
 3
 1.25 ATTAQUE ENNEMI
 AUCUNS
@@ -227,7 +227,7 @@ GEL GEL GEL
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Brise Glace
-Inflige 200% de l'attaque sur un ennemi, ignore la défense si la cible est gelée.
+Inflige 200% de l'attaque sur un ennemi, ignore la defense si la cible est gelee.
 6
 2.0 ATTAQUE ENNEMI
 AUCUNS
@@ -235,39 +235,39 @@ AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 EFFET NON_ACTIF NON_ACTIF
 
 Flames Pourpres
-Sur un ennemi, le brûle, diminue sa défense et son attaque.
+Sur un ennemi, le brule, diminue sa defense et son attaque.
 3
 0.0 ATTAQUE ENNEMI
 AUCUNS
 FLAMMES DIM_DEFENSE DIM_ATTAQUE
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
-Flames Guérisseuses
-Sur tout les alliés, soigne 20% de leurs pvs max, augmente leur taux de coups critiques, leur attaque, leur agilité et leur défense.
+Flames Guerisseuses
+Sur tout les allies, soigne 20% de leurs pvs max, augmente leur taux de coups critiques, leur attaque, leur agilite et leur defense.
 5
 0.0 ATTAQUE MOI
 AUG_CRITIQUE AUG_ATTAQUE AUG_AGILITE AUG_DEFENSE
 AUCUNS
 ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
-Racines Amères
-Sur tout les alliés, leur retire 2 effets néfastes, augmente leur taux de coups critiques, et leur agilité 3 fois.
+Racines Ameres
+Sur tout les allies, leur retire 2 effets nefastes, augmente leur taux de coups critiques, et leur agilite 3 fois.
 4
 0.0 ATTAQUE MOI
 AUG_CRITIQUE AUG_AGILITE AUG_AGILITE AUG_AGILITE
 AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 2 NON_ACTIF NON_ACTIF NON_ACTIF
 
-Concoction Secrète
-Sur tout les alliés, augmente leur vitesse et diminue le temps de rechargement de leurs compétences de 2 tours.
+Concoction Secrete
+Sur tout les allies, augmente leur vitesse et diminue le temps de rechargement de leurs competences de 2 tours.
 8
 0.0 ATTAQUE MOI
 AUG_VITESSE
 AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 2 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
-Barrière d'Eau
-Sur tout les alliés, leur applique 100% de ma défense en une barrière.
+Barriere d'Eau
+Sur tout les allies, leur applique 100% de ma defense en une barriere.
 2
 0.0 ATTAQUE MOI
 AUCUNS
@@ -275,7 +275,7 @@ AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 1.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Puissance de l'Eau
-Sur tout les alliés, soigne 20% de leurs pvs max, et augmente leur défense 2 fois.
+Sur tout les allies, soigne 20% de leurs pvs max, et augmente leur defense 2 fois.
 4
 0.0 ATTAQUE MOI
 AUG_DEFENSE AUG_DEFENSE
@@ -283,7 +283,7 @@ AUCUNS
 ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Boule de Feu
-Inflige 125% de l'attaque sur un ennemi, puis le brûle.
+Inflige 125% de l'attaque sur un ennemi, puis le brule.
 1
 1.25 ATTAQUE ENNEMI
 AUCUNS
@@ -294,24 +294,24 @@ AUCUNS
 FLAMMES
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
-Tempête de Flammes
-Inflige 35% de l'attaque sur tout les ennemis, pour chaque ennemi les dégâts sont multipliés par le nombre d'effets néfastes sur lui.
+Tempete de Flammes
+Inflige 35% de l'attaque sur tout les ennemis, pour chaque ennemi les degats sont multiplies par le nombre d'effets nefastes sur lui.
 6
 0.35 ATTAQUE ENNEMI
 AUCUNS
 AUCUNS
 NON_ACTIF NON_ACTIF ACTIF NON_ACTIF ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
-Potion Médicinale
-Sur un allié, soigne 20% de ses pvs max, lui retire 1 effet néfaste, et lui applique un effet d'immunité.
+Potion Medicinale
+Sur un allie, soigne 20% de ses pvs max, lui retire 1 effet nefaste, et lui applique un effet d'immunite.
 2
 0.0 ATTAQUE ALLIE
 IMMUNITE
 AUCUNS
 ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 1 NON_ACTIF NON_ACTIF NON_ACTIF
 
-Gaz Guérisseur
-Sur tout les alliés, soigne 20% de leurs pvs max, leur retire 3 effets néfastes, et leur applique un effet d'immunité.
+Gaz Guerisseur
+Sur tout les allies, soigne 20% de leurs pvs max, leur retire 3 effets nefastes, et leur applique un effet d'immunite.
 4
 0.0 ATTAQUE MOI
 IMMUNITE
@@ -319,7 +319,7 @@ AUCUNS
 ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 3 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Eclair
-Inflige 175% de l'attaque sur un ennemi, puis applique un effet d'immunité sur moi-même.
+Inflige 175% de l'attaque sur un ennemi, puis applique un effet d'immunite sur moi-meme.
 3
 1.75 ATTAQUE ENNEMI
 AUCUNS
@@ -331,7 +331,7 @@ AUCUNS
 NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 0 NON_ACTIF NON_ACTIF NON_ACTIF
 
 Ragnarok
-Inflige 25% de l'attaque sur tout les ennemis, détruit leurs pvs max par rapport aux dégâts infligés.
+Inflige 25% de l'attaque sur tout les ennemis, détruit leurs pvs max par rapport aux degats infliges.
 6
 0.25 ATTAQUE ENNEMI
 AUCUNS
