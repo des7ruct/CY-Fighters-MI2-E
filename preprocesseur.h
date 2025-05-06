@@ -98,6 +98,7 @@
     int type ;
   } Effet ;
 
+
   /* Phases */
   typedef struct {
     /* calcul classique des dégats */
@@ -105,7 +106,6 @@
     int stat ;
     int cible ;
     
-
     /* effets spéciaux */
     Effet* effets_positifs ;
     Effet* effets_negatifs ;
@@ -123,11 +123,12 @@
     int red_rechargement ;
     float red_stamina ;
     int red_nefastes ;
-    int ignore_defense ;
 
+    int ignore_defense ;
     int degats_pvs_restants_type ;
     int degats_pvs_restants_cible ;
   } Phase ;
+
 
   /* Compétences */
   typedef struct {
@@ -137,12 +138,14 @@
     Phase* phases ;
   } Competence ;
 
+
   /* Passifs */
   typedef struct {
     char* nom ;
     char* description ;
 
   } Passif ;
+
 
   /* Structure Combattant */
 
@@ -165,6 +168,20 @@
     Effet* effets_negatifs ;
   } Combattant ;
 
+
+  /* Objets */
+
+  typedef struct {
+    char* nom ;
+
+  } Objet ;
+
+
   /* Equipe */
 
+  typedef struct {
+    char* nom ;
+    Combattant* combattants ;
+    Objet* objets ;
+  } Equipe ;
 #endif
