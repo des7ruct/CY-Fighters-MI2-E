@@ -1,5 +1,17 @@
 #include "fonctions.h"
 
+char* Supp_SautDeLigne (char ligne[]){
+    //Supprime les sauts de lignes en fin de chaines pour des soucis de récupération de donnée et d'affichage
+    int i=0;
+    while(ligne[i]!='\0'){
+        if(ligne[i]=='\n'){
+        ligne[i]='\0';
+        }
+        i++;
+    }
+    return(ligne);
+
+}
 
 int VerifNb(char* test){
 //Vérifie que chaque caractère est bien un chiffre//
@@ -315,16 +327,345 @@ float Calcul_Coeff(char* stats){
 
 }
 
+int VerifCst (char* mot){
+    //Verifie les données récupérés et retourne les constantes de ces dernières
+
+    if(strcmp(mot, "ATTAQUE")==0){
+        return(ATTAQUE);
+    }
+    else if(strcmp(mot, "DEFENSE")==0){
+        return(DEFENSE);
+    }
+    else if(strcmp(mot, "PVSCOURANTS")==0){
+        return(PVSCOURANTS);
+    }
+    else if(strcmp(mot, "ENNEMI")==0){
+        return(ENNEMI);
+    }
+    else if(strcmp(mot, "MOI")==0){
+        return(MOI);
+    }
+    else if(strcmp(mot, "ALLIE")==0){
+        return(ALLIE);
+    }
+    else if(strcmp(mot, "NON_ACTIF")==0){
+        return(NON_ACTIF);
+    }
+    else if(strcmp(mot, "ACTIF")==0){
+        return(ACTIF);
+    }
+
+    else{
+        printf("ERREUR OU OUBLI???");
+        exit(8);
+    }
+
+    return(-1);
+}
+
+int VerifEffet(char* mot){
+    /* Verifie les données récupérés et retourne les constantes de ces dernières
+    (comme pour la fonction Verifcst mais pour les constantes d'effet */
+                                                                    
+    
+    if (strcmp(mot, "AUCUNS")==0){
+        return(AUCUNS);
+    }
+    else if(strcmp(mot, "AUG_ATTAQUE")==0){
+        return(AUG_ATTAQUE);
+    }
+    else if(strcmp(mot, "AUG_DEFENSE")==0){
+        return(AUG_DEFENSE);
+    }
+    else if(strcmp(mot, "AUG_AGILITE")==0){
+        return(AUG_AGILITE);
+    }
+    else if(strcmp(mot, "AUG_VITESSE")==0){
+        return(AUG_VITESSE);
+    }
+    else if(strcmp(mot, "AUG_CRITIQUE")==0){
+        return(AUG_CRITIQUE);
+    }
+    else if(strcmp(mot, "IMMUNITE")==0){
+        return(IMMUNITE);
+    }
+    else if(strcmp(mot, "EPINES")==0){
+        return(EPINES);
+    }
+    else if(strcmp(mot, "FLAMMES")==0){
+        return(FLAMMES);
+    }
+    else if(strcmp(mot, "POISON")==0){
+        return(POISON);
+    }
+    else if(strcmp(mot, "GEL")==0){
+        return(GEL);
+    }
+    else if(strcmp(mot, "DIM_ATTAQUE")==0){
+        return(DIM_ATTAQUE);
+    }
+    else if(strcmp(mot, "DIM_DEFENSE")==0){
+        return(DIM_DEFENSE);
+    }
+    else if(strcmp(mot, "DIM_AGILITE")==0){
+        return(DIM_AGILITE);
+    }
+    else if(strcmp(mot, "DIM_VITESSE")==0){
+        return(DIM_VITESSE);
+    }
+    else if(strcmp(mot, "SILENCE")==0){
+        return(SILENCE);
+    }
+    else if(strcmp(mot, "CONFUSION")==0){
+        return(CONFUSION);
+    }
+    else if(strcmp(mot, "ETOURDISSEMENT")==0){
+        return(ETOURDISSEMENT);
+    }
+    else if(strcmp(mot, "ANTIHEAL")==0){
+        return(ANTIHEAL);
+    }
+
+    else if(strcmp(mot, "STAT")==0){
+        return(STAT);
+    }
+     else if(strcmp(mot, "EFFET")==0){
+        return(EFFET);
+    }
+     else if(strcmp(mot, "MOINS")==0){
+        return(MOINS);
+    }
+     else if(strcmp(mot, "PLUS")==0){
+        return(PLUS);
+    }
+     else if(strcmp(mot, "MOI")==0){
+        return(MOI);
+    }
+     else if(strcmp(mot, "ENNEMI")==0){
+        return(ENNEMI);
+    }
+
+    else if(strcmp(mot, "NON_ACTIF")==0){
+        return(NON_ACTIF);
+    }
+    else if(strcmp(mot, "ACTIF")==0){
+        return(ACTIF);
+    }
+
+    else{
+        printf("ERREUR EFFET");
+        exit(8);
+    }
+
+    return(-1);
+
+}
+
+
+Combattant* AjouterCompetence(Combattant* tab, int taille){
+    //Cette fonction ajoute les compétences aux comabattants déjà mis dans le tableau
+
+    FILE* fic=NULL;
+    fic=fopen("competences.txt", "r");
+    if (fic==NULL){
+        exit(5);
+    }
+
+    char ligne[V];
+    int NbCompetence=taille*2; // l y a deux compétences par combattant
+
+    int j=0;
+        for (int i=0; i<NbCompetence; i++){
+                //Boucle par rapport au nombre de competences
+                tab[i].competences = malloc(sizeof(Competence) * 2);
+                if (tab[i].competences == NULL){
+                    printf("Erreur malloc");
+                    exit(9);
+                }
+
+            for(int j=0; j<2; j++){
+                //Boucle par rapport au nombre de phases
+                
+                //Récupération du nom de la compétence
+                tab[i].competences[j].nom=malloc(V);
+                if(tab[i].competences[j].nom == NULL){
+                    printf("Erreur malloc 2");
+                    exit(10);
+                }
+                fgets(tab[i].competences[j].nom, V, fic); 
+                Supp_SautDeLigne(tab[i].competences[j].nom);
+                
+                //Récupération de la description de la compétence
+                tab[i].competences[j].description=malloc(V);
+                if(tab[i].competences[j].description == NULL){
+                    printf("Erreur malloc 3");
+                    exit(13);
+                } 
+                fgets(tab[i].competences[j].description, V, fic); 
+                if(fscanf(fic, "%d\n", &tab[i].competences[j].rechargement)!=1){
+                    printf("ERREUR SORTIE DU PROGRAMME");
+                    exit(6);
+                }
+
+                //Ajout de phases//
+
+                tab[i].competences[j].phases=malloc(sizeof(Phase) * 2);
+                int c=0;
+                char* mot;
+                fgets(ligne, V, fic);
+                while(c==0){
+                    int k=0;
+
+                    Supp_SautDeLigne(ligne);
+                    mot=strtok(ligne, " ");
+                    tab[i].competences[j].phases[k].multiplicateur=atof(mot);
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].stat=VerifCst(mot);
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].cible=VerifCst(mot);
+
+                    //Ajout des effets des phases//
+                    fgets(ligne, V, fic);
+                    Supp_SautDeLigne(ligne);
+                    int e=0;
+                    int x=0;
+                    while(ligne[x]!= '\0'){
+                        if(ligne[x]==' '){
+                            e++;
+                        }
+                        x++;
+                    }
+                    int l=0;
+
+
+                    tab[i].competences[j].phases[k].effets_positifs=malloc(sizeof(Effet)*10);
+                    if(tab[i].competences[j].phases[k].effets_positifs == NULL){
+                        printf("ERREUR DE MALLOC");
+                        exit(11);
+                    }
+                    mot=strtok(ligne, " ");
+                    tab[i].competences[j].phases[k].effets_positifs[l].type=VerifEffet(mot);
+                    tab[i].competences[j].phases[k].effets_positifs[l].tours=2;
+                    l++;
+                    for(int i2=0; i2<e; i2++){
+                        mot=strtok(NULL, " ");
+                        tab[i].competences[j].phases[k].effets_positifs[l].type=VerifEffet(mot);
+                        tab[i].competences[j].phases[k].effets_positifs[l].tours=2;
+                        l++;
+                    }
+                    int l2=0;
+
+                    fgets(ligne, V, fic);
+                    Supp_SautDeLigne(ligne);
+                    x=0;
+                    e=0;
+                    while(ligne[x]!= '\0'){
+                        if(ligne[x]==' '){
+                            e++;
+                        }
+                        x++;
+                    }
+                    tab[i].competences[j].phases[k].effets_negatifs=malloc(sizeof(Effet)*10);
+                    if(tab[i].competences[j].phases[k].effets_negatifs == NULL){
+                        printf("ERREUR DE MALLOC");
+                        exit(12);
+                    }
+                    mot=strtok(ligne, " ");
+                    tab[i].competences[j].phases[k].effets_negatifs[l2].type=VerifEffet(mot);
+                    tab[i].competences[j].phases[k].effets_negatifs[l].tours=2;
+                    l2++;
+                    for(int i2=0; i2<e; i2++){
+                        mot=strtok(NULL, " ");
+                        tab[i].competences[j].phases[k].effets_negatifs[l2].type=VerifEffet(mot);
+                        tab[i].competences[j].phases[k].effets_negatifs[l].tours=2;
+                        l2++;
+                    }
+
+
+                    // On récupère les dernières données
+
+                    fgets(ligne, V, fic);
+                    Supp_SautDeLigne(ligne);
+
+                    mot=strtok(ligne, " ");
+                    tab[i].competences[j].phases[k].soin=VerifCst(mot);
+
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].vampirisme=VerifCst(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].aire=VerifEffet(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].destruction=VerifEffet(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].debuff_multiplicateur=VerifEffet(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].barriere=atof(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].red_rechargement=atoi(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].red_nefastes=atof(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].ignore_defense=atoi(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].ignore_defense=VerifEffet(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].degats_pvs_restants_type=VerifEffet(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].degats_pvs_restants_cible=VerifEffet(mot);
+
+                    k++; //Decompte du numéro de compétence
+
+
+                    /*
+                    Si le nom de cette compétence est celle de la dernière du document, on retourne le tableau
+                    */
+                    if(strcmp(tab[i].competences[j].nom, "Ragnarok")==0){
+                        return(tab);
+                    }
+
+                    //On vérifie si il y a une deuxième phase ou non
+                    fgets(ligne, V, fic);
+                    if (ligne != NULL) {
+                        if (ligne[0] == '\n') {
+                        c=1;
+                        }
+
+                        else{
+                            c=0;
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+
+    fclose(fic);
+    return(tab);
+}
+
 
 Combattant* RemplirTabCombattant(){
     //Crée un tableau avec tous les combattants disponible
-    
+
     Combattant* tab;
     int nb_combattants;
     FILE* fic=NULL;
     fic=fopen("combattants.txt", "r");
     char ligne[V];
-    
+
     //Calcul le nombre de combattants
     if(fic!=NULL){
         int nb_ligne=0;
@@ -341,7 +682,7 @@ Combattant* RemplirTabCombattant(){
             printf("Erreur, sortie du programme");
             exit(2);
         }
-        
+
         //Remplit le tableau avec tous les combattants et leur stats
         char ligne_stats[V];
         float coeff;
@@ -361,14 +702,14 @@ Combattant* RemplirTabCombattant(){
             tab[i].agilite = AGILITE_BASE * Calcul_Coeff(agi);
             char* vit=strtok(NULL, "\n");
             tab[i].vitesse = VITESSE_BASE * Calcul_Coeff(vit);
-            
+
             //Application du type, sachant qu'ils sont triés dans le fichier : FEU - PLANTE - EAU
             tab[i].type=type;
-            if(type==1 || type==2){
+            if(type==FEU || type==PLANTE){
                 type++;
             }
-            else if(type==3){
-                type=1;
+            else if(type==EAU){
+                type=FEU;
             }
             else{
                 printf("ERREUR de type");
@@ -384,6 +725,8 @@ Combattant* RemplirTabCombattant(){
         printf("ERREUR, Echec d'ouverture du fichier\n\n\n");
         exit(1);
     }
+
+    tab=AjouterCompetence(tab, nb_combattants);
     Affiche_tab(tab, nb_combattants);
     return(tab);
 }
