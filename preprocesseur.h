@@ -26,6 +26,9 @@
   /* Taille de la barre de stamina */
   #define STAMINA_MAX 1000
 
+  /* Nombre d'effet (positif OU négatif) max sur un combattant */
+  #define NOMBRE_EFFETS_MAX 20
+
   /* Pourcentage initial de stats de bases */
   #define HAUT 1
   #define MOYEN 0.75
