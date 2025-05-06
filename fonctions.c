@@ -229,6 +229,63 @@ int appliquer_effet(Effet effet, Effet* effets) {
   }
 }
 
+int reduction_tour_effets(Combattant combattant) {
+  /*
+  Fonction prenant un combattant et réduisant les tours de tout ses effets de 1.
+  Le tour n'est pas réduit si l'effet est AUCUNS
+  Si le tour d'un effet est a 0 le type de celui si est changé en AUCUNS.
+  renvoie 0 si l'opération a réussie, 1 sinon.
+  */
+
+  int i ;
+
+  if (NOMBRE_EFFETS_MAX < 0) {
+    printf("Erreur dans la fonction reduction_tour_effets avec la constante NOMBRE_EFFETS_MAX.\n") ;
+    exit(1) ;
+  }
+
+  else if (NOMBRE_EFFET_MAX == 0) {
+    return 1 ;
+  } 
+
+  else if ((combattant.effets_positifs == NULL) || (combattant.effets_negatifs == NULL)) {
+    printf("Erreur dans la fonction reduction_tour_effets avec l'une des variables effets du combattant.\n") ;
+    exit(2) ;
+  }
+
+  else {
+    for (i = 0 ; i < NOMBRE_EFFETS_MAX‎ ; i++) {
+      if ((((combattant.effets_positifs) + i) -> type) != AUCUNS) {
+        (((combattant.effets_positifs) + i) -> tours)-- ;
+      }
+    }
+
+    for (i = 0 ; i < NOMBRE_EFFETS_MAX‎ ; i++) {
+      if ((((combattant.effets_negatifs) + i) -> type) != AUCUNS) {
+        (((combattant.effets_negatifs) + i) -> tours)-- ;
+      }
+    }
+
+    for (i = 0 ; i < NOMBRE_EFFETS_MAX‎ ; i++) {
+      if ((((combattant.effets_positifs) + i) -> type) != AUCUNS) {
+        if ((((combattant.effets_positifs) + i) -> tours) == 0) {
+            (((combattant.effets_positifs) + i) -> type) = AUCUNS ;
+        }
+      }
+    }
+
+    for (i = 0 ; i < NOMBRE_EFFETS_MAX‎ ; i++) {
+      if ((((combattant.effets_negatifs) + i) -> type) != AUCUNS) {
+        if ((((combattant.effets_negatifs) + i) -> tours) == 0) {
+            (((combattant.effets_negatifs) + i) -> type) = AUCUNS ;
+        }
+      }
+    }
+
+    return 0 ;
+  }
+}
+
 
 float Calcul_Coeff(char* stats){
     //Calcul le coefficient pour calculer la valeur de la stat en fonction de sa qualité
@@ -249,7 +306,6 @@ float Calcul_Coeff(char* stats){
     return;
 
 }
-
 
 
 Combattant* RemplirTabCombattant(){
