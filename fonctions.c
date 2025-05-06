@@ -81,6 +81,14 @@ int aleatoire(int minimum, int maximum) {
   return resultat ;
 }
 
+int pile_ou_face() {
+  /*
+  Retourne 0 ou 1.
+  */
+
+  return aleatoire(0, 1) ;
+}
+
 
 int multiplicateur_critique(int valeur_critique) {
   /*
@@ -380,3 +388,35 @@ Combattant* RemplirTabCombattant(){
     return(tab);
 }
 
+
+int initialisation_equipes(Equipe equipe_a, Equipe equipe_b) {
+  /*
+  Prend deux équipes et initialise tout leurs combattants comme "NON_DISPO"
+  Renvoie 0 si l'opération réussie.
+  */
+
+  int i ;
+  char* chaine = NULL ;
+
+  if ((equipe_a.combattants == NULL) || (equipe_b.combattants == NULL)) {
+    printf("Erreur dans la fonction initialisation_equipes avec la liste combattants des deux équipes.\n") ;
+    exit(1) ;
+  }
+    
+  chaine = malloc(V) ;
+  if (chaine == NULL) {
+    printf("Erreur dans fonction initialisation_equipes, l'allocation a échouée\n") ;
+    exit(2) ;
+  }
+  *chaine = "NON_DISPO" ;
+      
+  for (i = 0 ; i < 8 ; i++) {
+    (equipe_a.combattants + i).nom = chaine ;
+  }
+
+  for (i = 0 ; i < 8 ; i++) {
+    (equipe_b.combattants + i).nom = chaine ;
+  }
+
+  return 0 ;
+}
