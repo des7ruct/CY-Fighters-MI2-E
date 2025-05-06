@@ -107,6 +107,31 @@ int multiplicateur_critique(int valeur_critique) {
   }
 }
 
+int application_effet() {
+  /*
+  A partir de la constante APPLICATION_EFFETS, renvoie 1 si l'effet s'applique et 0 sinon.
+  */
+
+  if ((APPLICATION_EFFETS < 0) || (APPLICATION_EFFETS > 100)) {
+    printf("Erreur dans la fonction application_effet avec la constante APPLICATION_EFFETS.") ;
+    exit(1) ;
+  }
+
+  else if (APPLICATION_EFFETS == 100) {
+    return 1 ;
+  }
+
+  else {
+    if (aleatoire(1, 100) > APPLICATION_EFFETS) {
+      return 0 ;
+    }
+
+    else {
+      return 1 ;
+    }
+  }
+}
+
 float multiplicateur_type(int type_lanceur, int type_cible) {
   /* 
   Fonction prenant le type du lanceur de l'attaque et le type de la cible et renvoie
