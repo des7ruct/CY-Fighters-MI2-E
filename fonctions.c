@@ -113,7 +113,7 @@ int application_effet() {
   */
 
   if ((APPLICATION_EFFETS < 0) || (APPLICATION_EFFETS > 100)) {
-    printf("Erreur dans la fonction application_effet avec la constante APPLICATION_EFFETS.") ;
+    printf("Erreur dans la fonction application_effet avec la constante APPLICATION_EFFETS.\n") ;
     exit(1) ;
   }
 
@@ -160,6 +160,72 @@ float multiplicateur_type(int type_lanceur, int type_cible) {
     else {
       return 1 - TAUX_TYPE ;
     }
+  }
+}
+
+int nombre_effets(int effet, Effet* effets) {
+  /*
+  Fonction retournant le nombre de fois d'un effet dans une liste d'effets.
+  il faut obligatoirement que l'effet et la liste correspondent ou le résultat sera faussé.
+  */
+    
+  int somme = 0 ;
+
+  if (NOMBRE_EFFETS_MAX < 0) {
+    printf("Erreur dans la fonction nombre_effets avec la constante NOMBRE_EFFETS_MAX.\n") ;
+    exit(1) ;
+  }
+
+  else if (NOMBRE_EFFET_MAX == 0) {
+    return 0 ;
+  } 
+
+  else if (effets == NULL) {
+    printf("Erreur dans la fonction nombre_effets avec la variable effets.\n") ;
+    exit(2) ;
+  }
+
+  else {
+    for (int i = 0 ; i < NOMBRE_EFFETS_MAX‎ ; i++) {
+      if (((effets + i) -> type) == effet) {
+        somme++ ;
+      }
+    }
+    return somme ;
+  }
+}
+
+
+int appliquer_effet(Effet effet, Effet* effets) {
+  /*
+  Fonction ajoutant un effet dans une liste d'effets.
+  il faut obligatoirement que l'effet et la liste correspondent ou le résultat sera faussé.
+  retourne 0 si l'opération a réussie, 1 sinon.
+  */
+
+  if (NOMBRE_EFFETS_MAX < 0) {
+    printf("Erreur dans la fonction appliquer_effet avec la constante NOMBRE_EFFETS_MAX.\n") ;
+    exit(1) ;
+  }
+
+  else if (NOMBRE_EFFET_MAX == 0) {
+    return 1 ;
+  } 
+
+  else if (effets == NULL) {
+    printf("Erreur dans la fonction appliquer_effet avec la variable effets.\n") ;
+    exit(2) ;
+  }
+
+  else {
+    for (int i = 0 ; i < NOMBRE_EFFETS_MAX‎ ; i++) {
+      if (((effets + i) -> type) == AUCUNS) {
+        ((effets + i) -> tours) = effet.tours ;
+        ((effets + i) -> type) = effet.type ;
+        return 0 ;
+      }
+    }
+    return 1 ;
   }
 }
 
