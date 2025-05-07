@@ -24,41 +24,6 @@ int Credit(){
 }
 
 
-int initialisation_equipes(Combattant* equipe_a, Combattant* equipe_b) {
-  /*
-  Prend deux listes de combattants et initialise tout les combattants comme "NON_DISPO"
-  Renvoie 0 si l'opération réussie.
-  */
-
-  int i ;
-  char* chaine = NULL ;
-
-  chaine = malloc(V) ;
-
-  if ((equipe_a == NULL) || (equipe_b == NULL)) {
-    printf("Erreur dans la fonction initialisation_equipes avec les listes combattants.\n") ;
-    exit(1) ;
-  }
-      
-  else if (chaine == NULL) {
-    printf("Erreur dans fonction initialisation_equipes, l'allocation a échouée\n") ;
-    exit(2) ;
-  }
-
-  else {
-    *chaine = "NON_DISPO" ;
-      
-    for (i = 0 ; i < 8 ; i++) {
-      (combattants + i).nom = chaine ;
-    }
-
-    for (i = 0 ; i < 8 ; i++) {
-      (combattants + i).nom = chaine ;
-    }
-
-    return 0 ;
-  }
-}
 
 
 int choix_combattant_correct(Combattant* combattants, int choix) {
