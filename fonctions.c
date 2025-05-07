@@ -732,3 +732,41 @@ int reduction_tour_effets(Combattant combattant) {
     return 0 ;
   }
 }
+
+
+int initialisation_combattants_equipes(Equipe* equipe_a, Equipe* equipe_b) {
+  /*
+  Prend l'adresse de deux équipes et initialise tout leurs combattants comme "NON_DISPO"
+  Renvoie 0 si l'opération réussie.
+  */
+
+  int i ;
+  char* chaine = NULL ;
+
+  equipe_a -> combattants = NULL ;
+  equipe_b -> combattants = NULL ;
+  
+  chaine = malloc(sizeof("NON_DISPO") * sizeof(char)) ;
+
+  equipe_a -> combattants = malloc(MAX_COMBATTANTS_EQUIPE * sizeof(Combattant)) ;
+  equipe_b -> combattants = malloc(MAX_COMBATTANTS_EQUIPE * sizeof(Combattant)) ;
+
+  if ((equipe_a -> combattants == NULL) || (equipe_b -> combattants == NULL) || (chaine == NULL)) {
+    printf("Erreur dans la fonction initialisation_equipes, l'allocation a échouée.\n") ;
+    exit(1) ;
+  }
+
+  else {
+    chaine = "NON_DISPO" ;
+
+    for (i = 0 ; i < MAX_COMBATTANTS_EQUIPE ; i++) {
+      ((equipe_a -> combattants) + i) -> nom = chaine ;
+    }
+
+    for (i = 0 ; i < MAX_COMBATTANTS_EQUIPE ; i++) {
+      ((equipe_b -> combattants) + i) -> nom = chaine ;
+    }
+
+    return 0 ;
+  }
+}
