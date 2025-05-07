@@ -196,7 +196,7 @@ int nombre_effets(int effet, Effet* effets) {
     exit(1) ;
   }
 
-  else if (NOMBRE_EFFET_MAX == 0) {
+  else if (NOMBRE_EFFETS_MAX == 0) {
     return 0 ;
   } 
 
@@ -228,7 +228,7 @@ int appliquer_effet(Effet effet, Effet* effets) {
     exit(1) ;
   }
 
-  else if (NOMBRE_EFFET_MAX == 0) {
+  else if (NOMBRE_EFFETS_MAX == 0) {
     return 1 ;
   } 
 
@@ -264,7 +264,7 @@ int reduction_tour_effets(Combattant combattant) {
     exit(1) ;
   }
 
-  else if (NOMBRE_EFFET_MAX == 0) {
+  else if (NOMBRE_EFFETS_MAX == 0) {
     return 1 ;
   } 
 
