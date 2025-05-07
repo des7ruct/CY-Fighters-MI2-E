@@ -743,7 +743,7 @@ int initialisation_equipes(Combattant* equipe_a, Combattant* equipe_b) {
 
   chaine = malloc(V) ;
 
-  if ((equipe_a == NULL) || (equipe_b.combattants == NULL)) {
+  if ((equipe_a == NULL) || (equipe_b == NULL)) {
     printf("Erreur dans la fonction initialisation_equipes avec les listes combattants.\n") ;
     exit(1) ;
   }
