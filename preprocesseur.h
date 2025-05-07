@@ -29,6 +29,9 @@
   /* Nombre d'effet (positif OU négatif) max sur un combattant */
   #define NOMBRE_EFFETS_MAX 20
 
+  /* Nombre max de combattants dans une equipe (bans inclus) */
+  #define MAX_COMBATTANTS_EQUIPE 8
+
   /* Pourcentage initial de stats de bases */
   #define HAUT 1
   #define MOYEN 0.75
