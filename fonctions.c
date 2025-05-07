@@ -609,3 +609,34 @@ Combattant* RemplirTabCombattant(){
 }
 
 
+int nombre_effets(int effet, Effet* effets) {
+  /*
+  Fonction retournant le nombre de fois d'un effet dans une liste d'effets.
+  il faut obligatoirement que l'effet et la liste correspondent ou le résultat sera faussé.
+  */
+
+  int somme = 0 ;
+
+  if (NOMBRE_EFFETS_MAX < 0) {
+    printf("Erreur dans la fonction nombre_effets avec la constante NOMBRE_EFFETS_MAX.\n") ;
+    exit(1) ;
+  }
+
+  else if (NOMBRE_EFFETS_MAX == 0) {
+    return 0 ;
+  } 
+
+  else if (effets == NULL) {
+    printf("Erreur dans la fonction nombre_effets avec la variable effets.\n") ;
+    exit(2) ;
+  }
+
+  else {
+    for (int i = 0 ; i < NOMBRE_EFFETS_MAX ; i++) {
+      if (((effets + i) -> type) == effet) {
+        somme++ ;
+      }
+    }
+    return somme ;
+  }
+}
