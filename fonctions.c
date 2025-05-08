@@ -770,3 +770,30 @@ int initialisation_combattants_equipes(Equipe* equipe_a, Equipe* equipe_b) {
     return 0 ;
   }
 }
+
+
+int choix_combattant_correct(Combattant* combattants, int choix) {
+  /*
+  Retourne 0 si le combattant d'indice choix est dispo, 1 sinon.
+  */
+
+  if (choix < 0) {
+    printf("Erreur dans la fonction choix_combattant_correct avec la variable choix.\n") ;
+    exit(1) ;
+  }
+
+  else if (combattants == NULL) {
+    printf("Erreur dans la fonction choix_combattant_correct avec la liste des combattants.\n") ; 
+    exit(2) ;
+  }
+
+  else {
+    if (strcmp(((combattants + choix) -> nom), "NON_DISPO") == 0) {
+      return 1 ;
+    }
+
+    else {
+      return 0 ;
+    }
+  } 
+}
