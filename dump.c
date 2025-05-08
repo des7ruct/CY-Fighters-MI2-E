@@ -25,33 +25,6 @@ int Credit(){
 
 
 
-
-int choix_combattant_correct(Combattant* combattants, int choix) {
-  /*
-  Retourne 0 si le combattant d'indice choix est dispo, 1 sinon.
-  */
-
-  if (choix < 0) {
-    printf("Erreur dans la fonction choix_combattant_correct avec la variable choix.\n") ;
-    exit(1) ;
-  }
-
-  else if (combattants == NULL) {
-    printf("Erreur dans la fonction choix_combattant_correct avec la liste des combattants.\n") ; 
-    exit(2) ;
-  }
-
-  else {
-    if (((combattants + choix) -> nom) == "NON_DISPO") {
-      return 1 ;
-    }
-
-    else {
-      return 0 ;
-    }
-  } 
-}
-
 int mettre_dans_equipe(Combattant* tab_combattants, Combattant* equipe, int choix) {
   if (choix < 0) {
     printf("Erreur dans la fonction mettre_dans_equipe, le choix est incorrect.\n") ;
