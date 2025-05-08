@@ -797,3 +797,41 @@ int choix_combattant_correct(Combattant* combattants, int choix) {
     }
   } 
 }
+
+
+int mettre_dans_equipe(Combattant* tab_combattants, Equipe* equipe, int choix) {
+  /*
+  Fonction prenant une liste de combattants et l'adresse d'une équipe, mettant le combattant choisi
+  dans l'équipe a un emplacement libre et l'enlevant de la liste des combattants.
+  retourne 0 si l'opération a réussie, 1 sinon.
+  */
+  
+  if (choix < 0) {
+    printf("Erreur dans la fonction mettre_dans_equipe, le choix est incorrect.\n") ;
+    exit(1) ;  
+  }
+
+  else if(equipe == NULL) {
+    printf("Erreur dans la fonction mettre_dans_equipe avec l'équipe choisie.\n") ;
+    
+  }
+
+  else if ((tab_combattants == NULL) || ((equipe -> combattants) == NULL)) {
+    printf("Erreur dans la fonction mettre_dans_equipe avec les listes de combattants.\n") ;
+    exit(2) ;
+  }
+
+  else {
+    for (int i = 0 ; i <= MAX_COMBATTANTS_EQUIPE ; i++) {
+      if (strcmp(((equipe -> combattants) + i) -> nom, "NON_DISPO") == 0) {
+        memcpy(((equipe -> combattants) + i), tab_combattants + choix, sizeof(Combattant)) ;
+
+        (tab_combattants + choix) -> nom = "NON_DISPO" ;
+        
+        return 0 ;
+      }
+    }
+    
+    return 1 ;
+  }
+}
