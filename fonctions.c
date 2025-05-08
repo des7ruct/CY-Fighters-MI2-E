@@ -855,3 +855,28 @@ int mettre_dans_equipe(Combattant* tab_combattants, Equipe* equipe, int choix) {
     return 1 ;
   }
 }
+
+
+int bannir_combattant(Equipe* equipe, int choix) {
+  /*
+  Prend l'adresse d'une équipe et un choix et rend le combattant correspondant non dispo.
+  retourne 0 si l'opération a réussie.
+  
+  */
+
+  if ((choix < 0) || (choix >= MAX_COMBATTANTS_EQUIPE)) {
+    printf("Erreur dans la fonction bannir_combattant avec le choix.\n") ;
+    exit(1) ;
+  }
+
+  else if(equipe == NULL) {
+    printf("Erreur dans la fonction bannir_combattant avec equipe.\n") ;
+    exit(2) ;
+  }
+
+  else {
+    ((equipe -> combattants) + choix) -> nom = "NON_DISPO" ;
+    
+    return 0 ;
+  }
+}
