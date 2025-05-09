@@ -880,3 +880,25 @@ int bannir_combattant(Equipe* equipe, int choix) {
     return 0 ;
   }
 }
+
+int Choix_Combattant(Combattant* tab, int nb_combattant, int num_choix){
+    char tampon[V];
+    int choix;
+    int verif=-1;
+
+    printf("Choix %d : ", num_choix);
+    fgets(tampon, V, stdin);
+    choix=VerifScanf(tampon);
+
+    verif=choix_combattant_correct(tab, choix-1);
+    while(verif!=0){
+        printf("\033[H\033[2J");
+        Liste_Combattant(tab, nb_combattant);
+        printf("Erreur, veuillez reselectionner un combattant disponible\n\n");
+        printf("Choix %d : ", num_choix);
+        fgets(tampon, V, stdin);
+        choix=VerifScanf(tampon);
+        verif=choix_combattant_correct(tab, choix-1);
+    }
+    return(choix-1);
+}
