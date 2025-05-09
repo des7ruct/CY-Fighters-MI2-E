@@ -170,6 +170,7 @@
     int pv_courants ;
     int pv_max_courants ;
     int barriere ;
+    int blocage ;
     Effet* effets_positifs ;
     Effet* effets_negatifs ;
   } Combattant ;
@@ -189,5 +190,6 @@
     char* nom ;
     Combattant* combattants ;
     Objet* objets ;
+    int pieces ;
   } Equipe ;
 #endif
