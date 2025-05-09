@@ -139,6 +139,7 @@
     char* nom ;
     char* description ;
     int rechargement ;
+    int rechargement_courant ;
     Phase* phases ;
   } Competence ;
 
@@ -167,6 +168,7 @@
     /* Non Prédéfini */
     int stamina ;
     int pv_courants ;
+    int pv_max_courants ;
     int barriere ;
     Effet* effets_positifs ;
     Effet* effets_negatifs ;
