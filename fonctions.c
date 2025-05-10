@@ -1126,6 +1126,7 @@ int initialisation_combat(Equipe* equipe)  {
               (((equipe -> combattants) + i) -> barriere) = 0 ;
               (((equipe -> combattants) + i) -> blocage) = 0 ;
               (((equipe -> combattants) + i) -> ko) = 0 ;
+              (((equipe -> combattants) + i) -> nom) = (((equipe -> combattants) + i) -> nom_temp) ;
         
               for (int j = 0 ; j < 2 ; j++) {
                   (((((equipe -> combattants) + i) -> competences) + j) -> rechargement_courant) = (((((equipe -> combattants) + i) -> competences) + j) -> rechargement) ;
