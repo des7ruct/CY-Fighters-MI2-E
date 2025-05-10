@@ -33,6 +33,9 @@
   /* Nombre max de combattants dans une equipe (bans inclus) */
   #define MAX_COMBATTANTS_EQUIPE 8
 
+  /* Nombre total de combattants */
+  #define NB_COMBATTANTS_TOTAL 18
+
   /* Pourcentage initial de stats de bases */
   #define HAUT 1
   #define MOYEN 0.75
@@ -93,61 +96,61 @@
 
   #define IMMUNITE 6
   #define EPINES 7
-  
+
   /* structures */
 
   /* Effets */
   typedef struct {
-    int tours ;
-    int type ;
+      int tours ;
+      int type ;
   } Effet ;
 
 
   /* Phases */
   typedef struct {
-    /* calcul classique des dégats */
-    float multiplicateur ;
-    int stat ;
-    int cible ;
-    
-    /* effets spéciaux */
-    Effet* effets_positifs ;
-    Effet* effets_negatifs ;
-    
-    /* effets suplémentaires */
-    /* actifs / inactifs */
-    int soin ;
-    int vampirisme ;
-    int aire ;
-    int destruction ;
-    int nefastes_multiplicateur ;
+      /* calcul classique des dégats */
+      float multiplicateur ;
+      int stat ;
+      int cible ;
 
-    /* effets complexes */
-    float barriere ;
-    int red_rechargement ;
-    float red_stamina ;
-    int red_nefastes ;
+      /* effets spéciaux */
+      Effet* effets_positifs ;
+      Effet* effets_negatifs ;
 
-    int ignore_defense ;
-    int degats_pvs_restants_type ;
-    int degats_pvs_restants_cible ;
+      /* effets suplémentaires */
+      /* actifs / inactifs */
+      int soin ;
+      int vampirisme ;
+      int aire ;
+      int destruction ;
+      int nefastes_multiplicateur ;
+
+      /* effets complexes */
+      float barriere ;
+      int red_rechargement ;
+      float red_stamina ;
+      int red_nefastes ;
+
+      int ignore_defense ;
+      int degats_pvs_restants_type ;
+      int degats_pvs_restants_cible ;
   } Phase ;
 
 
   /* Compétences */
   typedef struct {
-    char* nom ;
-    char* description ;
-    int rechargement ;
-    int rechargement_courant ;
-    Phase* phases ;
+      char* nom ;
+      char* description ;
+      int rechargement ;
+      int rechargement_courant ;
+      Phase* phases ;
   } Competence ;
 
 
   /* Passifs */
   typedef struct {
-    char* nom ;
-    char* description ;
+      char* nom ;
+      char* description ;
 
   } Passif ;
 
@@ -155,31 +158,31 @@
   /* Structure Combattant */
 
   typedef struct {
-    char* nom ;
-    int type ;
-    int pv_max ;
-    int attaque ;
-    int defense ;
-    int agilite ;
-    int vitesse ;
-    Competence* competences ;
-    Passif passif ;
+      char* nom ;
+      int type ;
+      int pv_max ;
+      int attaque ;
+      int defense ;
+      int agilite ;
+      int vitesse ;
+      Competence* competences ;
+      Passif passif ;
 
-    /* Non Prédéfini */
-    int stamina ;
-    int pv_courants ;
-    int pv_max_courants ;
-    int barriere ;
-    int blocage ;
-    Effet* effets_positifs ;
-    Effet* effets_negatifs ;
+      /* Non Prédéfini */
+      int stamina ;
+      int pv_courants ;
+      int pv_max_courants ;
+      int barriere ;
+      int blocage ;
+      Effet* effets_positifs ;
+      Effet* effets_negatifs ;
   } Combattant ;
 
 
   /* Objets */
 
   typedef struct {
-    char* nom ;
+      char* nom ;
 
   } Objet ;
 
@@ -187,9 +190,9 @@
   /* Equipe */
 
   typedef struct {
-    char* nom ;
-    Combattant* combattants ;
-    Objet* objets ;
-    int pieces ;
+      char* nom ;
+      Combattant* combattants ;
+      Objet* objets ;
+      int pieces ;
   } Equipe ;
 #endif
