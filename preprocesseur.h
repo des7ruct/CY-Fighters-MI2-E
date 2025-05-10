@@ -170,6 +170,7 @@
       Passif passif ;
 
       /* Non Prédéfini */
+      char* nom_temp ;
       int ko ;
       int stamina ;
       int pv_courants ;
