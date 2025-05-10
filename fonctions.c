@@ -813,9 +813,15 @@ int appliquer_effet(Effet effet, Effet* effets) {
   else {
       for (int i = 0 ; i < NOMBRE_EFFETS_MAX ; i++) {
           if (((effets + i) -> type) == AUCUNS) {
-              ((effets + i) -> tours) = effet.tours ;
-              ((effets + i) -> type) = effet.type ;
-              return 0 ;
+              if (application_effet() == 1) {
+                  ((effets + i) -> tours) = effet.tours ;
+                  ((effets + i) -> type) = effet.type ;
+                  return 0 ;
+              }
+                  
+              else {
+                  return 0 ;
+              }
           }
       }
       return 1 ;
