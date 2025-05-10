@@ -219,7 +219,7 @@ void Creation_Equipe(Combattant* tab, int nb_combattant_tot, int nb_combattant_e
         printf("Choix : ") ;
         fgets(tampon, V, stdin) ;
         choix = VerifScanf(tampon) ;
-        bannir_combattant(&A, choix) ;
+        bannir_combattant(&A, choix-1) ;
 
         printf("\033[H\033[2J");
         printf("Equipe %s :\n", B.nom) ;
@@ -228,7 +228,7 @@ void Creation_Equipe(Combattant* tab, int nb_combattant_tot, int nb_combattant_e
         printf("Choix : ") ;
         fgets(tampon, V, stdin) ;
         choix = VerifScanf(tampon) ;
-        bannir_combattant(&B, choix) ;
+        bannir_combattant(&B, choix-1) ;
 
         printf("Voici les 2 equipes : \n %s:\n ", A.nom);
         Liste_Combattant(A.combattants, nb_combattant_eq) ;
@@ -309,7 +309,7 @@ void Creation_Equipe(Combattant* tab, int nb_combattant_tot, int nb_combattant_e
         printf("Choix : ") ;
         fgets(tampon, V, stdin) ;
         choix = VerifScanf(tampon) ;
-        bannir_combattant(&B, choix) ;
+        bannir_combattant(&B, choix-1) ;
 
         printf("\033[H\033[2J");
         printf("Equipe %s :\n", A.nom) ;
@@ -318,7 +318,7 @@ void Creation_Equipe(Combattant* tab, int nb_combattant_tot, int nb_combattant_e
         printf("Choix : ") ;
         fgets(tampon, V, stdin) ;
         choix = VerifScanf(tampon) ;
-        bannir_combattant(&A, choix) ;
+        bannir_combattant(&A, choix-1) ;
 
         printf("Voici les 2 equipes : \n A:\n ") ;
         Liste_Combattant(A.combattants, nb_combattant_eq) ;
