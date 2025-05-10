@@ -65,6 +65,7 @@ void Menu() {
                 if (n != 1) {
                     printf("Erreur, pour retourner au menu, entrez '1'\n ") ;
                 }
+                Menu();
             }
             break ;
       
