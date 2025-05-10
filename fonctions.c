@@ -1146,3 +1146,189 @@ float calcul_passif(Combattant* combattant) {
 
     return 0.0 ;
 }
+
+
+float coefficient_effet(int nb_effet, float coefficient) {
+    /*
+    Prend le nombre de fois d'un effet et son coefficient et calcule le coefficient final.
+    */
+
+    float temp ;
+
+    temp = nb_effet ;
+
+    if ((nb_effet < 0) || (coefficient < 0)) {
+        printf("Erreur dans coefficient_effet avec les variables d'entrée.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        if (nb_effet = 0) {
+            return 1.0 ;
+        }
+
+        else {
+            if (coefficient < 1) {
+                if ((1.0 - (temp * coefficient)) < 0) {
+                    return 0 ;
+                }
+
+                else {
+                    return 1.0 - (temp * coefficient) ;
+                }
+            }
+
+            else {
+                coefficient -- ;
+                return (temp * coefficient) + 1.0 ;
+            }
+        }
+    }
+}
+
+
+int stamina_max_tab(int tab[]) {
+    /*
+    Prend un tableau de staminas retourne l'indice du stamina le plus élevé, 
+    prend au hasard si il y en a plusieurs.
+    */
+    
+    int i, j, s ;
+    int max = 1 ;
+    int max_tab[MAX_COMBATTANTS_EQUIPE] = {0} ;
+    s = 0 ;
+    
+    if (tab == NULL) {
+        printf("Erreur dans la fonction stamina_max_tab avec tab.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        for (i = 0 ; i < MAX_COMBATTANTS_EQUIPE ; i++) {
+            if (tab[i] == max) {
+                max_tab[i] = 1 ;
+            }
+
+            else if (tab[i] > max) {
+                max = tab[i] ;
+
+                for (j = 0 ; j < MAX_COMBATTANTS_EQUIPE ; j++) {
+                    max_tab[j] = 0 ;
+                }
+                
+                max_tab[i] = 1 ;
+            }
+        }
+
+        for (i = 0 ; i < MAX_COMBATTANTS_EQUIPE ; i++) {
+            if (max_tab[i] == 1) {
+                s++ ;
+            }
+        }     
+
+        if (s > 1) {
+            s = aleatoire(1, s) ;
+        }
+
+        for (i = 0 ; i < MAX_COMBATTANTS_EQUIPE ; i++) {
+            if (max_tab[i] == 1) {
+                if (s == 1) {
+                    return i ;
+                }
+
+                else {
+                    s-- ;
+                }
+            }
+        }
+
+        printf("Erreur dans la fonction stamina_max_tab.\n") ;
+        exit(2) ;
+    }
+}
+
+
+char* calcul_tour(Equipe* equipe_a, Equipe* equipe_b) {
+    /*
+    Prends l'adresse de deux équipes et renvoie le nom du combattant ayant son prochain 
+    tour et change les valeurs de stamina de tout les combattants.
+    */
+
+    int i, m ;
+    
+    int selectionne_a[MAX_COMBATTANTS_EQUIPE] = {0} ;
+    int selectionne_b[MAX_COMBATTANTS_EQUIPE] = {0} ;
+    
+    int max_stamina_a = -1 ;
+    int max_stamina_b = -1 ;
+
+    m = 0 ;
+
+    if ((equipe_a == NULL) || (equipe_b == NULL)) {
+        printf("Erreur dans la fonction calcul_tour avec les équipes.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        while (m != 1500) {
+            for (i = 0 ; i < MAX_COMBATTANTS_EQUIPE ; i++) {
+                if (strcmp(((equipe_a -> combattants) + i) -> nom, "NON_DISPO") != 0) {
+                    (((equipe_a -> combattants) + i) -> stamina) += (((equipe_a -> combattants) + i) -> vitesse) * coefficient_effet(nombre_effets(DIM_VITESSE, (((equipe_a -> combattants) + i) -> effets_negatifs)), 0.2) * coefficient_effet(nombre_effets(AUG_VITESSE, (((equipe_a -> combattants) + i) -> effets_positifs)), 1.2) * coefficient_effet(nombre_effets(GEL, (((equipe_a -> combattants) + i) -> effets_negatifs)), 0.05) * coefficient_effet(calcul_passif(((equipe_a -> combattants) + i)), 1.2) * 0.2 ;
+                        
+                    if ((((equipe_a -> combattants) + i) -> stamina) >= STAMINA_MAX ) {
+                        selectionne_a[i] = (((equipe_a -> combattants) + i) -> stamina) ;
+                    }
+                }
+            }
+
+            for (i = 0 ; i < MAX_COMBATTANTS_EQUIPE ; i++) {
+                if (strcmp(((equipe_b -> combattants) + i) -> nom, "NON_DISPO") != 0) {
+                    (((equipe_b -> combattants) + i) -> stamina) += (((equipe_b -> combattants) + i) -> vitesse) * coefficient_effet(nombre_effets(DIM_VITESSE, (((equipe_b -> combattants) + i) -> effets_negatifs)), 0.2) * coefficient_effet(nombre_effets(AUG_VITESSE, (((equipe_b -> combattants) + i) -> effets_positifs)), 1.2) * coefficient_effet(nombre_effets(GEL, (((equipe_b -> combattants) + i) -> effets_negatifs)), 0.05) * coefficient_effet(calcul_passif(((equipe_b -> combattants) + i)), 1.2) * 0.2 ;
+                
+                    if ((((equipe_b -> combattants) + i) -> stamina) >= STAMINA_MAX ) {
+                        selectionne_b[i] = (((equipe_b -> combattants) + i) -> stamina) ;
+                    }
+                }
+            }
+
+            for (i = 0 ; i < MAX_COMBATTANTS_EQUIPE ; i++) {
+                if (max_stamina_a == -1) {
+                    if ((selectionne_a[i] != 0) ) {
+                        max_stamina_a = stamina_max_tab(selectionne_a) ;
+                    }
+                }
+                
+                if (max_stamina_b == -1) {
+                    if ((selectionne_b[i] != 0) ) {
+                        max_stamina_b = stamina_max_tab(selectionne_b) ;
+                    }
+                }
+
+                if ((max_stamina_a != -1) || (max_stamina_b != -1)) {
+                    if ((max_stamina_a != -1) && (max_stamina_b != -1)) {
+                        if (pile_ou_face() == 0) {
+                            return ((equipe_a -> combattants) + max_stamina_a) -> nom ;
+                        }
+
+                        else {
+                            return ((equipe_b -> combattants) + max_stamina_b) -> nom ;
+                        }
+                    }
+
+                    else if (max_stamina_a != -1) {
+                        return ((equipe_a -> combattants) + max_stamina_a) -> nom ;
+                    }
+
+                    else {
+                        return ((equipe_b -> combattants) + max_stamina_b) -> nom ;
+                    }
+                }
+            }
+
+            m++ ;
+        }  
+
+        printf("Erreur dans calcul_tour.\n") ;
+        exit(2) ;
+    }
+}
