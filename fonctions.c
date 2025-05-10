@@ -1333,3 +1333,39 @@ char* calcul_tour(Equipe* equipe_a, Equipe* equipe_b) {
         exit(2) ;
     }
 }
+
+
+int fin_de_tour(Combattant* combattant) {
+    /*
+    Prend l'adresse d'un combattant et applique les effets de poisons / flammes, 
+    puis reduis tout les effets de 1 tour. Retourne 0 si l'opération à réussie.
+    */
+
+    if (combattant == NULL) {
+        printf("Erreur dans fin_de_tour avec combattant.\n") ;
+        exit(1) ;
+    }
+    
+    else {
+        if ((combattant -> pv_courants) > (combattant -> pv_max_courants)) {
+            (combattant -> pv_courants) = (combattant -> pv_max_courants) ;
+        }
+        
+        (combattant -> pv_courants) -= ((combattant -> pv_max_courants) - (combattant -> pv_max_courants) * coefficient_effet(nombre_effets(FLAMMES, (combattant -> effets_negatifs)), 0.05)) ;
+
+        (combattant -> pv_courants) -= ((combattant -> pv_max_courants) - (combattant -> pv_max_courants) * coefficient_effet(nombre_effets(POISON, (combattant -> effets_negatifs)), 0.05)) ;
+
+        if ((combattant -> pv_courants) <= 0) {
+            (combattant -> ko) = 1 ;
+            
+            reduction_tour_effets(combattant) ;
+            reduction_tour_effets(combattant) ;
+
+            return 0 ;
+        }
+
+        reduction_tour_effets(combattant) ;
+
+        return 0 ;
+    }
+}
