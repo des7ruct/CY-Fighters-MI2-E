@@ -108,6 +108,10 @@ void Menu() {
 
 
  void Creation_Equipe(Combattant* tab, int nb_combattant_tot, int nb_combattant_eq) {
+     /*
+     
+     */
+     
         printf("\033[H\033[2J") ;
 
         /* Initialisations des équipes */
