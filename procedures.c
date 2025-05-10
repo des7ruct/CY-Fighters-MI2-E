@@ -107,20 +107,35 @@ void Menu() {
 }
 
 
- void Creation_Equipe(Combattant* tab, int nb_combattant_tot, int nb_combattant_eq) {
+void Creation_Equipe(Combattant* tab, int nb_combattant_tot, int nb_combattant_eq) {
      /*
      Crée et initialise deux equipes et les remplis en fonction des choix de joueurs avec deux phases :
         Une phase de sélection de combattant, 2 par 2.
         Et une phase de bannissement pour bannir un combattant par equipe.
      */
-     
+
         printf("\033[H\033[2J") ;
+        char tampon[V] ;
 
         /* Initialisations des équipes */
         Equipe A ;
         initialisation_combattants_equipe(&A) ;
+        printf("Choisissez un nom pour la premiere equipe:\n\nChoix : ");
+        fgets(A.nom, V, stdin);
         Equipe B ;
         initialisation_combattants_equipe(&B) ;
+        printf("Choisissez un nom pour la deuxieme equipe:\n\nChoix : ");
+        fgets(tampon, V, stdin);
+        B.nom=tampon;
+        printf("%s\n\n", A.nom);
+        printf("\033[H\033[2J") ;
+        Supp_SautDeLigne(A.nom);
+        Supp_SautDeLigne(B.nom);
+
+        printf("Match : %s VS %s\n", A.nom, B.nom);
+        sleep(3);
+        printf("\033[H\033[2J") ;
+
 
 
 
@@ -128,30 +143,30 @@ void Menu() {
         int num_choix = 1 ;
         int choix ;
         int piece = pile_ou_face() ;
-        char tampon[V] ;
 
         switch (piece) {
 
 
             case 0 :
                 /* Choix des combattants de chaque equipe */
-                printf("L'Equipe A choisit en premier.\n\n") ;
+                printf("L'Equipe %s choisit en premier.\n\n", A.nom);
+                sleep(2);
                 for (int i = 0 ; i < nb_combattant_eq / 2 ; i++) {
                     printf("Voici la liste des combattants :\n\n") ;
                     Liste_Combattant(tab, nb_combattant_tot) ;
 
-                    printf("Choix de 2 combattants supplémentaire.\n") ;
-                    printf("Equipe A choisit un combattant en saisissant son numero\n") ;
+                    printf("Choix de 2 combattants supplementaire.\n") ;
+                    printf("Equipe %s choisit un combattant en saisissant son numero\n", A.nom) ;
                     choix = Choix_Combattant(tab, nb_combattant_tot, num_choix) ;
 
 
                     printf("Vous avez selectionne %s \n", tab[choix].nom) ;
-                  
+
                     if (mettre_dans_equipe(tab, &A, choix) != 0) {
                         printf("ERREUR D'AFFECTION\n") ;
                         exit(14) ;
                     }
-                  
+
                     num_choix++ ;
 
                     printf("\033[H\033[2J") ;
@@ -163,7 +178,7 @@ void Menu() {
                         printf("ERREUR D'AFFECTION 2") ;
                         exit(14) ;
                     }
-                  
+
                     num_choix = 1 ;
 
                     printf("Voici la liste des combattants :\n\n") ;
@@ -173,31 +188,31 @@ void Menu() {
                     printf("\033[H\033[2J") ;
                     Liste_Combattant(tab, nb_combattant_tot) ;
                     printf("Vous avez selectionne %s \n", tab[choix].nom) ;
-                  
+
                     if (mettre_dans_equipe(tab, &B, choix) != 0) {
                         printf("ERREUR D'AFFECTION") ;
                         exit(14) ;
                     }
-                  
+
                     num_choix++ ;
 
                     choix = Choix_Combattant(tab, nb_combattant_tot, num_choix) ;
-                    printf("\033[H\033[2J") ;
+                    printf("\033[H\033[2J");
                     Liste_Combattant(tab, nb_combattant_tot) ;
                     printf("Vous avez selectionne %s \n", tab[choix].nom) ;
-                    
+
                     if (mettre_dans_equipe(tab, &B, choix) != 0) {
                         printf("ERREUR D'AFFECTION 2") ;
                         exit(14) ;
                     }
-                  
+
                     num_choix = 1 ;
                   }
 
 
         /* Phase de bannissement */
-
-        printf("Equipe A :\n") ;
+        printf("\033[H\033[2J");
+        printf("Equipe %s :\n", A.nom) ;
         Liste_Combattant(A.combattants, nb_combattant_eq) ;
         printf("Choisissez un combattant a bannir en selectionnant son numero\n") ;
         printf("Choix : ") ;
@@ -205,7 +220,8 @@ void Menu() {
         choix = VerifScanf(tampon) ;
         bannir_combattant(&A, choix) ;
 
-        printf("Equipe B :\n") ;
+        printf("\033[H\033[2J");
+        printf("Equipe %s :\n", B.nom) ;
         Liste_Combattant(B.combattants, nb_combattant_eq) ;
         printf("Choisissez un combattant a bannir en selectionnant son numero\n") ;
         printf("Choix : ") ;
@@ -213,9 +229,9 @@ void Menu() {
         choix = VerifScanf(tampon) ;
         bannir_combattant(&B, choix) ;
 
-        printf("Voici les 2 equipes : \n A:\n ") ;
+        printf("Voici les 2 equipes : \n %s:\n ", A.nom);
         Liste_Combattant(A.combattants, nb_combattant_eq) ;
-        printf("B:\n") ;
+        printf("%s:\n", B.nom);
         Liste_Combattant(B.combattants, nb_combattant_eq) ;
 
                 break;
@@ -223,23 +239,24 @@ void Menu() {
 
          case 1 :
                 /* Choix des combattants de chaque equipe */
-                printf("L'Equipe B choisit en premier.\n\n") ;
+                printf("L'Equipe %s choisit en premier.\n\n", B.nom);
+                sleep(2);
                 for (int i = 0 ; i < (nb_combattant_eq / 2) ; i++) {
-                    printf("Voici la liste des combattants :\n\n") ;
+                    printf("Voici la liste des combattants :\n\n");
                     Liste_Combattant(tab, nb_combattant_tot) ;
 
-                    printf("Choix de 2 combattants supplémentaire.\n") ;
-                    printf("Equipe B choisit un combattant en saisissant son numero\n") ;
+                    printf("Choix de 2 combattants supplementaire.\n") ;
+                    printf("Equipe %s choisit un combattant en saisissant son numero\n", B.nom) ;
                     choix = Choix_Combattant(tab, nb_combattant_tot, num_choix) ;
 
 
                     printf("Vous avez selectionne %s \n", tab[choix].nom) ;
-                  
+
                     if (mettre_dans_equipe(tab, &B, choix) != 0) {
                         printf("ERREUR D'AFFECTION") ;
                         exit(14) ;
                     }
-                  
+
                     num_choix++ ;
 
                     printf("\033[H\033[2J") ;
@@ -251,7 +268,7 @@ void Menu() {
                         printf("ERREUR D'AFFECTION 2") ;
                         exit(14) ;
                     }
-                  
+
                     num_choix = 1 ;
 
                     printf("Voici la liste des combattants :\n\n") ;
@@ -261,30 +278,31 @@ void Menu() {
                     printf("\033[H\033[2J") ;
                     Liste_Combattant(tab, nb_combattant_tot) ;
                     printf("Vous avez selectionne %s \n", tab[choix].nom) ;
-                  
+
                     if (mettre_dans_equipe(tab, &A, choix)!=0) {
                         printf("ERREUR D'AFFECTION");
                         exit(14);
                     }
-                  
+
                     num_choix++ ;
 
                     choix = Choix_Combattant(tab, nb_combattant_tot, num_choix) ;
                     printf("\033[H\033[2J") ;
                     Liste_Combattant(tab, nb_combattant_tot) ;
                     printf("Vous avez selectionne %s \n", tab[choix].nom) ;
-                  
+
                     if (mettre_dans_equipe(tab, &A, choix) != 0) {
                         printf("ERREUR D'AFFECTION 2") ;
                         exit(14) ;
                     }
-                  
+
                     num_choix = 1 ;
         }
 
         /* Phase de bannissement */
 
-        printf("Equipe B :\n") ;
+        printf("\033[H\033[2J");
+        printf("Equipe %s :\n", B.nom);
         Liste_Combattant(B.combattants, nb_combattant_eq) ;
         printf("Choisissez un combattant a bannir en selectionnant son numero\n") ;
         printf("Choix : ") ;
@@ -292,7 +310,8 @@ void Menu() {
         choix = VerifScanf(tampon) ;
         bannir_combattant(&B, choix) ;
 
-        printf("Equipe A :\n") ;
+        printf("\033[H\033[2J");
+        printf("Equipe %s :\n", A.nom) ;
         Liste_Combattant(A.combattants, nb_combattant_eq) ;
         printf("Choisissez un combattant a bannir en selectionnant son numero\n") ;
         printf("Choix : ") ;
