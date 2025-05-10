@@ -1144,5 +1144,5 @@ float calcul_passif(Combattant* combattant) {
     Ne fait rien pour l'instant
     */
 
-    return 1.0 ;
+    return 0.0 ;
 }
