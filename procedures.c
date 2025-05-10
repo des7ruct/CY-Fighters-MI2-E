@@ -109,7 +109,9 @@ void Menu() {
 
  void Creation_Equipe(Combattant* tab, int nb_combattant_tot, int nb_combattant_eq) {
      /*
-     
+     Crée et initialise deux equipes et les remplis en fonction des choix de joueurs avec deux phases :
+        Une phase de sélection de combattant, 2 par 2.
+        Et une phase de bannissement pour bannir un combattant par equipe.
      */
      
         printf("\033[H\033[2J") ;
