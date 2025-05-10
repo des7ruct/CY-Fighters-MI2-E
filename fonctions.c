@@ -1066,7 +1066,7 @@ int Choix_Combattant(Combattant* tab, int nb_combattant, int num_choix) {
 
 int initialisation_effets(Equipe* equipe) {
     /*
-    Initialise les effets d'une equipe, renvoie 0 si l'opération a réussie.
+    Initialise les effets d'une equipe, renvoie 0 si l'opération a réussie, change aussi les noms temporaires des combatants.
     */
     
     if (equipe == NULL) {
@@ -1077,6 +1077,8 @@ int initialisation_effets(Equipe* equipe) {
     else {
         for  (int i = 0 ; i < MAX_COMBATTANTS_EQUIPE ; i++) {
             if (strcmp(((equipe -> combattants) + i) -> nom , "NON_DISPO") != 0) {
+                (((equipe -> combattants) + i) -> nom_temp) = (((equipe -> combattants) + i) -> nom) ;
+              
                 (((equipe -> combattants) + i) -> effets_positifs) = NULL ;
                 (((equipe -> combattants) + i) -> effets_negatifs) = NULL ;
 
