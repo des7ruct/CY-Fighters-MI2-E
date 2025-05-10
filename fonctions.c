@@ -1062,3 +1062,87 @@ int Choix_Combattant(Combattant* tab, int nb_combattant, int num_choix) {
   }
   return (choix - 1) ;
 }
+
+
+int initialisation_effets(Equipe* equipe) {
+    /*
+    Initialise les effets d'une equipe, renvoie 0 si l'opération a réussie.
+    */
+    
+    if (equipe == NULL) {
+        printf("Erreur dans la fonction initialisation_combat avec l'equipe.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        for  (int i = 0 ; i < MAX_COMBATTANTS_EQUIPE ; i++) {
+            if (strcmp(((equipe -> combattants) + i) -> nom , "NON_DISPO") != 0) {
+                (((equipe -> combattants) + i) -> effets_positifs) = NULL ;
+                (((equipe -> combattants) + i) -> effets_negatifs) = NULL ;
+
+                (((equipe -> combattants) + i) -> effets_positifs) = malloc(NOMBRE_EFFETS_MAX * sizeof(Effet)) ;
+                (((equipe -> combattants) + i) -> effets_negatifs) = malloc(NOMBRE_EFFETS_MAX * sizeof(Effet)) ;
+
+                if (((((equipe -> combattants) + i) -> effets_positifs) == NULL) || ((((equipe -> combattants) + i) -> effets_negatifs) == NULL)) {
+                    printf("Erreur dans la fonction initialisation_effets, allocation échouée") ;
+                    exit(1) ;
+                }
+            }  
+        }
+      
+        for (int j = 0 ; j < MAX_COMBATTANTS_EQUIPE ; j++) {
+            if (strcmp(((equipe -> combattants) + j) -> nom , "NON_DISPO") != 0) {
+                for (int k = 0 ; k < NOMBRE_EFFETS_MAX ; k++) {
+                    (((((equipe -> combattants) + j) -> effets_positifs) + k) -> type) = AUCUNS ;
+                    (((((equipe -> combattants) + j) -> effets_positifs) + k) -> tours) = 2 ;
+
+                    (((((equipe -> combattants) + j) -> effets_negatifs) + k) -> type) = AUCUNS ;
+                    (((((equipe -> combattants) + j) -> effets_negatifs) + k) -> tours) = 2 ;
+                }
+            }
+        }
+        
+        return 0 ;
+    }
+}
+
+
+int initialisation_combat(Equipe* equipe)  {
+    /*
+    Initialise une équipe pour le combat, renvoie 0 si l'opération à réussiee.
+    */
+
+  if (equipe == NULL) {
+      printf("Erreur dans la fonction initialisation_combat avec l'equipe.\n") ;
+      exit(1) ;
+  }
+
+  else {
+      for (int i = 0 ; i < MAX_COMBATTANTS_EQUIPE ; i++) {
+          if (strcmp((((equipe -> combattants) + i) -> nom), "NON_DISPO") != 0) {
+              (((equipe -> combattants) + i) -> stamina) = 0 ;
+              (((equipe -> combattants) + i) -> pv_max_courants) = (((equipe -> combattants) + i) -> pv_max) ;
+              (((equipe -> combattants) + i) -> pv_courants) = (((equipe -> combattants) + i) -> pv_max) ;
+              (((equipe -> combattants) + i) -> barriere) = 0 ;
+              (((equipe -> combattants) + i) -> blocage) = 0 ;
+        
+              for (int j = 0 ; j < 2 ; j++) {
+                  (((((equipe -> combattants) + i) -> competences) + j) -> rechargement_courant) = (((((equipe -> combattants) + i) -> competences) + j) -> rechargement) ;
+              }
+
+              reduction_tour_effets(((equipe -> combattants) + i)) ;
+              reduction_tour_effets(((equipe -> combattants) + i)) ;
+          }
+      }
+      return 0 ;
+  }
+}
+
+
+float calcul_passif(Combattant* combattant) {
+    /*
+    Ne fait rien pour l'instant
+    */
+
+    return 1.0 ;
+}
