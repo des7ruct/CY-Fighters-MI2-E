@@ -1360,12 +1360,14 @@ int fin_de_tour(Combattant* combattant) {
             
             reduction_tour_effets(combattant) ;
             reduction_tour_effets(combattant) ;
+            combattant -> stamina = 0 ;
 
             return 0 ;
         }
 
         reduction_tour_effets(combattant) ;
-
+        combattant -> stamina = 0 ;
+      
         return 0 ;
     }
 }
