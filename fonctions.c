@@ -1360,6 +1360,7 @@ int fin_de_tour(Combattant* combattant) {
 
         if ((combattant -> pv_courants) <= 0) {
             (combattant -> ko) = 1 ;
+            (combattant -> nom) = "NON_DISPO" ;
             
             reduction_tour_effets(combattant) ;
             reduction_tour_effets(combattant) ;
