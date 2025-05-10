@@ -170,6 +170,7 @@
       Passif passif ;
 
       /* Non Prédéfini */
+      int ko ;
       int stamina ;
       int pv_courants ;
       int pv_max_courants ;
