@@ -789,7 +789,7 @@ int nombre_effets(int effet, Effet* effets) {
 }
 
 
-int appliquer_effet(Effet effet, Effet* effets) {
+int appliquer_effet(Effet* effets_positifs, Effet effet, Effet* effets) {
   /*
   Fonction ajoutant un effet dans une liste d'effets.
   il faut obligatoirement que l'effet et la liste correspondent ou le résultat sera faussé.
@@ -813,7 +813,7 @@ int appliquer_effet(Effet effet, Effet* effets) {
   else {
       for (int i = 0 ; i < NOMBRE_EFFETS_MAX ; i++) {
           if (((effets + i) -> type) == AUCUNS) {
-              if (application_effet() == 1) {
+              if ((application_effet() == 1) && (nombre_effets(IMMUNITE, effets_positifs) == 0)) {
                   ((effets + i) -> tours) = effet.tours ;
                   ((effets + i) -> type) = effet.type ;
                   return 0 ;
