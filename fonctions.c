@@ -1002,7 +1002,7 @@ int bannir_combattant(Equipe* equipe, int choix) {
 
 int Liste_Combattant(Combattant* tab, int nb_combattant) {
   /*
-  
+  Affiche la liste des combattants contenue dans un tableau
   */
   
   int decompte_type = 1 ;
@@ -1033,7 +1033,7 @@ int Liste_Combattant(Combattant* tab, int nb_combattant) {
 
 int Choix_Combattant(Combattant* tab, int nb_combattant, int num_choix) {
   /*
-  
+  Permet de choisir un combattant parmis un tableau de combattants
   */
   
   char tampon[V] ;
