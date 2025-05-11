@@ -437,211 +437,206 @@ int VerifEffet(char* mot) {
 }
 
 
-Combattant* AjouterCompetence(Combattant* tab, int taille) {
-  /*
-  Cette fonction ajoute les compétences aux comabattants déjà mis dans le tableau
-  */
+Combattant* AjouterCompetence(Combattant* tab, int taille){
+    //Cette fonction ajoute les compétences aux comabattants déjà mis dans le tableau
 
-  FILE* fic = NULL ;
-  fic = fopen("competences.txt", "r") ;
-  
-  if (fic == NULL) {
-      exit(5) ;
-  }
+    FILE* fic=NULL;
+    fic=fopen("competences.txt", "r");
+    if (fic==NULL){
+        exit(5);
+    }
 
-  char ligne[V] ;
-  
-  int NbCompetence = taille * 2 ; /* l y a deux compétences par combattant */
+    char ligne[V];
+    int NbCompetence=taille*2; // l y a deux compétences par combattant
 
-  int j = 0 ;
-      for (int i = 0 ; i < NbCompetence ; i++) {
-              /* Boucle par rapport au nombre de competences */
-              tab[i].competences = malloc(sizeof(Competence) * 2) ;
-              if (tab[i].competences == NULL) {
-                  printf("Erreur malloc") ;
-                  exit(9) ;
-              }
+    int j=0;
+        for (int i=0; i<NbCompetence; i++){
+                //Boucle par rapport au nombre de competences
+                tab[i].competences = malloc(sizeof(Competence) * 2);
+                if (tab[i].competences == NULL){
+                    printf("Erreur malloc");
+                    exit(9);
+                }
 
-          for (int j = 0 ; j < 2 ; j++) {
-              /* Boucle par rapport au nombre de phases */
+            for(int j=0; j<2; j++){
+                //Boucle par rapport au nombre de phases
 
-              /* Récupération du nom de la compétence */
-              tab[i].competences[j].nom = malloc(V) ;
-              if (tab[i].competences[j].nom == NULL) {
-                  printf("Erreur malloc 2") ;
-                  exit(10) ;
-              }
-            
-              fgets(tab[i].competences[j].nom, V, fic) ; 
-              Supp_SautDeLigne(tab[i].competences[j].nom) ;
+                //Récupération du nom de la compétence
+                tab[i].competences[j].nom=malloc(V);
+                if(tab[i].competences[j].nom == NULL){
+                    printf("Erreur malloc 2");
+                    exit(10);
+                }
+                fgets(tab[i].competences[j].nom, V, fic);
+                Supp_SautDeLigne(tab[i].competences[j].nom);
 
-              /* Récupération de la description de la compétence */
-              tab[i].competences[j].description = malloc(V) ;
-              if (tab[i].competences[j].description == NULL) {
-                  printf("Erreur malloc 3") ;
-                  exit(13) ;
-              } 
-            
-              fgets(tab[i].competences[j].description, V, fic) ; 
-              if (fscanf(fic, "%d\n", &tab[i].competences[j].rechargement) != 1) {
-                  printf("ERREUR SORTIE DU PROGRAMME") ;
-                  exit(6) ;
-              }
+                //Récupération de la description de la compétence
+                tab[i].competences[j].description=malloc(V);
+                if(tab[i].competences[j].description == NULL){
+                    printf("Erreur malloc 3");
+                    exit(13);
+                }
+                fgets(tab[i].competences[j].description, V, fic);
+                if(fscanf(fic, "%d\n", &tab[i].competences[j].rechargement)!=1){
+                    printf("ERREUR SORTIE DU PROGRAMME");
+                    exit(6);
+                }
 
-              /* Ajout de phases */
+                //Ajout de phases//
 
-              tab[i].competences[j].phases = malloc(sizeof(Phase) * 2) ;
-              int c = 0 ;
-              char* mot ;
-              fgets(ligne, V, fic) ;
-            
-              while(c == 0) {
-                  int k = 0 ;
+                tab[i].competences[j].phases=malloc(sizeof(Phase) * 2);
+                int c=0;
+                char* mot;
+                fgets(ligne, V, fic);
+                while(c==0){
+                    int k=0;
 
-                  Supp_SautDeLigne(ligne) ;
-                  mot = strtok(ligne, " ") ;
-                  tab[i].competences[j].phases[k].multiplicateur = atof(mot) ;
-                  mot = strtok(NULL, " ") ;
-                  tab[i].competences[j].phases[k].stat = VerifCst(mot) ;
-                  mot = strtok(NULL, " ") ;
-                  tab[i].competences[j].phases[k].cible = VerifCst(mot) ;
+                    Supp_SautDeLigne(ligne);
+                    mot=strtok(ligne, " ");
+                    tab[i].competences[j].phases[k].multiplicateur=atof(mot);
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].stat=VerifCst(mot);
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].cible=VerifCst(mot);
 
-                  /* Ajout des effets des phases */
-                  fgets(ligne, V, fic) ;
-                  Supp_SautDeLigne(ligne) ;
-                  int e = 0 ;
-                  int x = 0 ;
-                
-                  while (ligne[x] != '\0') {
-                      if (ligne[x] == ' ') {
-                          e++ ;
-                      }
-                      x++ ;
-                  }
-                
-                  int l = 0 ;
-
-                  tab[i].competences[j].phases[k].effets_positifs = malloc(sizeof(Effet) * 10) ;
-                  if (tab[i].competences[j].phases[k].effets_positifs == NULL) {
-                      printf("ERREUR DE MALLOC") ;
-                      exit(11) ;
-                  }
-                
-                  mot = strtok(ligne, " ") ;
-                  tab[i].competences[j].phases[k].effets_positifs[l].type = VerifEffet(mot) ;
-                  tab[i].competences[j].phases[k].effets_positifs[l].tours = 2 ;
-                  l++ ;
-                
-                  for (int i2 = 0 ; i2 < e ; i2++) {
-                      mot = strtok(NULL, " ") ;
-                      tab[i].competences[j].phases[k].effets_positifs[l].type = VerifEffet(mot) ;
-                      tab[i].competences[j].phases[k].effets_positifs[l].tours = 2 ;
-                      l++ ;
-                  }
-                
-                  int l2 = 0 ;
-
-                  fgets(ligne, V, fic) ;
-                  Supp_SautDeLigne(ligne) ;
-                  x = 0 ;
-                  e = 0 ;
-                
-                  while (ligne[x] != '\0') {
-                      if (ligne[x] == ' ') {
-                          e++ ;
-                      }
-                    
-                      x++ ;
-                  }
-                
-                  tab[i].competences[j].phases[k].effets_negatifs = malloc(sizeof(Effet) * 10) ;
-                
-                  if (tab[i].competences[j].phases[k].effets_negatifs == NULL) {
-                      printf("ERREUR DE MALLOC") ;
-                      exit(12) ;
-                  }
-                
-                  mot = strtok(ligne, " ") ;
-                  tab[i].competences[j].phases[k].effets_negatifs[l2].type = VerifEffet(mot) ;
-                  tab[i].competences[j].phases[k].effets_negatifs[l].tours = 2 ;
-                  l2++ ;
-                
-                  for (int i2 = 0 ; i2 < e ; i2++) {
-                      mot = strtok(NULL, " ") ;
-                      tab[i].competences[j].phases[k].effets_negatifs[l2].type = VerifEffet(mot) ;
-                      tab[i].competences[j].phases[k].effets_negatifs[l].tours = 2 ;
-                      l2++ ;
-                  }
-
-                  /* On récupère les dernières données */
-
-                  fgets(ligne, V, fic) ;
-                  Supp_SautDeLigne(ligne) ;
-
-                  mot = strtok(ligne, " ") ;
-                  tab[i].competences[j].phases[k].soin = VerifCst(mot) ;
+                    //Ajout des effets des phases//
+                    fgets(ligne, V, fic);
+                    Supp_SautDeLigne(ligne);
+                    int e=0;
+                    int x=0;
+                    while(ligne[x]!= '\0'){
+                        if(ligne[x]==' '){
+                            e++;
+                        }
+                        x++;
+                    }
+                    int l=0;
 
 
-                  mot = strtok(NULL, " ") ;
-                  tab[i].competences[j].phases[k].vampirisme = VerifCst(mot) ;
+                    tab[i].competences[j].phases[k].effets_positifs=malloc(sizeof(Effet)*10);
+                    if(tab[i].competences[j].phases[k].effets_positifs == NULL){
+                        printf("ERREUR DE MALLOC");
+                        exit(11);
+                    }
+                    mot=strtok(ligne, " ");
+                    tab[i].competences[j].phases[k].effets_positifs[l].type=VerifEffet(mot);
+                    tab[i].competences[j].phases[k].effets_positifs[l].tours=2;
+                    l++;
+                    for(int i2=0; i2<e; i2++){
+                        mot=strtok(NULL, " ");
+                        tab[i].competences[j].phases[k].effets_positifs[l].type=VerifEffet(mot);
+                        tab[i].competences[j].phases[k].effets_positifs[l].tours=2;
+                        l++;
+                    }
+                    for (e; e<=10; e++){
+                        tab[i].competences[j].phases[k].effets_positifs[l].type=AUCUNS;
+                        l++;
+                    }
+                    int l2=0;
 
-                  mot = strtok(NULL, " ") ;
-                  tab[i].competences[j].phases[k].aire = VerifEffet(mot) ;
-
-                  mot = strtok(NULL, " ") ;
-                  tab[i].competences[j].phases[k].destruction = VerifEffet(mot) ;
-
-                  mot = strtok(NULL, " ") ;
-                  tab[i].competences[j].phases[k].nefastes_multiplicateur = VerifEffet(mot) ;
-
-                  mot = strtok(NULL, " ") ;
-                  tab[i].competences[j].phases[k].barriere = atof(mot) ;
-
-                  mot = strtok(NULL, " ") ;
-                  tab[i].competences[j].phases[k].red_rechargement = atoi(mot) ;
-
-                  mot = strtok(NULL, " ") ;
-                  tab[i].competences[j].phases[k].red_nefastes = atof(mot) ;
-
-                  mot = strtok(NULL, " ") ;
-                  tab[i].competences[j].phases[k].ignore_defense = atoi(mot) ;
-
-                  mot = strtok(NULL, " ") ;
-                  tab[i].competences[j].phases[k].ignore_defense = VerifEffet(mot) ;
-
-                  mot = strtok(NULL, " ") ;
-                  tab[i].competences[j].phases[k].degats_pvs_restants_type = VerifEffet(mot) ;
-
-                  mot = strtok(NULL, " ") ;
-                  tab[i].competences[j].phases[k].degats_pvs_restants_cible = VerifEffet(mot) ;
-
-                  k++ ; /* Decompte du numéro de compétence */
+                    fgets(ligne, V, fic);
+                    Supp_SautDeLigne(ligne);
+                    x=0;
+                    e=0;
+                    while(ligne[x]!= '\0'){
+                        if(ligne[x]==' '){
+                            e++;
+                        }
+                        x++;
+                    }
+                    tab[i].competences[j].phases[k].effets_negatifs=malloc(sizeof(Effet)*10);
+                    if(tab[i].competences[j].phases[k].effets_negatifs == NULL){
+                        printf("ERREUR DE MALLOC");
+                        exit(12);
+                    }
+                    mot=strtok(ligne, " ");
+                    tab[i].competences[j].phases[k].effets_negatifs[l2].type=VerifEffet(mot);
+                    tab[i].competences[j].phases[k].effets_negatifs[l].tours=2;
+                    l2++;
+                    for(int i2=0; i2<e; i2++){
+                        mot=strtok(NULL, " ");
+                        tab[i].competences[j].phases[k].effets_negatifs[l2].type=VerifEffet(mot);
+                        tab[i].competences[j].phases[k].effets_negatifs[l].tours=2;
+                        l2++;
+                    }
+                    for (e; e<=10; e++){
+                        tab[i].competences[j].phases[k].effets_positifs[l2].type=AUCUNS;
+                        l2++;
+                    }
 
 
-                  /*
-                  Si le nom de cette compétence est celle de la dernière du document, on retourne le tableau
-                  */
-                  if (strcmp(tab[i].competences[j].nom, "Ragnarok") == 0) {
-                      return(tab) ;
-                  }
+                    // On récupère les dernières données
 
-                  /* On vérifie si il y a une deuxième phase ou non */
-                  fgets(ligne, V, fic) ;
-                  if (ligne != NULL) {
-                      if (ligne[0] == '\n') {
-                          c = 1 ;
-                      }
+                    fgets(ligne, V, fic);
+                    Supp_SautDeLigne(ligne);
 
-                      else {
-                          c = 0 ;
-                      }
-                  }
-              }
-          }
-      }
+                    mot=strtok(ligne, " ");
+                    tab[i].competences[j].phases[k].soin=VerifCst(mot);
 
-  fclose(fic) ;
-  return(tab) ;
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].vampirisme=VerifCst(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].aire=VerifEffet(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].destruction=VerifEffet(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].nefastes_multiplicateur=VerifEffet(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].barriere=atof(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].red_rechargement=atoi(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].red_nefastes=atof(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].ignore_defense=atoi(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].ignore_defense=VerifEffet(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].degats_pvs_restants_type=VerifEffet(mot);
+
+                    mot=strtok(NULL, " ");
+                    tab[i].competences[j].phases[k].degats_pvs_restants_cible=VerifEffet(mot);
+
+                    k++; //Decompte du numéro de compétence
+
+
+                    /*
+                    Si le nom de cette compétence est celle de la dernière du document, on retourne le tableau
+                    */
+                    if(strcmp(tab[i].competences[j].nom, "Ragnarok")==0){
+                        return(tab);
+                    }
+
+                    //On vérifie si il y a une deuxième phase ou non
+                    fgets(ligne, V, fic);
+                    if (ligne != NULL) {
+                        if (ligne[0] == '\n') {
+                        c=1;
+                        }
+
+                        else{
+                            c=0;
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+
+    fclose(fic);
+    return(tab);
 }
 
 
