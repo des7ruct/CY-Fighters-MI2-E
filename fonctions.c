@@ -1409,6 +1409,12 @@ int fin_de_tour(Combattant* combattant) {
 
         reduction_tour_effets(combattant) ;
         combattant -> stamina = 0 ;
+
+        for (int i = 0 ; i < 2 ; i++) {
+            if ((((combattant -> competences) + i) -> rechargement_courant) < (((combattant -> competences) + i) -> rechargement)) {
+                (((combattant -> competences) + i) -> rechargement_courant)++ ;
+            }
+        }
       
         return 0 ;
     }
