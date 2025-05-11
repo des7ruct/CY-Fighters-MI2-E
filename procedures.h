@@ -3,6 +3,7 @@
 
   /* inclusions */
 #include "fonctions.h"
+#include "preprocesseur.h"
 
   /* déclarations */
 
