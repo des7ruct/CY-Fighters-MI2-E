@@ -3185,4 +3185,17 @@ void vide_malloc(){
     }
 }
 
+int main() {
+    int n_tot=Calcul_Nb_Combattant();
+    int n_eq=4;
+    Combattant* tab;
+    
+    tab=RemplirTabCombattant();
+
+    Combat(tab, n_tot, n_eq);
+
+    
+
+    return(0);
+}
 
