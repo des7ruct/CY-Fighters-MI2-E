@@ -11,10 +11,14 @@
   /* constantes */
 
   /* Valeur de chaque type assignée à son nom pour faciliter l'écriture de code */
-
   #define FEU 1
   #define PLANTE 2
   #define EAU 3
+
+  /* Valeurs de difficultés de l'ia */
+  #define NOOB 1
+  #define FACILE 2
+  #define NORMAL 3
 
   /* Pourcentage initial de bonus de type */
   #define TAUX_TYPE 0.25
