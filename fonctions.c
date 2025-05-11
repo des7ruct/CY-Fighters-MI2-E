@@ -1628,3 +1628,58 @@ int donner_effets_negatifs(Combattant* cible, Effet* effets) {
         return 0 ;
     }
 }
+
+
+int phase_competence_effets(Phase* phase, Combattant* cible) {
+    /*
+    Execute une phase sur une cible, revoie 0 si l'opération a réussie.
+    */
+
+    if ((phase == NULL) || (cible == NULL)) {
+        printf("Erreur dans phase_competence.\n") ;
+    }
+
+    else {
+        donner_effets_positifs(cible, (phase -> effets_positifs)) ;
+        donner_effets_negatifs(cible, (phase -> effets_negatifs)) ;
+
+        return 0 ;
+    }
+}
+
+
+int phase_competence_attaque(Combattant* lanceur, Combattant* cible, Phase* phase) {
+    /*
+    Attaque la cible avec la competence, et prend en compte les effets complexes. Retourne 0 si l'opération a réussie.
+    */
+
+    if ((lanceur == NULL) || (cible == NULL) || (phase == NULL)) {
+        printf("Erreur dans phase_competence_attaque.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        
+    }
+}
+
+
+int utiliser_competence(Combattant* lanceur, Combattant* cible, int c) {
+    /*
+    Utilise une compétence sur une cible, c etant l'indice de la competence, renvoie 0 si l'opération a réussie.
+    */
+
+    if ((lanceur == NULL) || (cible == NULL) || (c < 0) || (c > 1)) {
+        printf("Erreur dans utiliser_competence avec les variables d'entrée.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        for (int i = 0 ; i < 2 ; i++) {
+            phase_competence_attaque(lanceur, cible, ((((lanceur -> competences) + c) -> phases) + i)) ;
+            phase_competence_effets(((((lanceur -> competences) + c) -> phases) + i) , cible) ;
+        }
+
+        return 0 ;
+    }   
+}
