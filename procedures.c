@@ -473,7 +473,7 @@ void Creation_Equipe(Combattant* tab, int nb_combattant_tot, int nb_combattant_e
 
 
 void Interface_Combat(Equipe* A, Equipe* B, Combattant Attaquant){
-        
+
 
         char *c1, *c2, *c3, *c4, *c5, *c6;
         char* type;
@@ -644,7 +644,7 @@ void Interface_Combat(Equipe* A, Equipe* B, Combattant Attaquant){
             }
 
             else if(j==2){
-                printf(" 1 : %s ", Attaquant.competences[0].nom);
+                printf(" 1 : %s  %d/%d ", Attaquant.competences[0].nom, Attaquant.competences[0].rechargement_courant, Attaquant.competences[0].rechargement);
                 break;
             }
             else if(j==3){
@@ -653,7 +653,7 @@ void Interface_Combat(Equipe* A, Equipe* B, Combattant Attaquant){
             }
 
             else if(j==5){
-                printf(" 2 : %s ", Attaquant.competences[1].nom);
+                printf(" 2 : %s  %d/%d ", Attaquant.competences[1].nom, Attaquant.competences[1].rechargement_courant, Attaquant.competences[1].rechargement);
                 break;
             }
             else if(j==6){
@@ -683,7 +683,8 @@ void Combat(Combattant* tab, int n_tot, int n_eq){
         Equipe A ;
         initialisation_combattants_equipe(&A) ;
         printf("Choisissez un nom pour la premiere equipe:\n\nChoix : ");
-        fgets(A.nom, V, stdin);
+        fgets(tampon, V, stdin);
+        A.nom=tampon;
         Equipe B ;
         initialisation_combattants_equipe(&B) ;
         printf("Choisissez un nom pour la deuxieme equipe:\n\nChoix : ");
@@ -712,7 +713,10 @@ void Combat(Combattant* tab, int n_tot, int n_eq){
             int choix=-1;
             int equipe;
             Attaquant.nom=calcul_tour(&A, &B);
+
             Attaquant=Compare_Attaquant(&A, &B, Attaquant);
+            printf("%d %d\n", (Attaquant.competences + 1) -> rechargement_courant, (Attaquant.competences + 1) -> rechargement) ;
+            debut_tour(&Attaquant) ;
 
             if(Attaquant.nom==A.combattants[0].nom || Attaquant.nom==A.combattants[1].nom || Attaquant.nom==A.combattants[2].nom){
                 equipe=1;
@@ -737,12 +741,101 @@ void Combat(Combattant* tab, int n_tot, int n_eq){
             switch(choix){
 
                 case 1 :
+                    choix=0;
+                    printf("Qui souhaitez vous attaquer ?\n");
+                    while(choix<1 ||choix >6){
+                        fgets(tampon, V, stdin);
+                        choix=VerifScanf(tampon);
+                        if(choix<1 ||choix >6){
+                            printf("Erreur, veuillez de nouveau choisir une cible");
+                        }
+                        if((equipe==1) && (choix==1 || choix==2 || choix==3)){
+                            printf("Choisissez un adversaire\n");
+                            choix=0;
+                           }
+                        if((equipe==2) && (choix==4 || choix==5 || choix==6)){
+                            printf("Choisissez un adversaire\n");
+                            choix=0;
+                           }
+                    }
 
+                    switch(choix){
+
+                        case 1 :
+                            utiliser_competence(&Attaquant, &A.combattants[1], 0) ;
+                            break;
+
+                        case 2 :
+                            utiliser_competence(&Attaquant, &A.combattants[1], 0);
+                            break;
+
+                        case 3 :
+                            utiliser_competence(&Attaquant, &A.combattants[2], 0);
+                            break;
+
+                        case 4 :
+                            utiliser_competence(&Attaquant, &B.combattants[0], 0);
+                            break;
+
+                        case 5 :
+                            utiliser_competence(&Attaquant, &B.combattants[1], 0);
+                            break;
+
+                        case 6 :
+                            utiliser_competence(&Attaquant, &B.combattants[2], 0);
+                            break;
+
+                    }
 
 
                     break;
 
                 case 2 :
+                    choix=0;
+                    printf("Qui souhaitez vous attaquer ?\n");
+                    while(choix<1 ||choix >6){
+                        fgets(tampon, V, stdin);
+                        choix=VerifScanf(tampon);
+                        if(choix<1 ||choix >6){
+                            printf("Erreur, veuillez de nouveau choisir une cible");
+                        }
+                        if((equipe==1) && (choix==1 || choix==2 || choix==3)){
+                            printf("Choisissez un adversaire\n");
+                            choix=0;
+                           }
+                        if((equipe==2) && (choix==4 || choix==5 || choix==6)){
+                            printf("Choisissez un adversaire\n");
+                            choix=0;
+                           }
+                    }
+
+                    switch(choix){
+
+                        case 1 :
+                            utiliser_competence(&Attaquant, &A.combattants[1], 1) ;
+                            break;
+
+                        case 2 :
+                            utiliser_competence(&Attaquant, &A.combattants[1], 1);
+                            break;
+
+                        case 3 :
+                            utiliser_competence(&Attaquant, &A.combattants[2], 1);
+                            break;
+
+                        case 4 :
+                            utiliser_competence(&Attaquant, &B.combattants[0], 1);
+                            break;
+
+                        case 5 :
+                            utiliser_competence(&Attaquant, &B.combattants[1], 1);
+                            break;
+
+                        case 6 :
+                            utiliser_competence(&Attaquant, &B.combattants[2], 1);
+                            break;
+
+                    }
 
                     break;
 
@@ -769,10 +862,7 @@ void Combat(Combattant* tab, int n_tot, int n_eq){
                     switch(choix){
 
                         case 1 :
-                            if(attaque_basique(&Attaquant, &A.combattants[0])!=0){
-                                printf("ERREUR ATT_BASE");
-                                exit(21);
-                                }
+                            attaque_basique(&Attaquant, &A.combattants[0]) ;
                             break;
 
                         case 2 :
@@ -806,11 +896,9 @@ void Combat(Combattant* tab, int n_tot, int n_eq){
                     break;
             }
 
+            fin_de_tour(&Attaquant) ;
 
         }
-
-
-
  }
 
 
