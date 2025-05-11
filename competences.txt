@@ -260,7 +260,7 @@ NON_ACTIF NON_ACTIF ACTIF NON_ACTIF NON_ACTIF 0.0 0 1.0 2 NON_ACTIF NON_ACTIF NO
 
 Concoction Secrete
 Sur tout les allies, augmente leur vitesse et diminue le temps de rechargement de leurs competences de 2 tours.
-8
+6
 0.0 ATTAQUE MOI
 AUG_VITESSE
 AUCUNS
