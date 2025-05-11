@@ -2007,3 +2007,27 @@ char* convertir_type(int t){
 
     return(type);
 }
+
+Combattant Compare_Attaquant(Equipe* A, Equipe* B, Combattant Attaquant){
+    //Compare le nom du combattant attaquant et retourne le bon combattant//
+    if(strcmp(Attaquant.nom, A -> combattants[0].nom)==0){
+        return(A -> combattants[0]);
+    }
+    else if(strcmp(Attaquant.nom, A -> combattants[1].nom)==0){
+        return(A -> combattants[1]);
+    }
+    else if(strcmp(Attaquant.nom, A -> combattants[2].nom)==0){
+        return(A -> combattants[2]);
+    }
+    else if(strcmp(Attaquant.nom, B -> combattants[0].nom)==0){
+        return(B -> combattants[0]);
+    }
+    else if(strcmp(Attaquant.nom, B -> combattants[1].nom)==0){
+        return(B -> combattants[1]);
+    }
+    else if(strcmp(Attaquant.nom, A -> combattants[2].nom)==0){
+        return(B -> combattants[2]);
+    }
+        printf("ERREUR ATTAQUANT");
+        exit(18);
+ }
