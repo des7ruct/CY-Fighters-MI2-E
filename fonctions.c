@@ -1519,3 +1519,19 @@ float coefficient_stat_attaque(int stat, Combattant* lanceur) {
         }
     }
 }
+
+
+float coefficient_defense(Combattant* cible) {
+    /*
+    Retourne le coefficient de la defense de la cible.
+    */
+
+    if (cible == NULL) {
+        printf("Erreur coefficient defense avec la cible.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        return (1.0 * coefficient_effet(nombre_effets(AUG_DEFENSE, (cible -> effets_positifs)), 1.25) * coefficient_effet(nombre_effets(DIM_DEFENSE, (cible -> effets_negatifs)), 0.25) * coefficient_effet(nombre_effets(POISON, (cible -> effets_negatifs)), 0.05) * coefficient_effet(calcul_passif(cible), calcul_passif(cible))) ;
+    }
+}
