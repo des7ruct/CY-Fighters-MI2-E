@@ -1454,14 +1454,21 @@ float coefficients_basiques_attaque(Combattant* lanceur, Combattant* cible) {
         coefficient *= multiplicateur_critique(15 + (15 * nombre_effets(AUG_CRITIQUE, (lanceur -> effets_positifs)))) ;
 
         coefficient *= multiplicateur_type((lanceur -> type), (cible -> type)) ;
-        
+
         coefficient *= DegatsEsquive(((lanceur -> agilite) * coefficient_effet(nombre_effets(AUG_AGILITE, (lanceur -> effets_positifs)), 1.15) * coefficient_effet(nombre_effets(DIM_AGILITE, (lanceur -> effets_negatifs)), 0.15) * coefficient_effet(nombre_effets(GEL, (lanceur -> effets_negatifs)), 0.05) * coefficient_effet(calcul_passif(lanceur), 1.2)), ((cible -> agilite) * coefficient_effet(nombre_effets(AUG_AGILITE, (cible -> effets_positifs)), 1.15) * coefficient_effet(nombre_effets(DIM_AGILITE, (cible -> effets_negatifs)), 0.15) * coefficient_effet(nombre_effets(GEL, (cible -> effets_negatifs)), 0.05) * coefficient_effet(calcul_passif(cible), 1.2))) ;
 
         if ((cible -> blocage) == 1) {
             coefficient *= 0.65 ;
         }
+
+        if (coefficient == 0) {
+            return 1.0 ;
+        }
+
+        else {
+            return coefficient ;
+        }
         
-        return coefficient ;
     }
 }
 
@@ -1478,9 +1485,15 @@ float coefficient_stat_attaque(int stat, Combattant* lanceur) {
 
     else {
         if (stat == ATTAQUE) {
-            return (1.0 * coefficient_effet(nombre_effets(AUG_ATTAQUE, (lanceur -> effets_positifs)), 1.25) * coefficient_effet(nombre_effets(DIM_ATTAQUE, (lanceur -> effets_negatifs)), 0.25) * coefficient_effet(nombre_effets(FLAMMES, (lanceur -> effets_negatifs)), 0.05) * coefficient_effet(calcul_passif(lanceur), calcul_passif(lanceur))) ;
+            if ((1.0 * coefficient_effet(nombre_effets(AUG_ATTAQUE, (lanceur -> effets_positifs)), 1.25) * coefficient_effet(nombre_effets(DIM_ATTAQUE, (lanceur -> effets_negatifs)), 0.25) * coefficient_effet(nombre_effets(FLAMMES, (lanceur -> effets_negatifs)), 0.05) * coefficient_effet(calcul_passif(lanceur), calcul_passif(lanceur))) == 0) {
+                return 1.0 ;
+            }
+
+            else {
+                return (1.0 * coefficient_effet(nombre_effets(AUG_ATTAQUE, (lanceur -> effets_positifs)), 1.25) * coefficient_effet(nombre_effets(DIM_ATTAQUE, (lanceur -> effets_negatifs)), 0.25) * coefficient_effet(nombre_effets(FLAMMES, (lanceur -> effets_negatifs)), 0.05) * coefficient_effet(calcul_passif(lanceur), calcul_passif(lanceur))) ;
+            }
         }
-        
+
         else if (stat == DEFENSE) {
             return (1.0 * coefficient_effet(nombre_effets(AUG_DEFENSE, (lanceur -> effets_positifs)), 1.25) * coefficient_effet(nombre_effets(DIM_DEFENSE, (lanceur -> effets_negatifs)), 0.25) * coefficient_effet(nombre_effets(POISON, (lanceur -> effets_negatifs)), 0.05) * coefficient_effet(calcul_passif(lanceur), calcul_passif(lanceur))) ;
         }
@@ -1529,7 +1542,7 @@ int attaque_basique(Combattant* lanceur, Combattant* cible) {
         if ((nombre_effets(ETOURDISSEMENT, (lanceur -> effets_negatifs))) > 0) {
             return 0.0 ;
         }
-      
+
         if ((cible -> barriere) > 0) {
             (cible -> barriere) -= (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque(ATTAQUE, lanceur) ;
 
@@ -1548,7 +1561,7 @@ int attaque_basique(Combattant* lanceur, Combattant* cible) {
                         }
                     }
                 }
-                
+
                 return 0 ;
             }
         }
@@ -1556,7 +1569,7 @@ int attaque_basique(Combattant* lanceur, Combattant* cible) {
         else {
             if ((((cible -> defense) * coefficient_defense(cible)) - (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque(ATTAQUE, lanceur)) < 0) {
                 (cible -> pv_courants) += (((cible -> defense) * coefficient_defense(cible)) - (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque(ATTAQUE, lanceur)) ;
-                
+
                 if (nombre_effets(EPINES, (cible -> effets_positifs)) > 0) {
                     if ((((lanceur -> defense) * coefficient_defense(lanceur)) - 0.35 * (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque(ATTAQUE, lanceur)) < 0) {
                         for (i = 0 ; i < nombre_effets(EPINES, (cible -> effets_positifs)) ; i++) {
@@ -1569,6 +1582,8 @@ int attaque_basique(Combattant* lanceur, Combattant* cible) {
             return 0 ;
         }
     }
+
+    return 1 ;
 }
 
 
@@ -1595,7 +1610,7 @@ int donner_effets_negatifs(Combattant* cible, Effet* effets) {
     /*
     Donne tout les effets négatifs d'une liste a un combattant, renvoie 0 si l'opération a réussie.
     */
-    
+
     if ((cible == NULL) || (effets == NULL)) {
         printf("Erreur dans la fonction donner_effets_negatifs.\n") ;
         exit(1) ;
@@ -1617,7 +1632,7 @@ float coefficient_multiplicatif_nefaste(Phase* phase, Combattant* cible) {
     */
 
     float somme = 0.0 ;
-    
+
     if ((phase == NULL) || (cible == NULL)) {
         printf("Erreur avec coefficient_multiplicatif_nefaste.\n") ;
         exit(1) ;
@@ -1657,7 +1672,7 @@ float coefficient_multiplicateur_pv_restants(Phase* phase, Combattant* lanceur, 
         if ((phase -> degats_pvs_restants_cible) == MOI) {
             max = (lanceur -> pv_max_courants) ;
             restant = (lanceur -> pv_courants) ;
-            
+
         }
 
         else if ((phase -> degats_pvs_restants_cible) == ENNEMI) {
@@ -1727,11 +1742,18 @@ int phase_competence_effets(Phase* phase, Combattant* cible) {
     }
 
     else {
-        donner_effets_positifs(cible, (phase -> effets_positifs)) ;
-        donner_effets_negatifs(cible, (phase -> effets_negatifs)) ;
+        if (phase -> effets_positifs != AUCUNS) {
+            donner_effets_positifs(cible, (phase -> effets_positifs)) ;
+        }
 
+        if (phase -> effets_negatifs != AUCUNS) {
+            donner_effets_negatifs(cible, (phase -> effets_negatifs)) ;
+        }
+        
         return 0 ;
     }
+
+    return 1 ;
 }
 
 
@@ -1754,7 +1776,7 @@ int phase_competence_attaque(Combattant* lanceur, Combattant* cible, Phase* phas
     else {
         pv_temp = (cible -> pv_courants) ;
         red_nefastes_temp = (phase -> red_nefastes) ;
-        
+
         if ((cible -> barriere) > 0) {
             (cible -> barriere) -= coefficient_multiplicatif_nefaste(phase, cible) * (phase -> multiplicateur) * (phase -> stat) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque((phase -> stat), lanceur) ;
 
@@ -1776,13 +1798,14 @@ int phase_competence_attaque(Combattant* lanceur, Combattant* cible, Phase* phas
         }
 
         else {
-            if ((((cible -> defense) * coefficient_defense(cible)) * coefficient_ignore_defense(phase, lanceur, cible) - coefficient_multiplicatif_nefaste(phase, cible) * (phase -> multiplicateur) * (phase -> stat) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque((phase -> stat), lanceur)) < 0) {
-                (cible -> pv_courants) += (((cible -> defense) * coefficient_defense(cible)) * coefficient_ignore_defense(phase, lanceur, cible) - coefficient_multiplicatif_nefaste(phase, cible) * (phase -> multiplicateur) * (phase -> stat) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque((phase -> stat), lanceur)) ;
+
+            if ((((cible -> defense) * coefficient_defense(cible)) * coefficient_ignore_defense(phase, lanceur, cible) - coefficient_multiplicatif_nefaste(phase, cible) * (phase -> multiplicateur) * (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque((phase -> stat), lanceur)) < 0) {
+                (cible -> pv_courants) += (((cible -> defense) * coefficient_defense(cible)) * coefficient_ignore_defense(phase, lanceur, cible) - coefficient_multiplicatif_nefaste(phase, cible) * (phase -> multiplicateur) * (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque((phase -> stat), lanceur)) ;
 
                 if (nombre_effets(EPINES, (cible -> effets_positifs)) > 0) {
-                    if ((((lanceur -> defense) * coefficient_defense(lanceur)) - 0.35 * coefficient_multiplicatif_nefaste(phase, cible) * (phase -> multiplicateur) * (phase -> stat) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque((phase -> stat), lanceur)) < 0) {
+                    if ((((lanceur -> defense) * coefficient_defense(lanceur)) - 0.35 * coefficient_multiplicatif_nefaste(phase, cible) * (phase -> multiplicateur) * (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque((phase -> stat), lanceur)) < 0) {
                         for (i = 0 ; i < nombre_effets(EPINES, (cible -> effets_positifs)) ; i++) {
-                            (lanceur -> pv_courants) += (((lanceur -> defense) * coefficient_defense(lanceur)) - 0.35 * coefficient_multiplicatif_nefaste(phase, cible) * (phase -> multiplicateur) * (phase -> stat) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque((phase -> stat), lanceur)) ;
+                            (lanceur -> pv_courants) += (((lanceur -> defense) * coefficient_defense(lanceur)) - 0.35 * coefficient_multiplicatif_nefaste(phase, cible) * (phase -> multiplicateur) * (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque((phase -> stat), lanceur)) ;
                         }
                     }
                 }
@@ -1793,7 +1816,7 @@ int phase_competence_attaque(Combattant* lanceur, Combattant* cible, Phase* phas
             for (i = 0 ; i < 2 ; i++) {
                 if ((((cible -> competences) + i) -> rechargement_courant) < (((cible -> competences) + i) -> rechargement)) {
                     (((cible -> competences) + i) -> rechargement_courant) += (phase -> red_rechargement) ;
-                    
+
                     if ((((cible -> competences) + i) -> rechargement_courant) > (((cible -> competences) + i) -> rechargement)) {
                         (((cible -> competences) + i) -> rechargement_courant) = (((cible -> competences) + i) -> rechargement) ;
                     }
@@ -1825,7 +1848,7 @@ int phase_competence_attaque(Combattant* lanceur, Combattant* cible, Phase* phas
 
         if (((phase -> vampirisme) != NON_ACTIF && ((nombre_effets(ANTISOINS, (lanceur -> effets_negatifs))) == 0))) {
             (lanceur -> pv_courants) += pv_temp ;
-            
+
             if ((lanceur -> pv_courants) > (lanceur -> pv_max_courants)) {
                 (lanceur -> pv_courants) = (lanceur -> pv_max_courants) ;
             }
@@ -1833,7 +1856,7 @@ int phase_competence_attaque(Combattant* lanceur, Combattant* cible, Phase* phas
 
         if ((phase -> destruction) != NON_ACTIF) {
             (cible -> pv_max_courants) -= pv_temp ;
-            
+
             if ((cible -> pv_courants) > (cible -> pv_max_courants)) {
                 (cible -> pv_courants) = (cible -> pv_max_courants) ;
             }
@@ -1869,16 +1892,18 @@ int utiliser_competence(Combattant* lanceur, Combattant* cible, int c) {
     else {
         if ((nombre_effets(CONFUSION, (lanceur -> effets_negatifs))) > 0) {
             if (pile_ou_face() == 1) {
-                return 0.0 ;
+                return 0 ;
             }
         }
 
         if ((nombre_effets(ETOURDISSEMENT, (lanceur -> effets_negatifs))) > 0) {
-            return 0.0 ;
+            return 0 ;
         }
-      
+
         for (int i = 0 ; i < 2 ; i++) {
+            printf("pv cible %d\n", cible -> pv_courants) ;
             phase_competence_attaque(lanceur, cible, ((((lanceur -> competences) + c) -> phases) + i)) ;
+            printf("pv cible %d\n", cible -> pv_courants) ;
             phase_competence_effets(((((lanceur -> competences) + c) -> phases) + i) , cible) ;
         }
 
