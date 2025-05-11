@@ -2031,3 +2031,19 @@ Combattant Compare_Attaquant(Equipe* A, Equipe* B, Combattant Attaquant){
         printf("ERREUR ATTAQUANT");
         exit(18);
  }
+
+
+int main(){
+    int n_tot=Calcul_Nb_Combattant();
+    int n_eq=4;
+    Combattant* tab;
+    printf("oep");
+    tab=RemplirTabCombattant();
+    printf("oe\n");
+    Combat(tab, n_tot, n_eq);
+
+
+
+    return(0);
+
+}
