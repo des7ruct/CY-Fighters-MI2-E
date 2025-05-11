@@ -1556,7 +1556,14 @@ int attaque_basique(Combattant* lanceur, Combattant* cible) {
 
             else {
                 if ((((cible -> defense) * coefficient_defense(cible)) + (cible -> barriere)) < 0) {
-                    (cible -> pv_courants) += (((cible -> defense) * coefficient_defense(cible)) + (cible -> barriere))  ;
+                    (cible -> pv_courants) += (((cible -> defense) * coefficient_defense(cible)) + (cible -> barriere)) ;
+                    if (nombre_effets(EPINES, (cible -> effets_positifs)) > 0) {
+                        if ((((lanceur -> defense) * coefficient_defense(lanceur)) + 0.35 * (cible -> barriere)) < 0) {
+                            for (int i = 0 ; i < nombre_effets(EPINES, (cible -> effets_positifs)) ; i++) {
+                                (lanceur -> pv_courants) += (((lanceur -> defense) * coefficient_defense(lanceur)) + 0.35 * (cible -> barriere)) ;
+                            }
+                        }
+                    }
                 }
                 
                 return 0 ;
@@ -1566,6 +1573,14 @@ int attaque_basique(Combattant* lanceur, Combattant* cible) {
         else {
             if ((((cible -> defense) * coefficient_defense(cible)) - (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque(ATTAQUE, lanceur)) < 0) {
                 (cible -> pv_courants) += (((cible -> defense) * coefficient_defense(cible)) - (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque(ATTAQUE, lanceur)) ;
+                
+                if (nombre_effets(EPINES, (cible -> effets_positifs)) > 0) {
+                    if ((((lanceur -> defense) * coefficient_defense(lanceur)) - 0.35 * (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque(ATTAQUE, lanceur)) < 0) {
+                        for (int i = 0 ; i < nombre_effets(EPINES, (cible -> effets_positifs)) ; i++) {
+                            (lanceur -> pv_courants) += (((lanceur -> defense) * coefficient_defense(lanceur)) - 0.35 * (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque(ATTAQUE, lanceur)) ;
+                        }
+                    }
+                }
             }
 
             return 0 ;
