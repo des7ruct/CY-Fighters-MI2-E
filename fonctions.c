@@ -551,12 +551,12 @@ Combattant* AjouterCompetence(Combattant* tab, int taille){
                     }
                     mot=strtok(ligne, " ");
                     tab[i].competences[j].phases[k].effets_negatifs[l2].type=VerifEffet(mot);
-                    tab[i].competences[j].phases[k].effets_negatifs[l].tours=2;
+                    tab[i].competences[j].phases[k].effets_negatifs[l2].tours=2;
                     l2++;
                     for(int i2=0; i2<e; i2++){
                         mot=strtok(NULL, " ");
                         tab[i].competences[j].phases[k].effets_negatifs[l2].type=VerifEffet(mot);
-                        tab[i].competences[j].phases[k].effets_negatifs[l].tours=2;
+                        tab[i].competences[j].phases[k].effets_negatifs[l2].tours=2;
                         l2++;
                     }
                     for (e; e<=10; e++){
