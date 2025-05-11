@@ -1849,7 +1849,7 @@ int phase_competence_attaque(Combattant* lanceur, Combattant* cible, Phase* phas
             }
         }
 
-        if (((phase -> vampirisme) != NON_ACTIF)) {
+        if (((phase -> vampirisme) != NON_ACTIF && ((nombre_effets(ANTISOINS, (lanceur -> effets_negatifs))) == 0))) {
             (lanceur -> pv_courants) += pv_temp ;
             
             if ((lanceur -> pv_courants) > (lanceur -> pv_max_courants)) {
