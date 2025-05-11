@@ -1430,7 +1430,10 @@ int  bloquer(Combattant* combattant) {
         printf("Erreur dans bloquer avec combattant.\n") ;
     }
 
-    (combattant -> blocage) = 1 ;   
+    else {
+        (combattant -> blocage) = 1 ;  
+        return 0 ;
+    } 
 }
 
 
