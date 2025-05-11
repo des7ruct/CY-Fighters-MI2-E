@@ -1706,6 +1706,43 @@ float coefficient_multiplicateur_pv_restants(Phase* phase, Combattant* lanceur, 
 }
 
 
+float coefficient_ignore_defense(Phase* phase, Combattant* lanceur, Combattant* cible) {
+    /*
+    Ignore la defense en fonction des pvs courants ou bien de si la cible est gelée.
+    */
+
+    float max, restant ;
+
+    max = (lanceur -> pv_max_courants) ;
+    restant = (lanceur -> pv_courants) ;
+
+    if ((phase == NULL) || (lanceur == NULL) || (cible == NULL)) {
+        printf("Erreur dans coefficient_ignore_defense.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        if ((phase -> ignore_defense) == EFFET) {
+            if (nombre_effets(GEL, (cible -> effets_negatifs)) > 0) {
+                return 0.0 ;
+            }
+
+            else {
+                return 1.0 ;
+            }
+        }
+
+        else if ((phase -> ignore_defense) == STAT) {
+            return restant / max ;
+        }
+
+        else {
+            return 1.0 ;
+        }
+    }
+}
+
+
 int phase_competence_effets(Phase* phase, Combattant* cible) {
     /*
     Execute une phase sur une cible, revoie 0 si l'opération a réussie.
