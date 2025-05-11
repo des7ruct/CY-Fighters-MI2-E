@@ -1590,3 +1590,41 @@ int attaque_basique(Combattant* lanceur, Combattant* cible) {
         }
     }
 }
+
+
+int donner_effets_positifs(Combattant* cible, Effet* effets) {
+    /*
+    Donne tout les efeets dune liste a un combattant, renvoie 0 si l'opération a réussie.
+    */
+
+    if ((cible == NULL) || (effets == NULL)) {
+        printf("Erreur dans la fonction donner_effets_positifs.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        for (int i = 0 ; i < 10 ; i++) {
+            appliquer_effet_positif(*(effets + i), (cible -> effets_positifs)) ;
+        }
+        return 0 ;
+    }
+}
+
+
+int donner_effets_negatifs(Combattant* cible, Effet* effets) {
+    /*
+    Donne tout les effets négatifs d'une liste a un combattant, renvoie 0 si l'opération a réussie.
+    */
+    
+    if ((cible == NULL) || (effets == NULL)) {
+        printf("Erreur dans la fonction donner_effets_negatifs.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        for (int i = 0 ; i < 10 ; i++) {
+            appliquer_effet_negatif((cible -> effets_positifs), *(effets + i), (cible -> effets_negatifs)) ;
+        }
+        return 0 ;
+    }
+}
