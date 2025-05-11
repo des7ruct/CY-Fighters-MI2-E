@@ -640,33 +640,7 @@ Combattant* AjouterCompetence(Combattant* tab, int taille){
 }
 
 
-int Affiche_tab(Combattant* tab, int taille) {
-    /* Affiche les informations de tous les combattants */
-    for (int i = 0 ; i < taille ; i++) {
-        printf("Nom : %s // Type : ", tab[i].nom) ;
-        switch (tab[i].type) {
-            case 1 :
-                printf("Feu") ;
-                break ;
 
-            case 2 :
-                printf("Plante") ;
-                break ;
-
-            case 3 :
-                printf("Eau") ;
-                break ;
-
-            default :
-                printf("ERREUR") ;
-                exit(4) ;
-        }
-      
-        printf("\n Pvmax : %d / Attaque : %d / Defense : %d / Agilite : %d / Vitesse : %d \n", tab[i].pv_max, tab[i].attaque, tab[i].defense, tab[i].agilite, tab[i].vitesse) ;
-        printf("Competence 1: %s \nCompetence 2: %s \n\n\n", tab[i].competences[0].nom, tab[i].competences[1].nom) ;
-    }
-  return 0 ;
-}
 
 
 Combattant* RemplirTabCombattant() {
