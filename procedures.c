@@ -4,6 +4,41 @@
 
 /* contenu */
 
+void Codex (Combattant* tab, int taille){
+    //Affiche les informations de tous les combattants
+    FILE* fic = NULL;
+    fic=fopen("lore_combattants.txt", "r");
+    char ligne[V];
+
+    int j=1;
+    for(int i=0; i<taille; i++){
+        printf("%d : Nom : %s // Type : ", j, tab[i].nom);
+        j++;
+        switch (tab[i].type){
+            case 1:
+                printf("Feu");
+                break;
+
+            case 2:
+                printf("Plante");
+                break;
+
+            case 3:
+                printf("Eau");
+                break;
+
+            default:
+                printf("ERREUR");
+                exit(4);
+        }
+        printf("\n Pvmax : %d / Attaque : %d / Defense : %d / Agilite : %d / Vitesse : %d \n", tab[i].pv_max, tab[i].attaque, tab[i].defense, tab[i].agilite, tab[i].vitesse);
+        printf("Competence 1: %s \nCompetence 2: %s \n", tab[i].competences[0].nom, tab[i].competences[1].nom);
+        fgets(ligne, V, fic);
+        printf("%s\n\n\n", ligne);
+    }
+     printf(" 1-Retourner au menu.\n\n");
+}
+
 void Tuto() {
     /* Affichage du tutoriel */
   
