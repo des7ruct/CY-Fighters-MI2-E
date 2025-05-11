@@ -1493,3 +1493,29 @@ float coefficients_basiques_attaque(Combattant* lanceur, Combattant* cible) {
         return coefficient ;
     }
 }
+
+
+float coefficient_stat_attaque(int stat, Combattant* lanceur) {
+    /*
+    Calcule un coefficient basé sur la stat d'attaque,.
+    */
+
+    if ((stat < 0) || (lanceur == NULL)) {
+        printf("Erreur dans coefficient_stat_attaque.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        if (stat == ATTAQUE) {
+            return (1.0 * coefficient_effet(nombre_effets(AUG_ATTAQUE, (lanceur -> effets_positifs)), 1.25) * coefficient_effet(nombre_effets(DIM_ATTAQUE, (lanceur -> effets_negatifs)), 0.25) * coefficient_effet(nombre_effets(FLAMMES, (lanceur -> effets_negatifs)), 0.05) * coefficient_effet(calcul_passif(lanceur), calcul_passif(lanceur))) ;
+        }
+        
+        else if (stat == DEFENSE) {
+            return (1.0 * coefficient_effet(nombre_effets(AUG_DEFENSE, (lanceur -> effets_positifs)), 1.25) * coefficient_effet(nombre_effets(DIM_DEFENSE, (lanceur -> effets_negatifs)), 0.25) * coefficient_effet(nombre_effets(POISON, (lanceur -> effets_negatifs)), 0.05) * coefficient_effet(calcul_passif(lanceur), calcul_passif(lanceur))) ;
+        }
+
+        else {
+            return 1.0 ;
+        }
+    }
+}
