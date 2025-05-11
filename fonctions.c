@@ -1688,6 +1688,8 @@ int utiliser_competence(Combattant* lanceur, Combattant* cible, int c) {
             phase_competence_effets(((((lanceur -> competences) + c) -> phases) + i) , cible) ;
         }
 
+        (((lanceur -> competences) + c) -> rechargement_courant) = -1 ;
+
         return 0 ;
     }   
 }
