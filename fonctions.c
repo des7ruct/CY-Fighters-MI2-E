@@ -2021,3 +2021,21 @@ int main(){
     return(0);
 
 }
+
+int Calcul_Nb_Combattant(){
+    int nb_combattants;
+    FILE* fic=NULL;
+    fic=fopen("combattants.txt", "r");
+    char ligne[V];
+
+    //Calcul le nombre de combattants
+    if(fic!=NULL){
+        int nb_ligne=0;
+        while(fgets(ligne, V, fic)){
+            nb_ligne++;
+        }
+        nb_combattants=nb_ligne/2;
+    }
+    fclose(fic);
+    return(nb_combattants);
+  }
