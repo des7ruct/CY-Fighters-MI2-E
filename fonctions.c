@@ -1482,6 +1482,10 @@ float coefficients_basiques_attaque(Combattant* lanceur, Combattant* cible) {
                 return 0.0 ;
             }
         }
+
+        if ((nombre_effets(ETOURDISSEMENT, (lanceur -> effets_negatifs))) > 0) {
+            return 0.0 ;
+        }
         
         coefficient *= multiplicateur_critique(15 + (15 * nombre_effets(AUG_CRITIQUE, (lanceur -> effets_positifs)))) ;
 
