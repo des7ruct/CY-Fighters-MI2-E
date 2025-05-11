@@ -1913,3 +1913,30 @@ int utiliser_competence(Combattant* lanceur, Combattant* cible, int c) {
         return 0 ;
     }   
 }
+
+char* convertir_type(int t){
+//Prends le type d'un combattant sous forme de int et le retourne en chaine de caractère//
+
+    char* type;
+
+    switch(t){
+
+        case 1 :
+            type="FEU";
+            break;
+
+        case 2 :
+            type="PLANTE";
+            break;
+
+        case 3 :
+            type="EAU";
+            break;
+
+        default :
+            printf("ERREUR AFFICHAGE TYPE");
+            exit(20);
+    }
+
+    return(type);
+}
