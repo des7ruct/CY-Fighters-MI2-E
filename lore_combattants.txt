@@ -1,1 +1,41 @@
+Chevaliers
+Chevalier Draconique : Il a grandi avec des dragons et rêve de devenir le plus fort pour protéger les faibles.
 
+Chevalier de l'Arbre : Il vit dans une grande forêt et aide ceux qui se perdent ou ont besoin d’aide.
+
+Chevalier Tsunami : Il vient de la mer et aime surprendre ses ennemis avec des attaques rapides comme les vagues.
+
+Paladins
+Paladin Enflammé : Il a juré de protéger les innocents, même si ses flammes brûlent un peu trop fort.
+
+Paladin Fleuri : Il cueille des fleurs pour ses amis après chaque combat, même s’il fait le dur.
+
+Paladin du Courant : Il adore courir sous la pluie et rêve de voyager partout grâce à l’eau.
+
+Fées
+Fée Cramoisie : Elle est petite, mais quand ses amis sont en danger, elle devient une boule de feu.
+
+Fée Verdoyante : Elle parle aux plantes et soigne ceux qu’elle aime avec des feuilles magiques.
+
+Fée Goutte d’Eau : Elle aime chanter près des rivières et fait tomber la pluie pour calmer les gens tristes.
+
+Assassins
+Assassin Rouge : Il est silencieux, mais il se fâche très vite si on touche à ses amis.
+
+Assassin Vert : Il vit dans la forêt et n’attaque que ceux qui font du mal à la nature.
+
+Assassin Bleu : Il parle peu, mais il écoute tout… et attaque toujours au bon moment.
+
+Sorcières
+Sorcière des Flammes : Elle joue avec le feu depuis petite et adore faire peur aux méchants.
+
+Sorcière de la Nature : Elle connaît tous les secrets des bois et aide ceux qui se perdent.
+
+Sorcière de la Rivière : Elle suit les rivières pour aider les voyageurs blessés.
+
+Mages
+Mage Brûlant : Il est un peu maladroit, mais ses sorts de feu sont très puissants.
+
+Mage Bourgeonnant : Il veut faire pousser des fleurs partout, même sur les armures des ennemis.
+
+Mage Orageux : Il adore les orages et rit à chaque fois qu’il lance un éclair.
