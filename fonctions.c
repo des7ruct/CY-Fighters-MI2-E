@@ -1678,6 +1678,10 @@ int utiliser_competence(Combattant* lanceur, Combattant* cible, int c) {
         exit(1) ;
     }
 
+    else if (((nombre_effets(SILENCE, (lanceur -> effets_negatifs))) > 0) || ((((lanceur -> competences) + c) -> rechargement_courant) != (((lanceur -> competences) + c) -> rechargement))) {
+        return 1 ;
+    }
+
     else {
         for (int i = 0 ; i < 2 ; i++) {
             phase_competence_attaque(lanceur, cible, ((((lanceur -> competences) + c) -> phases) + i)) ;
