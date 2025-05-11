@@ -61,86 +61,103 @@ void Tuto() {
 }
 
 
-void Menu() {
-    /* 
-    
-    */
-  
-    int n = 0 ;
-    char tampon[1000] ;
-  
-    printf(" Choisissez une option en entrant le chiffre adequat\n\n 1-Jouer\n 2-Codex\n") ;
-    printf(" 3-Tutoriel\n 4-Credits\n 5-Quitter le jeu\n\n") ;
-    printf("Reponse :   ") ;
+void Menu(){
+    int nb_combattant;
+    nb_combattant=Calcul_Nb_Combattant();
+    Combattant* tab;
+    tab=RemplirTabCombattant();
+    int n=0;
+    char tampon[100];
+    printf(" Choisissez une option en entrant le chiffre adequat\n\n ");
+    printf("1-Jouer\n ");
+    printf("2-Codex\n ");
+    printf("3-Tutoriel\n ");
+    printf("4-Credits\n ");
+    printf("5-Quitter le jeu\n\n");
+    printf("Reponse :   ");
 
-    /* récupère la chaîne avec un fgets pour faciliter la vérification */
-    fgets(tampon, V, stdin) ;
-    n = VerifScanf(tampon) ;
+    //récupère la chaîne avec un fgets pour faciliter la vérification//
+    fgets(tampon, V, stdin);
+    n=VerifScanf(tampon);
 
-    if (n == -1) {
-        Menu() ;
+    if(n==-1){
+        Menu();
     }
 
-    switch (n) {
+    switch (n){
 
-        case 1 :
-            break ;
+        case 1:
 
-        case 2 :
-            break ;
+            break;
 
-        case 3 :
-            n = 0 ;
-            Tuto() ;
-          
-            while (n != 1) {
-                fgets(tampon, V,stdin) ;
-                n = VerifScanf(tampon) ;
-              
-                if (n != 1) {
-                    printf("Erreur, pour retourner au menu, entrez '1'\n ") ;
+
+        case 2:
+            n=0;
+            Codex(tab, nb_combattant);
+            while(n!=1){
+                fgets(tampon, V,stdin);
+                n=VerifScanf(tampon);
+                if(n!=1){
+                    printf("Erreur, pour retourner au menu, entrez '1'\n ");
+                }
+            }
+                Menu();
+            break;
+
+
+        case 3:
+            n=0;
+            Tuto();
+            while(n!=1){
+                fgets(tampon, V,stdin);
+                n=VerifScanf(tampon);
+                if(n!=1){
+                    printf("Erreur, pour retourner au menu, entrez '1'\n ");
                 }
                 Menu();
-            }
-            break ;
-      
-        case 4 :
-            /* 
-                Affiche les crédits et ferme le programme ou redirige 
-                au menu selon le choix de l'utilisateur    
-            */
-            n = Credit() ;
-          
-            if (n == 1) {
-                printf("\033[H\033[2J") ;
-                Menu() ;
-            }
-              
-            else if (n == 2) {
-                printf("Fermeture du programme") ;
-                exit(0) ;
-            }
-              
-            else{
-                printf("ERREUR, fermeture du programme\n") ;
-                exit(1) ;
-            }
-          
-            break ;
 
-        case 5 :
-            /* Ferme le programme */
-            printf("Merci d'avoir joue a notre jeu !") ;
-            exit(0) ;
-            break ;
+            }
+            break;
+
+
+        case 4:
+            /*
+                Affiche les crédits et ferme le programme ou redirige
+                au menu selon le choix de l'utilisateur
+            */
+            n=Credit();
+            if(n==1){
+                printf("\033[H\033[2J");
+                Menu();
+            }
+            else if(n==2){
+                printf("Fermeture du programme");
+                exit(0);
+            }
+            else{
+                printf("ERREUR, fermeture du programme\n");
+                exit(1);
+            }
+            break;
+
+
+        case 5:
+            // Ferme le programme//
+            printf("Merci d'avoir joue a notre jeu !");
+            exit(0);
+            break;
+
 
         default :
-            printf("\033[H\033[2J") ;
-            printf("Choix invalide, veuillez recommencer\n\n") ;
-            Menu() ;
-            break ;
+            printf("\033[H\033[2J");
+            printf("Choix invalide, veuillez recommencer\n\n");
+            Menu();
+            break;
+
+
     }
 }
+
 
 
 void Creation_Equipe(Combattant* tab, int nb_combattant_tot, int nb_combattant_eq, Equipe* A, Equipe* B) {
