@@ -1443,7 +1443,7 @@ int  bloquer(Combattant* combattant) {
 
 int debut_tour(Combattant* combattant) {
     /*
-    Initialise le combattant pour le début du tour.
+    Initialise le combattant pour le début du tour, renvoie 0 si l'opération a réussie.
     */
 
     if (combattant == NULL) {
@@ -1457,4 +1457,39 @@ int debut_tour(Combattant* combattant) {
     }
     
     return 0 ;
+}
+
+
+float coefficients_basiques_attaque(Combattant* lanceur, Combattant* cible) {
+    /*
+    Fait le calcul de coefficient avec le type, les coups critiques, 
+    l'agilité, la confusion, et le blocage.
+    */
+
+    float coefficient = 1 ;
+
+    if (lanceur == NULL || cible == NULL) {
+        printf("Erreur dans coefficients_basiques_attaque.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        if ((nombre_effets(CONFUSION, (lanceur -> effets_negatifs))) > 0) {
+            if (pile_ou_face() == 1) {
+                return 0.0 ;
+            }
+        }
+        
+        coefficient *= multiplicateur_critique(15 + (15 * nombre_effets(AUG_CRITIQUE, (lanceur -> effets_positifs)))) ;
+
+        coefficient *= multiplicateur_type((lanceur -> type), (cible -> type)) ;
+        
+        coefficient *= DegatsEsquive(((lanceur -> agilite) * coefficient_effet(nombre_effets(AUG_AGILITE, (lanceur -> effets_positifs)), 1.15) * coefficient_effet(nombre_effets(DIM_AGILITE, (lanceur -> effets_negatifs)), 0.15) * coefficient_effet(nombre_effets(GEL, (lanceur -> effets_negatifs)), 0.05) * coefficient_effet(calcul_passif(lanceur), 1.2)), ((cible -> agilite) * coefficient_effet(nombre_effets(AUG_AGILITE, (cible -> effets_positifs)), 1.15) * coefficient_effet(nombre_effets(DIM_AGILITE, (cible -> effets_negatifs)), 0.15) * coefficient_effet(nombre_effets(GEL, (cible -> effets_negatifs)), 0.05) * coefficient_effet(calcul_passif(cible), 1.2))) ;
+
+        if ((cible -> blocage) == 1) {
+            coefficient *= 0.65 ;
+        }
+        
+        return coefficient ;
+    }
 }
