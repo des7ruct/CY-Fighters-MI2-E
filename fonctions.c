@@ -1419,3 +1419,35 @@ int fin_de_tour(Combattant* combattant) {
         return 0 ;
     }
 }
+
+
+int  bloquer(Combattant* combattant) {
+    /*
+    Prend un combattant et le fait "bloquer" retourne 0 si l'opération a réussie.
+    */
+
+    if (combattant == NULL) {
+        printf("Erreur dans bloquer avec combattant.\n") ;
+    }
+
+    (combattant -> blocage) = 1 ;   
+}
+
+
+int debut_tour(Combattant* combattant) {
+    /*
+    Initialise le combattant pour le début du tour.
+    */
+
+    if (combattant == NULL) {
+        printf("Erreur dans debut_tour avec combattant.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        (combattant -> blocage) = 0 ;
+        calcul_passif(combattant) ;
+    }
+    
+    return 0 ;
+}
