@@ -1539,6 +1539,8 @@ int attaque_basique(Combattant* lanceur, Combattant* cible) {
     Simule une attaque basique, renvoie 0 si l'opération a réussie.
     */
 
+    int i ;
+
     if ((lanceur == NULL) || (cible == NULL)) {
         printf("Erreur dans attaque_basique avec le lanceur ou la cible.\n") ;
     }
@@ -1566,7 +1568,7 @@ int attaque_basique(Combattant* lanceur, Combattant* cible) {
                     (cible -> pv_courants) += (((cible -> defense) * coefficient_defense(cible)) + (cible -> barriere)) ;
                     if (nombre_effets(EPINES, (cible -> effets_positifs)) > 0) {
                         if ((((lanceur -> defense) * coefficient_defense(lanceur)) + 0.35 * (cible -> barriere)) < 0) {
-                            for (int i = 0 ; i < nombre_effets(EPINES, (cible -> effets_positifs)) ; i++) {
+                            for (i = 0 ; i < nombre_effets(EPINES, (cible -> effets_positifs)) ; i++) {
                                 (lanceur -> pv_courants) += (((lanceur -> defense) * coefficient_defense(lanceur)) + 0.35 * (cible -> barriere)) ;
                             }
                         }
@@ -1583,7 +1585,7 @@ int attaque_basique(Combattant* lanceur, Combattant* cible) {
                 
                 if (nombre_effets(EPINES, (cible -> effets_positifs)) > 0) {
                     if ((((lanceur -> defense) * coefficient_defense(lanceur)) - 0.35 * (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque(ATTAQUE, lanceur)) < 0) {
-                        for (int i = 0 ; i < nombre_effets(EPINES, (cible -> effets_positifs)) ; i++) {
+                        for (i = 0 ; i < nombre_effets(EPINES, (cible -> effets_positifs)) ; i++) {
                             (lanceur -> pv_courants) += (((lanceur -> defense) * coefficient_defense(lanceur)) - 0.35 * (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque(ATTAQUE, lanceur)) ;
                         }
                     }
