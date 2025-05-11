@@ -1535,3 +1535,40 @@ float coefficient_defense(Combattant* cible) {
         return (1.0 * coefficient_effet(nombre_effets(AUG_DEFENSE, (cible -> effets_positifs)), 1.25) * coefficient_effet(nombre_effets(DIM_DEFENSE, (cible -> effets_negatifs)), 0.25) * coefficient_effet(nombre_effets(POISON, (cible -> effets_negatifs)), 0.05) * coefficient_effet(calcul_passif(cible), calcul_passif(cible))) ;
     }
 }
+
+
+int attaque_basique(Combattant* lanceur, Combattant* cible) {
+    /*
+    Simule une attaque basique, renvoie 0 si l'opération a réussie.
+    */
+
+    if ((lanceur == NULL) || (cible == NULL)) {
+        printf("Erreur dans attaque_basique avec le lanceur ou la cible.\n") ;
+    }
+
+    else {
+        if ((cible -> barriere) > 0) {
+            (cible -> barriere) -= (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque(ATTAQUE, lanceur) ;
+
+            if ((cible -> barriere) >= 0) {
+                return 0 ;
+            }
+
+            else {
+                if ((((cible -> defense) * coefficient_defense(cible)) + (cible -> barriere)) < 0) {
+                    (cible -> pv_courants) += (((cible -> defense) * coefficient_defense(cible)) + (cible -> barriere))  ;
+                }
+                
+                return 0 ;
+            }
+        }
+
+        else {
+            if ((((cible -> defense) * coefficient_defense(cible)) - (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque(ATTAQUE, lanceur)) < 0) {
+                (cible -> pv_courants) += (((cible -> defense) * coefficient_defense(cible)) - (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque(ATTAQUE, lanceur)) ;
+            }
+
+            return 0 ;
+        }
+    }
+}
