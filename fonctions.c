@@ -2007,20 +2007,7 @@ Combattant Compare_Attaquant(Equipe* A, Equipe* B, Combattant Attaquant){
  }
 
 
-int main(){
-    int n_tot=Calcul_Nb_Combattant();
-    int n_eq=4;
-    Combattant* tab;
-    printf("oep");
-    tab=RemplirTabCombattant();
-    printf("oe\n");
-    Combat(tab, n_tot, n_eq);
 
-
-
-    return(0);
-
-}
 
 int Calcul_Nb_Combattant(){
     int nb_combattants;
