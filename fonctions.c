@@ -1636,6 +1636,37 @@ int donner_effets_negatifs(Combattant* cible, Effet* effets) {
 }
 
 
+float coefficient_multiplicatif_nefaste(Phase* phase, Combattant* cible) {
+    /*
+    Renvoie le multiplicateur par rapport au nombres d'effets max sur la cible.
+    Cette fonction se base sur nefastes_multiplicateur de la structure Phase.
+    */
+
+    float somme = 0.0 ;
+    
+    if ((phase == NULL) || (cible == NULL)) {
+        printf("Erreur avec coefficient_multiplicatif_nefaste.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        if (phase -> nefastes_multiplicateur != NON_ACTIF) {
+            for (int i = 0 ; i < NOMBRE_EFFETS_MAX ; i++) {
+                if ((((cible -> effets_negatifs) + i) -> type) != AUCUNS) {
+                    somme++ ;
+                }
+            }
+
+            return somme ;
+        }
+
+        else {
+            return 1.0 ;
+        }
+    }
+}
+
+
 int phase_competence_effets(Phase* phase, Combattant* cible) {
     /*
     Execute une phase sur une cible, revoie 0 si l'opération a réussie.
