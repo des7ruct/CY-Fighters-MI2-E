@@ -2,7 +2,7 @@
   #define PROCEDURES_H
 
   /* inclusions */
-#include <fonctions.h>
+#include "fonctions.h"
 
   /* déclarations */
 
