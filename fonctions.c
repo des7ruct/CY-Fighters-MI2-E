@@ -1477,16 +1477,6 @@ float coefficients_basiques_attaque(Combattant* lanceur, Combattant* cible) {
     }
 
     else {
-        if ((nombre_effets(CONFUSION, (lanceur -> effets_negatifs))) > 0) {
-            if (pile_ou_face() == 1) {
-                return 0.0 ;
-            }
-        }
-
-        if ((nombre_effets(ETOURDISSEMENT, (lanceur -> effets_negatifs))) > 0) {
-            return 0.0 ;
-        }
-        
         coefficient *= multiplicateur_critique(15 + (15 * nombre_effets(AUG_CRITIQUE, (lanceur -> effets_positifs)))) ;
 
         coefficient *= multiplicateur_type((lanceur -> type), (cible -> type)) ;
@@ -1554,6 +1544,16 @@ int attaque_basique(Combattant* lanceur, Combattant* cible) {
     }
 
     else {
+        if ((nombre_effets(CONFUSION, (lanceur -> effets_negatifs))) > 0) {
+            if (pile_ou_face() == 1) {
+                return 0.0 ;
+            }
+        }
+
+        if ((nombre_effets(ETOURDISSEMENT, (lanceur -> effets_negatifs))) > 0) {
+            return 0.0 ;
+        }
+      
         if ((cible -> barriere) > 0) {
             (cible -> barriere) -= (lanceur -> attaque) * coefficients_basiques_attaque(lanceur, cible) * coefficient_stat_attaque(ATTAQUE, lanceur) ;
 
@@ -1683,6 +1683,16 @@ int utiliser_competence(Combattant* lanceur, Combattant* cible, int c) {
     }
 
     else {
+        if ((nombre_effets(CONFUSION, (lanceur -> effets_negatifs))) > 0) {
+            if (pile_ou_face() == 1) {
+                return 0.0 ;
+            }
+        }
+
+        if ((nombre_effets(ETOURDISSEMENT, (lanceur -> effets_negatifs))) > 0) {
+            return 0.0 ;
+        }
+      
         for (int i = 0 ; i < 2 ; i++) {
             phase_competence_attaque(lanceur, cible, ((((lanceur -> competences) + c) -> phases) + i)) ;
             phase_competence_effets(((((lanceur -> competences) + c) -> phases) + i) , cible) ;
