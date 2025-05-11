@@ -1667,6 +1667,45 @@ float coefficient_multiplicatif_nefaste(Phase* phase, Combattant* cible) {
 }
 
 
+float coefficient_multiplicateur_pv_restants(Phase* phase, Combattant* lanceur, Combattant* cible) {
+    /*
+    Donne un coef en fonction des pvs restants, les paramètres sont définis dans la phase.
+    */
+
+    float max, restant ;
+
+    if ((phase == NULL) || (lanceur == NULL) || (cible == NULL)) {
+        printf("Erreur dans coefficient_multiplicateur_pv_restants.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        if ((phase -> degats_pvs_restants_cible) == MOI) {
+            max = (lanceur -> pv_max_courants) ;
+            restant = (lanceur -> pv_courants) ;
+            
+        }
+
+        else if ((phase -> degats_pvs_restants_cible) == ENNEMI) {
+            max = (cible -> pv_max_courants) ;
+            restant = (cible -> pv_courants) ;
+        }
+
+        else {
+            return 1.0 ;
+        }
+
+        if ((phase -> degats_pvs_restants_type) == PLUS) {
+            return 1.0 + (restant / max) ;
+        }
+
+        else {
+            return 1.0 + (1.0 - (restant / max)) ;
+        }
+    }
+}
+
+
 int phase_competence_effets(Phase* phase, Combattant* cible) {
     /*
     Execute une phase sur une cible, revoie 0 si l'opération a réussie.
