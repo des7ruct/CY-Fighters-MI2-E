@@ -1914,6 +1914,73 @@ int utiliser_competence(Combattant* lanceur, Combattant* cible, int c) {
     }   
 }
 
+
+int plus_faible(Equipe* equipe) {
+    /*
+    Renvoie l'id du combattant le plus faible au niveau des pv_courants
+    */
+
+    int max = PVMAX_BASE + 1 ;
+
+    int id ;
+
+    if (equipe == NULL) {
+        printf("Erreur avec plus_faible avec l'equipe.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        for (int i = 0 ; i < MAX_COMBATTANTS_EQUIPE ; i++) {
+            if ((((equipe -> combattants) + i) -> pv_courants) < max) {
+                max = (((equipe -> combattants) + i) -> pv_courants) ;
+                id = i ;
+            }
+        }
+
+        return id ;
+    }
+}
+
+
+int bot_cible(Equipe* equipe, int difficulte) {
+    /*
+    Retourne l'id dans une equipe de la cible de l'ia par rapport a la difficulté
+    */
+
+    int nb = 0 ;
+    int temp ;
+
+    if ((equipe == NULL) || (difficulte < NOOB) || (difficulte > NORMAL)) {
+        printf("Erreur dans bot_cible.\n") ;
+        exit(1) ;
+    }
+
+    else {
+        if ((difficulte == FACILE) || (difficulte == NORMAL)) {
+            return plus_faible(equipe) ;
+        }
+
+        else {
+            for (int i = 0 ; i < MAX_COMBATTANTS_EQUIPE ; i++) {
+                if (strcmp((((equipe -> combattants) + i) -> nom), "NON DISPO") != 0) {
+                    nb++ ;
+                }
+            }
+
+            temp = aleatoire(0, nb) ;
+
+            for (int i = 0 ; i < MAX_COMBATTANTS_EQUIPE ; i++) {
+                if ((strcmp((((equipe -> combattants) + i) -> nom), "NON DISPO") != 0) && ((temp - 1) <= 0)) {
+                    return i ;
+                }
+
+                temp-- ;
+            }
+        }
+    }
+}
+
+
 char* convertir_type(int t){
 //Prends le type d'un combattant sous forme de int et le retourne en chaine de caractère//
 
