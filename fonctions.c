@@ -1407,6 +1407,10 @@ int fin_de_tour(Combattant* combattant) {
             return 0 ;
         }
 
+        if ((combattant -> barriere) < 0) {
+            (combattant -> barriere) = 0 ;
+        }
+
         reduction_tour_effets(combattant) ;
         combattant -> stamina = 0 ;
 
