@@ -813,3 +813,27 @@ void Combat(Combattant* tab, int n_tot, int n_eq){
 
  }
 
+
+void vide_malloc(){
+    free(tab);
+    for (int i=0; i<18; i++){
+        free(tab[i].nom);
+        free(tab[i].competences);
+        for(int j=0; j<2; j++){
+            free(tab[i].competences.nom);
+            free(tab[i].competences[j].description);
+            free(tab[i].competences[j].phases);
+            for(int k=0; k<10; k++){
+                free(tab[i].competences[j].phases[k].effets_positifs);
+                free(tab[i].competences[j].phases[k].effets_negatifs);
+            }
+        }
+    }
+    free(chaines);
+    free(equipe.combattants);
+    for(int l=0; l<8; l++){
+        free(equipe.combattants[i].effets_positifs);
+        free(equipe.combattants[i].effets_negatifs);
+    }
+}
+        
