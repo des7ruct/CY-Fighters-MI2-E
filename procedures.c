@@ -87,7 +87,7 @@ void Menu(){
     switch (n){
 
         case 1:
-
+            Combat(tab, nb_combattant, MAX_COMBATTANTS_EQUIPE);
             break;
 
 
