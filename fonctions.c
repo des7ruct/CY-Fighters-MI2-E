@@ -802,8 +802,12 @@ int appliquer_effet_negatif(Effet* effets_positifs, Effet effet, Effet* effets) 
   }
 
   else if (NOMBRE_EFFETS_MAX == 0) {
-      return 1 ;
+      return 0 ;
   } 
+
+  else if (effet == AUCUNS) {
+      return 0 ;
+  }
 
   else if (effets == NULL) {
       printf("Erreur dans la fonction appliquer_effet avec la variable effets.\n") ;
@@ -842,8 +846,12 @@ int appliquer_effet_positif(Effet effet, Effet* effets) {
   }
 
   else if (NOMBRE_EFFETS_MAX == 0) {
-      return 1 ;
+      return 0 ;
   } 
+
+  else if (effet == AUCUNS) {
+      return 0 ;
+  }
 
   else if (effets == NULL) {
       printf("Erreur dans la fonction appliquer_effet avec la variable effets.\n") ;
