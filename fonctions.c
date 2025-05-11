@@ -789,7 +789,7 @@ int nombre_effets(int effet, Effet* effets) {
 }
 
 
-int appliquer_effet(Effet* effets_positifs, Effet effet, Effet* effets) {
+int appliquer_effet_negatif(Effet* effets_positifs, Effet effet, Effet* effets) {
   /*
   Fonction ajoutant un effet dans une liste d'effets.
   il faut obligatoirement que l'effet et la liste correspondent ou le résultat sera faussé.
@@ -818,10 +818,48 @@ int appliquer_effet(Effet* effets_positifs, Effet effet, Effet* effets) {
                   ((effets + i) -> type) = effet.type ;
                   return 0 ;
               }
-                  
+
               else {
                   return 0 ;
               }
+          }
+      }
+      return 1 ;
+  }
+}
+
+
+int appliquer_effet_positif(Effet effet, Effet* effets) {
+  /*
+  Fonction ajoutant un effet dans une liste d'effets.
+  il faut obligatoirement que l'effet et la liste correspondent ou le résultat sera faussé.
+  retourne 0 si l'opération a réussie, 1 sinon.
+  */
+
+  if (NOMBRE_EFFETS_MAX < 0) {
+      printf("Erreur dans la fonction appliquer_effet avec la constante NOMBRE_EFFETS_MAX.\n") ;
+      exit(1) ;
+  }
+
+  else if (NOMBRE_EFFETS_MAX == 0) {
+      return 1 ;
+  } 
+
+  else if (effets == NULL) {
+      printf("Erreur dans la fonction appliquer_effet avec la variable effets.\n") ;
+      exit(2) ;
+  }
+
+  else {
+      for (int i = 0 ; i < NOMBRE_EFFETS_MAX ; i++) {
+          if (((effets + i) -> type) == AUCUNS) {
+              ((effets + i) -> tours) = effet.tours ;
+              ((effets + i) -> type) = effet.type ;
+              return 0 ;
+          }
+
+          else {
+              return 0 ;
           }
       }
       return 1 ;
