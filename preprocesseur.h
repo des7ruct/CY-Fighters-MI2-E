@@ -86,7 +86,7 @@
   #define SILENCE 8
   #define CONFUSION 9
   #define ETOURDISSEMENT 10
-  #define ANTIHEAL 11
+  #define ANTISOINS 11
 
   /* Positifs */
   #define AUG_ATTAQUE 1
